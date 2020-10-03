@@ -20,7 +20,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{E8E14A72-B1A0-4C40-BE68-66BE3E8DAF3D}</ProjectGuid>
+    <ProjectGuid>{88B14DF9-8C40-49AD-A89B-ACED2EDEBC49}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -98,7 +98,106 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="p1.cpp" />
+    <ClCompile Include="002.cpp" />
+    <ClCompile Include="003.cpp" />
+    <ClCompile Include="004.cpp" />
+    <ClCompile Include="005.cpp" />
+    <ClCompile Include="006.cpp" />
+    <ClCompile Include="007.cpp" />
+    <ClCompile Include="008.cpp" />
+    <ClCompile Include="009.cpp" />
+    <ClCompile Include="010.cpp" />
+    <ClCompile Include="011.cpp" />
+    <ClCompile Include="012.cpp" />
+    <ClCompile Include="013.cpp" />
+    <ClCompile Include="014.cpp" />
+    <ClCompile Include="015.cpp" />
+    <ClCompile Include="016.cpp" />
+    <ClCompile Include="017.cpp" />
+    <ClCompile Include="018.cpp" />
+    <ClCompile Include="019.cpp" />
+    <ClCompile Include="020.cpp" />
+    <ClCompile Include="021.cpp" />
+    <ClCompile Include="022.cpp" />
+    <ClCompile Include="023.cpp" />
+    <ClCompile Include="024.cpp" />
+    <ClCompile Include="025.cpp" />
+    <ClCompile Include="026.cpp" />
+    <ClCompile Include="027.cpp" />
+    <ClCompile Include="028.cpp" />
+    <ClCompile Include="029.cpp" />
+    <ClCompile Include="030.cpp" />
+    <ClCompile Include="031.cpp" />
+    <ClCompile Include="032.cpp" />
+    <ClCompile Include="033.cpp" />
+    <ClCompile Include="034.cpp" />
+    <ClCompile Include="035.cpp" />
+    <ClCompile Include="036.cpp" />
+    <ClCompile Include="037.cpp" />
+    <ClCompile Include="038.cpp" />
+    <ClCompile Include="039.cpp" />
+    <ClCompile Include="040.cpp" />
+    <ClCompile Include="041.cpp" />
+    <ClCompile Include="042.cpp" />
+    <ClCompile Include="043.cpp" />
+    <ClCompile Include="044.cpp" />
+    <ClCompile Include="045.cpp" />
+    <ClCompile Include="046.cpp" />
+    <ClCompile Include="047.cpp" />
+    <ClCompile Include="048.cpp" />
+    <ClCompile Include="049.cpp" />
+    <ClCompile Include="050.cpp" />
+    <ClCompile Include="051.cpp" />
+    <ClCompile Include="052.cpp" />
+    <ClCompile Include="053.cpp" />
+    <ClCompile Include="054.cpp" />
+    <ClCompile Include="055.cpp" />
+    <ClCompile Include="056.cpp" />
+    <ClCompile Include="057.cpp" />
+    <ClCompile Include="058.cpp" />
+    <ClCompile Include="059.cpp" />
+    <ClCompile Include="060.cpp" />
+    <ClCompile Include="061.cpp" />
+    <ClCompile Include="062.cpp" />
+    <ClCompile Include="063.cpp" />
+    <ClCompile Include="064.cpp" />
+    <ClCompile Include="065.cpp" />
+    <ClCompile Include="066.cpp" />
+    <ClCompile Include="067.cpp" />
+    <ClCompile Include="068.cpp" />
+    <ClCompile Include="069.cpp" />
+    <ClCompile Include="070.cpp" />
+    <ClCompile Include="1.cpp" />
+    <ClCompile Include="100.cpp" />
+    <ClCompile Include="71.cpp" />
+    <ClCompile Include="72.cpp" />
+    <ClCompile Include="73.cpp" />
+    <ClCompile Include="74.cpp" />
+    <ClCompile Include="75.cpp" />
+    <ClCompile Include="76.cpp" />
+    <ClCompile Include="77.cpp" />
+    <ClCompile Include="78.cpp" />
+    <ClCompile Include="79.cpp" />
+    <ClCompile Include="80.cpp" />
+    <ClCompile Include="81.cpp" />
+    <ClCompile Include="82.cpp" />
+    <ClCompile Include="83.cpp" />
+    <ClCompile Include="84.cpp" />
+    <ClCompile Include="85.cpp" />
+    <ClCompile Include="86.cpp" />
+    <ClCompile Include="87.cpp" />
+    <ClCompile Include="88.cpp" />
+    <ClCompile Include="89.cpp" />
+    <ClCompile Include="90.cpp" />
+    <ClCompile Include="91.cpp" />
+    <ClCompile Include="92.cpp" />
+    <ClCompile Include="93.cpp" />
+    <ClCompile Include="94.cpp" />
+    <ClCompile Include="95.cpp" />
+    <ClCompile Include="96.cpp" />
+    <ClCompile Include="97.cpp" />
+    <ClCompile Include="98.cpp" />
+    <ClCompile Include="99.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

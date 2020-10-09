@@ -1,4 +1,4 @@
-﻿#include<stdio.h>
+#include<stdio.h>
 
 void movedisc(unsigned n, char fromneedle, char toneedle, char usingneedle)
 ;
@@ -8,85 +8,85 @@ int i = 0;
 main()
 
 {
-	unsigned n;
+    unsigned n;
 
-	printf("please enter the number of disc:");
+    printf("please enter the number of disc:");
 
-	scanf("%d", &n);               /*输入N值*/
+    scanf("%d", &n);               /*输入N值*/
 
-	printf("\tneedle:\ta\t b\t c\n");
+    printf("\tneedle:\ta\t b\t c\n");
 
-	movedisc(n, 'a', 'c', 'b');        /*从A上借助B将N个盘子移动到C上*/
+    movedisc(n, 'a', 'c', 'b');        /*从A上借助B将N个盘子移动到C上*/
 
-	printf("\t Total: %d\n", i);
+    printf("\t Total: %d\n", i);
 }
 
 void movedisc(unsigned n, char fromneedle, char toneedle, char usingneedle)
 
 {
-	if (n > 0)
+    if (n > 0)
 
-	{
-		movedisc(n - 1, fromneedle, usingneedle, toneedle);
+    {
+        movedisc(n - 1, fromneedle, usingneedle, toneedle);
 
-		/*从fromneedle上借助toneedle将N-1个盘子移动到usingn
+        /*从fromneedle上借助toneedle将N-1个盘子移动到usingn
 eedle上*/
 
-		++i;
+        ++i;
 
-		switch (fromneedle)     /*将fromneedle 上的一个盘子移到toneedle上*/
+        switch (fromneedle)     /*将fromneedle 上的一个盘子移到toneedle上*/
 
-		{
-		case 'a': switch (toneedle)
+        {
+        case 'a': switch (toneedle)
 
-		{
-		case 'b': printf("\t[%d]:\t%2d.........>%2d\n", i, n, n);
+        {
+        case 'b': printf("\t[%d]:\t%2d.........>%2d\n", i, n, n);
 
-			break;
+            break;
 
-		case 'c': printf("\t[%d]:\t%2d...............>%2d\n", i, n, n);
+        case 'c': printf("\t[%d]:\t%2d...............>%2d\n", i, n, n);
 
-			break;
-		}
+            break;
+        }
 
-				break;
+                break;
 
-		case 'b': switch (toneedle)
+        case 'b': switch (toneedle)
 
-		{
-		case 'a': printf("\t[%d]:\t%2d<...............>%2d\
+        {
+        case 'a': printf("\t[%d]:\t%2d<...............>%2d\
 n", i, n, n);
 
-			break;
+            break;
 
-		case 'c': printf("\t[%d]:\t        %2d........>%2d\
+        case 'c': printf("\t[%d]:\t        %2d........>%2d\
 n", i, n, n);
 
-			break;
-		}
+            break;
+        }
 
-				break;
+                break;
 
-		case 'c': switch (toneedle)
+        case 'c': switch (toneedle)
 
-		{
-		case 'a': printf("\t[%d]:\t%2d<............%2d\n", i
-			, n, n);
+        {
+        case 'a': printf("\t[%d]:\t%2d<............%2d\n", i
+            , n, n);
 
-			break;
+            break;
 
-		case 'b': printf("\t[%d]:\t%2d<........%2d\n", i, n, n
-		);
+        case 'b': printf("\t[%d]:\t%2d<........%2d\n", i, n, n
+        );
 
-			break;
-		}
+            break;
+        }
 
-				break;
-		}
+                break;
+        }
 
-		movedisc(n - 1, usingneedle, toneedle, fromneedle);
+        movedisc(n - 1, usingneedle, toneedle, fromneedle);
 
-		/*从usingneedle上借助fromneedle将N-1个盘子移动到toneedle上
+        /*从usingneedle上借助fromneedle将N-1个盘子移动到toneedle上
 */
-	}
+    }
 }

@@ -1,90 +1,90 @@
-﻿#include<stdio.h>
+#include<stdio.h>
 
 main()
 
 {
-	int n, k, x, y, cc, pc, g;
+    int n, k, x, y, cc, pc, g;
 
-	printf("More Mountain Game\n");
+    printf("More Mountain Game\n");
 
-	printf("Game Begin\n");
+    printf("Game Begin\n");
 
-	pc = cc = 0;
+    pc = cc = 0;
 
-	g = 1;
+    g = 1;
 
-	for (;;)
+    for (;;)
 
-	{
-		printf("No.%2d game \n", g++);
+    {
+        printf("No.%2d game \n", g++);
 
-		printf("---------------------------------------\n");
+        printf("---------------------------------------\n");
 
-		printf("How many mpuntains are there?");
+        printf("How many mpuntains are there?");
 
-		scanf("%d", &n);
+        scanf("%d", &n);
 
-		if (!n) break;
+        if (!n) break;
 
-		printf("How many mountains are allowed to each time?");
+        printf("How many mountains are allowed to each time?");
 
-		do {
-			scanf("%d", &k);
+        do {
+            scanf("%d", &k);
 
-			if (k > n || k < 1) printf("Repeat again!\n");
-		} while (k > n || k < 1);
+            if (k > n || k < 1) printf("Repeat again!\n");
+        } while (k > n || k < 1);
 
-		do {
-			printf("How many mountains do you wish movw away?");
+        do {
+            printf("How many mountains do you wish movw away?");
 
-			scanf("%d", &x);
+            scanf("%d", &x);
 
-			if (x<1 || x>k || x > n)      /*判断搬山数是否符合要求*/
+            if (x<1 || x>k || x > n)      /*判断搬山数是否符合要求*/
 
-			{
-				printf("IIIegal,again please!\n");
+            {
+                printf("IIIegal,again please!\n");
 
-				continue;
-			}
+                continue;
+            }
 
-			n -= x;
+            n -= x;
 
-			printf("There are %d mountains left now.\n", n);
+            printf("There are %d mountains left now.\n", n);
 
-			if (!n)
+            if (!n)
 
-			{
-				printf("...............I win. You are failure...............\n\
+            {
+                printf("...............I win. You are failure...............\n\
 n"); cc++;
-			}
+            }
 
-			else
+            else
 
-			{
-				y = (n - 1) % (k + 1);      /*求出最佳搬山数*/
+            {
+                y = (n - 1) % (k + 1);      /*求出最佳搬山数*/
 
-				if (!y) y = 1;
+                if (!y) y = 1;
 
-				n -= y;
+                n -= y;
 
-				printf("Copmputer move %d mountains away.\n", y);
+                printf("Copmputer move %d mountains away.\n", y);
 
-				if (n) printf(" There are %d mountains left now.\n", n);
+                if (n) printf(" There are %d mountains left now.\n", n);
 
-				else
+                else
 
-				{
-					printf("...............I am failure. You win..................\n\n");
+                {
+                    printf("...............I am failure. You win..................\n\n");
 
-					pc++;
-				}
-			}
-		} while (n);
-	}
+                    pc++;
+                }
+            }
+        } while (n);
+    }
 
-	printf("Games in total have been played %d.\n", cc + pc);
+    printf("Games in total have been played %d.\n", cc + pc);
 
-	printf("You score is win %d,lose %d.\n", pc, cc);
+    printf("You score is win %d,lose %d.\n", pc, cc);
 
-	printf("My score is win %d,lose %d.\n", cc, pc);
+    printf("My score is win %d,lose %d.\n", cc, pc);
 }

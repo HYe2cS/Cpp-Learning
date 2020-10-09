@@ -1,5 +1,5 @@
-/*
-3¡¢Éè¼ÆÒ»¸öµÝ¹éµ÷ÓÃº¯Êý£¬Çó1µ½nµÄÅ¼ÊýºÍ¡£
+ï»¿/*
+3ã€è®¾è®¡ä¸€ä¸ªé€’å½’è°ƒç”¨å‡½æ•°ï¼Œæ±‚1åˆ°nçš„å¶æ•°å’Œã€‚
 */
 #include<stdio.h>
 int sum(int n)

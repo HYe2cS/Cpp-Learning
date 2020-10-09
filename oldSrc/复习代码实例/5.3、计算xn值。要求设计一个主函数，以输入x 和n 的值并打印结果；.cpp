@@ -1,5 +1,5 @@
-/*
-3¡¢¼ÆËãxnÖµ¡£ÒªÇóÉè¼ÆÒ»¸öÖ÷º¯Êý£¬ÒÔÊäÈëx ºÍn µÄÖµ²¢´òÓ¡½á¹û£»Éè¼ÆÒ»¸öpower(x,n)º¯ÊýÇóxnµÄÖµ£¬power(x,n)º¯ÊýÖÐÊ¹ÓÃµÝ¹éµ÷ÓÃ·½·¨¡£
+ï»¿/*
+3ã€è®¡ç®—xnå€¼ã€‚è¦æ±‚è®¾è®¡ä¸€ä¸ªä¸»å‡½æ•°ï¼Œä»¥è¾“å…¥x å’Œn çš„å€¼å¹¶æ‰“å°ç»“æžœï¼›è®¾è®¡ä¸€ä¸ªpower(x,n)å‡½æ•°æ±‚xnçš„å€¼ï¼Œpower(x,n)å‡½æ•°ä¸­ä½¿ç”¨é€’å½’è°ƒç”¨æ–¹æ³•ã€‚
 */
 #include<stdio.h>
 float power(float x, int n)

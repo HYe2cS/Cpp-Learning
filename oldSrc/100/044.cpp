@@ -1,4 +1,4 @@
-#include<stdio.h>
+ï»¿#include<stdio.h>
 
 main()
 
@@ -7,7 +7,7 @@ main()
 
 	printf("The 4 fractions which sum is equal 1 are:\n");
 
-	for (p = 2; p < 5; p++)                /*Çî¾Ù·ÖÄ¸*/
+	for (p = 2; p < 5; p++)                /*ç©·ä¸¾åˆ†æ¯*/
 
 		for (q = p; q < 7; q++)
 
@@ -16,12 +16,12 @@ main()
 				if (p * q * r - q * r - p * r - p * q != 0)
 
 				{
-					s = (p * q * r) / (p * q * r - q * r - p * r - p * q);        /*Çó³ösµÄÖµ*/
+					s = (p * q * r) / (p * q * r - q * r - p * r - p * q);        /*æ±‚å‡ºsçš„å€¼*/
 
 					if (!((p * q * r) % (p * q * r - q * r - p * r - p * q)) && s >= r)
 
 						printf("[%2d]    1/%d+1/%d+1/%d+1/%d=1\n", ++count, p, q, r, s);
 
-					/*Êä³ö½á¹û*/
+					/*è¾“å‡ºç»“æžœ*/
 				}
 }

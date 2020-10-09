@@ -1,4 +1,4 @@
-# include <iostream>
+ï»¿# include <iostream>
 using namespace std;
 class Base {
 public:    int i;
@@ -22,25 +22,25 @@ void fun(Base& bb)
 }
 int main() {
 	Base b1(100); b1.show();
-	//ÅÉÉúÀà¶ÔÏó¿ÉÒÔÏò»ùÀà¶ÔÏó¸³Öµ
+	//æ´¾ç”Ÿç±»å¯¹è±¡å¯ä»¥å‘åŸºç±»å¯¹è±¡èµ‹å€¼
 	Derived d1(11); b1 = d1;
 	b1.show();
 
-	//ÅÉÉúÀà¶ÔÏó¿ÉÒÔ³õÊ¼»¯»ùÀàµÄÒýÓÃ
+	//æ´¾ç”Ÿç±»å¯¹è±¡å¯ä»¥åˆå§‹åŒ–åŸºç±»çš„å¼•ç”¨
 	Derived d2(22); Base& b2 = d2;
 	b2.show();
 
-	//ÅÉÉúÀà¶ÔÏóµÄµØÖ·¿ÉÒÔ¸³Öµ¸øÖ¸Ïò»ùÀà¶ÔÏóµÄÖ¸Õë£¬·´¹ýÀ´²»ÐÐ
+	//æ´¾ç”Ÿç±»å¯¹è±¡çš„åœ°å€å¯ä»¥èµ‹å€¼ç»™æŒ‡å‘åŸºç±»å¯¹è±¡çš„æŒ‡é’ˆï¼Œåè¿‡æ¥ä¸è¡Œ
 	Derived d3(33);
 	Base* b3 = &d3;
 	b3->show();
-	//ÏÂÃæÁ½¾ä»á±¨´í
+	//ä¸‹é¢ä¸¤å¥ä¼šæŠ¥é”™
 	//Derived *d3=&b3;
 	//d3->show();
 
-	//Èç¹ûº¯ÊýµÄÐÎ²ÎÊÇ»ùÀà¶ÔÏó»ò»ùÀà¶ÔÏóµÄÒýÓÃ£¬
-	//ÔÚµ÷ÓÃº¯ÊýÊ±¿ÉÒÔÓÃÅÉÉúÀà¶ÔÏó×÷ÎªÊµ²Î
-	//d4ÊÇÅÉÉúÀà¶ÔÏó£¬º¯ÊýÐÎ²ÎÊÇ»ùÀà
+	//å¦‚æžœå‡½æ•°çš„å½¢å‚æ˜¯åŸºç±»å¯¹è±¡æˆ–åŸºç±»å¯¹è±¡çš„å¼•ç”¨ï¼Œ
+	//åœ¨è°ƒç”¨å‡½æ•°æ—¶å¯ä»¥ç”¨æ´¾ç”Ÿç±»å¯¹è±¡ä½œä¸ºå®žå‚
+	//d4æ˜¯æ´¾ç”Ÿç±»å¯¹è±¡ï¼Œå‡½æ•°å½¢å‚æ˜¯åŸºç±»
 	Derived d4(44); fun(d4);
 
 	return 0;

@@ -1,30 +1,30 @@
-#include<stdio.h>
+ï»¿#include<stdio.h>
 #define ROW 8
 #define COLUMN 8
 #define STEP ROW*COLUMN
-/*ROW±íÊ¾ÃÔ¹¬µÄĞĞÊı£¬COLUMN±íÊ¾ÃÔ¹¬µÄÁĞÊı£¬STEP±íÊ¾¶ÓÁĞµÄÈİÁ¿*/
-/*¶¨ÒåÒ»¸öÓÃÀ´¼ÇÂ¼ÃÔ¹¬Ì½Â·µÄ¶ÓÁĞ*/
+/*ROWè¡¨ç¤ºè¿·å®«çš„è¡Œæ•°ï¼ŒCOLUMNè¡¨ç¤ºè¿·å®«çš„åˆ—æ•°ï¼ŒSTEPè¡¨ç¤ºé˜Ÿåˆ—çš„å®¹é‡*/
+/*å®šä¹‰ä¸€ä¸ªç”¨æ¥è®°å½•è¿·å®«æ¢è·¯çš„é˜Ÿåˆ—*/
 struct StepQueue
 {
 	int x, y;
 	int PreStep;
 }StepQ[STEP], tmpStepQ[STEP];
-/*¶¨ÒåÒ»¸ö½á¹¹ÌåÓÃÀ´±íÊ¾ÃÔ¹¬ÖĞµÄÒÆ¶¯·½Ïò£¬Ò»¹²ÓĞ8ÖÖ·½Ïò*/
+/*å®šä¹‰ä¸€ä¸ªç»“æ„ä½“ç”¨æ¥è¡¨ç¤ºè¿·å®«ä¸­çš„ç§»åŠ¨æ–¹å‘ï¼Œä¸€å…±æœ‰8ç§æ–¹å‘*/
 struct MoveD
 {
-	/*x,y×ø±êÔöÁ¿£¬È¡Öµ-1£¬0£¬1*/
+	/*x,yåæ ‡å¢é‡ï¼Œå–å€¼-1ï¼Œ0ï¼Œ1*/
 	int x, y;
 }move[8];
-/*ÃÔ¹¬Ì½Â·º¯Êı*/
+/*è¿·å®«æ¢è·¯å‡½æ•°*/
 int PathMaze(int maze[ROW][COLUMN])
 {
 	int i, j, k, v, front, rear, x, y, l;
-	/*ÉùÃ÷Ò»¸ö±ê¼ÇÊı×éÀ´¼ÇÂ¼Ò»¸öÊÇ·ñµ½´ï¹ıÄ³¸öµã£¬²¢½øĞĞ³õÊ¼»¯*/
+	/*å£°æ˜ä¸€ä¸ªæ ‡è®°æ•°ç»„æ¥è®°å½•ä¸€ä¸ªæ˜¯å¦åˆ°è¾¾è¿‡æŸä¸ªç‚¹ï¼Œå¹¶è¿›è¡Œåˆå§‹åŒ–*/
 	int mark[ROW][COLUMN];
 	for (i = 0; i < ROW; i++)
 		for (j = 0; j < COLUMN; j++)
 			mark[i][j] = 0;
-	/*³õÊ¼»¯Èë¿Úµã*/
+	/*åˆå§‹åŒ–å…¥å£ç‚¹*/
 	StepQ[1].x = 1;
 	StepQ[1].y = 1;
 	StepQ[1].PreStep = 0;
@@ -33,15 +33,15 @@ int PathMaze(int maze[ROW][COLUMN])
 	mark[1][1] = 1;
 	while (front <= rear)
 	{
-		/*ÒÔ(x,y)Îª³ö·¢µã½øĞĞËÑË÷*/
+		/*ä»¥(x,y)ä¸ºå‡ºå‘ç‚¹è¿›è¡Œæœç´¢*/
 		x = StepQ[front].x;
 		y = StepQ[front].y;
-		/*ËÑË÷(x,y)µÄ8¸öÏàÁÚ(i,j)ÊÇ·ñ¿ÉÒÔµ½´ï*/
+		/*æœç´¢(x,y)çš„8ä¸ªç›¸é‚»(i,j)æ˜¯å¦å¯ä»¥åˆ°è¾¾*/
 		for (v = 0; v < 8; v++)
 		{
 			i = x + move[v].x;
 			j = y + move[v].y;
-			/*(i,j)Îª¿ÉÒÔµ½´ïµã£¬½«ÆğÈë¶Ó*/
+			/*(i,j)ä¸ºå¯ä»¥åˆ°è¾¾ç‚¹ï¼Œå°†èµ·å…¥é˜Ÿ*/
 			if ((maze[i][j] == 0) && (mark[i][j] == 0))
 			{
 				rear++;
@@ -50,35 +50,35 @@ int PathMaze(int maze[ROW][COLUMN])
 				StepQ[rear].y = j;
 				mark[i][j] = 1;
 			}
-			/*Èç¹ûµ½´ï³ö¿Ú£¬ÔòÊä³öÂ·¾¶*/
+			/*å¦‚æœåˆ°è¾¾å‡ºå£ï¼Œåˆ™è¾“å‡ºè·¯å¾„*/
 			if ((i == ROW - 2) && (j == COLUMN - 2))
 			{
 				printf("\nThe Path in this maze is: \n\n");
 				k = rear;
 				l = 0;
-				/*k==0ËµÃ÷ÒÑ¾­µ½´ï*/
+				/*k==0è¯´æ˜å·²ç»åˆ°è¾¾*/
 				while (k != 0)
 				{
 					tmpStepQ[l++].x = StepQ[k].x;
 					tmpStepQ[l++].y = StepQ[k].y;
-					/*ÕÒÇ°Ò»µã*/
+					/*æ‰¾å‰ä¸€ç‚¹*/
 					k = StepQ[k].PreStep;
 				}
-				/*Êä³öÂ·¾¶*/
+				/*è¾“å‡ºè·¯å¾„*/
 				while (l > 0)
 					printf("(%d,%d)>", tmpStepQ[--l].x, tmpStepQ[--l].y);
 				printf("(%d,%d)", tmpStepQ[0].x, tmpStepQ[0].y);
 				return(1);
 			}
 		}
-		/*´Ó¶ÓÁĞÖĞµ¯³öÒ»¸öµã£¬frontÖ¸ÏòĞÂµÄ³ö·¢µã*/
+		/*ä»é˜Ÿåˆ—ä¸­å¼¹å‡ºä¸€ä¸ªç‚¹ï¼ŒfrontæŒ‡å‘æ–°çš„å‡ºå‘ç‚¹*/
 		front++;
 	}
-	/*¶Ó¿ÕËµÃ÷Ã»ÓĞÂ·¾¶*/
+	/*é˜Ÿç©ºè¯´æ˜æ²¡æœ‰è·¯å¾„*/
 	printf("There is no Path in the maze! \n");
 	return(0);
 }
-/*ÃÔ¹¬Éú³Éº¯Êı*/
+/*è¿·å®«ç”Ÿæˆå‡½æ•°*/
 void CreateMaze(int maze[ROW][COLUMN])
 {
 	int i, j;
@@ -107,10 +107,10 @@ void CreateMaze(int maze[ROW][COLUMN])
 }
 int main()
 {
-	/*ÉùÃ÷Ò»¸öÓÃÀ´·ÅÃÔ¹¬µÄÊı×é*/
+	/*å£°æ˜ä¸€ä¸ªç”¨æ¥æ”¾è¿·å®«çš„æ•°ç»„*/
 	int maze[ROW][COLUMN];
 
-	/*³õÊ¼»¯ÒÆ¶¯·½ÏòÊı×é*/
+	/*åˆå§‹åŒ–ç§»åŠ¨æ–¹å‘æ•°ç»„*/
 	move[0].x = -1; move[0].y = -1; move[1].x = -1; move[1].y = 0;
 	move[2].x = -1; move[2].y = 1; move[3].x = 0; move[3].y = -1;
 	move[4].x = 0; move[4].y = 1; move[5].x = 1; move[5].y = -1;
@@ -119,9 +119,9 @@ int main()
 	printf("*********************************\n");
 	printf("|      Welcome to our maze      |\n");
 	printf("*********************************\n");
-	/*´´½¨Ò»¸öÃÔ¹¬*/
+	/*åˆ›å»ºä¸€ä¸ªè¿·å®«*/
 	CreateMaze(maze);
-	/*ÃÔ¹¬ÖĞÌ½Â·*/
+	/*è¿·å®«ä¸­æ¢è·¯*/
 	PathMaze(maze);
 	getchar();
 	return 0;

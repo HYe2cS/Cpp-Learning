@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<string>
 using namespace std;
 class Date {
@@ -21,11 +21,11 @@ void Date::set(int y, int m, int d)
 }
 void Date::show()
 {
-	cout << "ÉúÈÕ£º" << year << "Äê" << month << "ÔÂ" << day << "ÈÕ" << endl;
+	cout << "ç”Ÿæ—¥ï¼š" << year << "å¹´" << month << "æœˆ" << day << "æ—¥" << endl;
 }
 class People {
 public:
-	People(int y = 2000, int m = 00, int d = 00, string i = "20000000000", string na = "ÕÅÈý", char se = 'm');
+	People(int y = 2000, int m = 00, int d = 00, string i = "20000000000", string na = "å¼ ä¸‰", char se = 'm');
 	void set(int y, int m, int d, string i, string na, char se);
 	void show();
 private:
@@ -49,13 +49,13 @@ void People::set(int y, int m, int d, string i, string na, char se)
 }
 void People::show()
 {
-	cout << "±àºÅ£º" << id << endl << "ÐÕÃû£º" << name << endl << "ÐÔ±ð£º" << sex << endl;
+	cout << "ç¼–å·ï¼š" << id << endl << "å§“åï¼š" << name << endl << "æ€§åˆ«ï¼š" << sex << endl;
 	birthday.show();
 }
 int main()
 {
 	People p;
-	p.set(2001, 01, 01, "20181251215", "ÕÅÔª½Ú", 'm');
+	p.set(2001, 01, 01, "20181251215", "å¼ å…ƒèŠ‚", 'm');
 	p.show();
 	return 0;
 }

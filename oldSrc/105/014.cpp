@@ -1,4 +1,4 @@
-#include<stdio.h>
+ï»¿#include<stdio.h>
 #include<stdlib.h>
 
 #define MAX_VEX_NUM 6
@@ -16,7 +16,7 @@ int previous[MAX_VEX_NUM] = { -1,-1,-1,-1,-1,-1 };
 void ShortestPath()
 {
 	int i, j, min, v;
-	/*³õÊ¼»¯*/
+	/*åˆå§‹åŒ–*/
 	for (i = 0; i < MAX_VEX_NUM; i++)
 	{
 		D[i] = arcs[0][i];
@@ -24,10 +24,10 @@ void ShortestPath()
 		previous[i] = NOTHING;
 	}
 	D[0] = 0;
-	final[0] = TRUE;             /* ³õÊ¼»¯v0¶¥µãÊôÓÚS¼¯ */
-	for (i = 1; i < MAX_VEX_NUM; i++) /*½øĞĞMAX_VEX_NUM -1 ´ÎÑ­»·*/
+	final[0] = TRUE;             /* åˆå§‹åŒ–v0é¡¶ç‚¹å±äºSé›† */
+	for (i = 1; i < MAX_VEX_NUM; i++) /*è¿›è¡ŒMAX_VEX_NUM -1 æ¬¡å¾ªç¯*/
 	{
-		min = MAX_INT;             /* µ±Ç°ËùÖª¾İv0µÄ×î¶Ì¾àÀë */
+		min = MAX_INT;             /* å½“å‰æ‰€çŸ¥æ®v0çš„æœ€çŸ­è·ç¦» */
 		for (j = 0; j < MAX_VEX_NUM; j++)
 		{
 			if (final[j] == FALSE)
@@ -47,11 +47,11 @@ void ShortestPath()
 		}
 		for (j = 0; j < MAX_VEX_NUM; j++)
 		{
-			if (!final[j])/* µÚj¸ö¶¥µãÔÚV-SÖĞ */
+			if (!final[j])/* ç¬¬jä¸ªé¡¶ç‚¹åœ¨V-Sä¸­ */
 			{
 				if (D[j] > (arcs[v][j] + min))
 				{
-					D[j] = arcs[v][j] + min;/*ĞŞ¸Ä D[j]*/
+					D[j] = arcs[v][j] + min;/*ä¿®æ”¹ D[j]*/
 					previous[j] = v;
 				}
 				else

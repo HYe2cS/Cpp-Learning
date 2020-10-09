@@ -1,4 +1,4 @@
-#include<stdio.h>
+ï»¿#include<stdio.h>
 
 #include<stdlib.h>
 main()
@@ -8,9 +8,9 @@ main()
 
 	printf("Please enter a number=");
 
-	scanf("%d", &number);                /*ÊäÈëÕûÊı*/
+	scanf("%d", &number);                /*è¾“å…¥æ•´æ•°*/
 
-	for (i = 1; i < number / 2; i++)         /*ÊÔÌ½·¨¡£ÊÔÌ½i,j,k,kµÄ²»Í¬Öµ*/
+	for (i = 1; i < number / 2; i++)         /*è¯•æ¢æ³•ã€‚è¯•æ¢i,j,k,kçš„ä¸åŒå€¼*/
 
 		for (j = 0; j <= i; j++)
 
@@ -18,8 +18,8 @@ main()
 
 				for (l = 0; l <= k; l++)
 
-					if (number == i * i + j * j + k * k + l * l)    /*ÈôÂú×ã¶¨ÀíÒªÇóÔòÊä³ö
-½á¹û*/
+					if (number == i * i + j * j + k * k + l * l)    /*è‹¥æ»¡è¶³å®šç†è¦æ±‚åˆ™è¾“å‡º
+ç»“æœ*/
 
 					{
 						printf(" %d=%d*%d+%d*%d+%d*%d+%d*%d\n", number, i,

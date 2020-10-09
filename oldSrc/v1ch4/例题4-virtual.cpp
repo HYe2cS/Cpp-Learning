@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 using namespace std;
 //base
 class Base {
@@ -26,7 +26,7 @@ protected:
 //base1
 class Base1 :virtual public Base {
 public:
-	Base1(int a1, int b1) :Base(a1)//±ØĞë×ºÉÏ¶ÔÀàBase¹¹Ôìº¯ÊıµÄµ÷ÓÃ
+	Base1(int a1, int b1) :Base(a1)//å¿…é¡»ç¼€ä¸Šå¯¹ç±»Baseæ„é€ å‡½æ•°çš„è°ƒç”¨
 	{
 		cout << "Constructing Base1." << endl;
 		b = b1;
@@ -49,7 +49,7 @@ protected:
 //base2
 class Base2 :virtual public Base {
 public:
-	Base2(int a1, int c1) :Base(a1)//±ØĞë×ºÉÏ¶ÔÀàBase¹¹Ôìº¯ÊıµÄµ÷ÓÃ
+	Base2(int a1, int c1) :Base(a1)//å¿…é¡»ç¼€ä¸Šå¯¹ç±»Baseæ„é€ å‡½æ•°çš„è°ƒç”¨
 	{
 		cout << "Constructing Base1." << endl;
 		c = c1;
@@ -69,10 +69,10 @@ public:
 protected:
 	int c;
 };
-//ÅÉÉúÀà
+//æ´¾ç”Ÿç±»
 class Derived :public Base1, public Base2 {
 public:
-	Derived(int a1, int b1, int c1, int d1) :Base(a1), Base1(a1, b1), Base2(a1, c1)//±ØĞë×ºÉÏ¶ÔÀàBase¹¹Ôìº¯ÊıµÄµ÷ÓÃ
+	Derived(int a1, int b1, int c1, int d1) :Base(a1), Base1(a1, b1), Base2(a1, c1)//å¿…é¡»ç¼€ä¸Šå¯¹ç±»Baseæ„é€ å‡½æ•°çš„è°ƒç”¨
 	{
 		cout << "Constructing Derived." << endl;
 		d = d1;

@@ -1,5 +1,5 @@
-//±àĞ´Ò»¸öÑ§ÉúºÍ½ÌÊ¦µÄÊı¾İÊäÈëºÍÏÔÊ¾³ÌĞò¡£Ñ§ÉúÊı¾İÓĞ±àºÅ¡¢ĞÕÃû¡¢ĞÔ±ğ¡¢ÄêÁä¡¢Ïµ±ğºÍ³É¼¨£¬
-//½ÌÊ¦Êı¾İÓĞ±àºÅ¡¢ĞÕÃû¡¢ĞÔ±ğ¡¢ÄêÁä¡¢Ö°³ÆºÍ²¿ÃÅ¡£ÒªÇó½«±àºÅ¡¢ĞÕÃû¡¢ĞÔ±ğ¡¢ÄêÁäµÄÊäÈëºÍÏÔÊ¾Éè¼Æ³ÉÒ»¸öÀàPerson£¬²¢×÷ÎªÑ§ÉúÀàStudentºÍ½ÌÊ¦ÀàTeacherµÄ»ùÀà¡£
+ï»¿//ç¼–å†™ä¸€ä¸ªå­¦ç”Ÿå’Œæ•™å¸ˆçš„æ•°æ®è¾“å…¥å’Œæ˜¾ç¤ºç¨‹åºã€‚å­¦ç”Ÿæ•°æ®æœ‰ç¼–å·ã€å§“åã€æ€§åˆ«ã€å¹´é¾„ã€ç³»åˆ«å’Œæˆç»©ï¼Œ
+//æ•™å¸ˆæ•°æ®æœ‰ç¼–å·ã€å§“åã€æ€§åˆ«ã€å¹´é¾„ã€èŒç§°å’Œéƒ¨é—¨ã€‚è¦æ±‚å°†ç¼–å·ã€å§“åã€æ€§åˆ«ã€å¹´é¾„çš„è¾“å…¥å’Œæ˜¾ç¤ºè®¾è®¡æˆä¸€ä¸ªç±»Personï¼Œå¹¶ä½œä¸ºå­¦ç”Ÿç±»Studentå’Œæ•™å¸ˆç±»Teacherçš„åŸºç±»ã€‚
 #include<iostream>
 #include<string>
 using namespace std;
@@ -16,86 +16,86 @@ class Student :public Person {
 public:
 	void input()
 	{
-		cout << "ÇëÊäÈëÑ§ÉúĞÅÏ¢:" << endl;
-		cout << "±àºÅ:";
+		cout << "è¯·è¾“å…¥å­¦ç”Ÿä¿¡æ¯:" << endl;
+		cout << "ç¼–å·:";
 		cin >> sno;
-		cout << "ĞÕÃû:";
+		cout << "å§“å:";
 		cin >> name;
-		cout << "ĞÔ±ğ:";
+		cout << "æ€§åˆ«:";
 		cin >> sex;
-		cout << "ÄêÁä:";
+		cout << "å¹´é¾„:";
 		cin >> age;
-		cout << "Ïµ±ğ:";
+		cout << "ç³»åˆ«:";
 		cin >> xibie;
-		cout << "³É¼¨:";
+		cout << "æˆç»©:";
 		cin >> score;
 	}
 	void output()
 	{
-		cout << "±àºÅ:" << sno << endl << "ĞÕÃû:" << name << endl
-			<< "ĞÔ±ğ:" << sex << endl << "ÄêÁä:" << age << endl << "Ïµ±ğ:" << xibie << endl << "³É¼¨:" << score << endl;
+		cout << "ç¼–å·:" << sno << endl << "å§“å:" << name << endl
+			<< "æ€§åˆ«:" << sex << endl << "å¹´é¾„:" << age << endl << "ç³»åˆ«:" << xibie << endl << "æˆç»©:" << score << endl;
 	}
 private:
-	string xibie;//Ïµ±ğ
-	float score;//³É¼¨
+	string xibie;//ç³»åˆ«
+	float score;//æˆç»©
 };
 class Teacher :public Person {
 private:
-	string major;//Ö°³Æ
-	string bumeng;//²¿ÃÅ
+	string major;//èŒç§°
+	string bumeng;//éƒ¨é—¨
 public:
 	void input()
 	{
-		cout << "ÇëÊäÈë½ÌÊ¦ĞÅÏ¢:" << endl;
-		cout << "±àºÅ:";
+		cout << "è¯·è¾“å…¥æ•™å¸ˆä¿¡æ¯:" << endl;
+		cout << "ç¼–å·:";
 		cin >> sno;
-		cout << "ĞÕÃû:";
+		cout << "å§“å:";
 		cin >> name;
-		cout << "ĞÔ±ğ:";
+		cout << "æ€§åˆ«:";
 		cin >> sex;
-		cout << "ÄêÁä:";
+		cout << "å¹´é¾„:";
 		cin >> age;
-		cout << "Ö°³Æ:";
+		cout << "èŒç§°:";
 		cin >> major;
-		cout << "²¿ÃÅ:";
+		cout << "éƒ¨é—¨:";
 		cin >> bumeng;
 	}
 	void output()
 	{
-		cout << "±àºÅ:" << sno << endl << "ĞÕÃû:" << name << endl
-			<< "ĞÔ±ğ:" << sex << endl << "ÄêÁä:" << age << endl << "Ö°³Æ:" << major << endl << "²¿ÃÅ:" << bumeng << endl;
+		cout << "ç¼–å·:" << sno << endl << "å§“å:" << name << endl
+			<< "æ€§åˆ«:" << sex << endl << "å¹´é¾„:" << age << endl << "èŒç§°:" << major << endl << "éƒ¨é—¨:" << bumeng << endl;
 	}
 };
 int main()
 {
 	int num;
-	cout << "ÇëÊäÈëÑ§ÉúÈËÊı:";
+	cout << "è¯·è¾“å…¥å­¦ç”Ÿäººæ•°:";
 	cin >> num;
 	Student s1[num];
 	for (int i = 0; i < num; i++)
 	{
-		cout << "ÇëÊäÈëµÚ" << i + 1 << "Î»Ñ§ÉúĞÅÏ¢:" << endl;
+		cout << "è¯·è¾“å…¥ç¬¬" << i + 1 << "ä½å­¦ç”Ÿä¿¡æ¯:" << endl;
 		s1[i].input();
 	}
 
 	for (int i = 0; i < num; i++)
 	{
-		cout << "µÚ" << i + 1 << "Î»Ñ§ÉúĞÅÏ¢:" << endl;
+		cout << "ç¬¬" << i + 1 << "ä½å­¦ç”Ÿä¿¡æ¯:" << endl;
 		s1[i].output();
 	}
 
-	cout << "ÇëÊäÈë½ÌÊ¦ÈËÊı:";
+	cout << "è¯·è¾“å…¥æ•™å¸ˆäººæ•°:";
 	cin >> num;
 	Teacher t2[num];
 	for (int i = 0; i < num; i++)
 	{
-		cout << "ÇëÊäÈëµÚ" << i + 1 << "Î»½ÌÊ¦ĞÅÏ¢:" << endl;
+		cout << "è¯·è¾“å…¥ç¬¬" << i + 1 << "ä½æ•™å¸ˆä¿¡æ¯:" << endl;
 		t2[i].input();
 	}
 
 	for (int i = 0; i < num; i++)
 	{
-		cout << "µÚ" << i + 1 << "Î»½ÌÊ¦ĞÅÏ¢:" << endl;
+		cout << "ç¬¬" << i + 1 << "ä½æ•™å¸ˆä¿¡æ¯:" << endl;
 		t2[i].output();
 	}
 

@@ -1,10 +1,10 @@
-//studentÀàµÄ±àĞ´ÊäÈëÊä³ö
+ï»¿//studentç±»çš„ç¼–å†™è¾“å…¥è¾“å‡º
 #include<iostream>
 #include<string>
 using namespace std;
 class Student {
 public:
-	Student(string na = "ÕÅÈı", string sn = "20190000000", char s = 'm', int ag = 20);//¹¹Ôìº¯Êı
+	Student(string na = "å¼ ä¸‰", string sn = "20190000000", char s = 'm', int ag = 20);//æ„é€ å‡½æ•°
 	void set(string na, string sn, char s, int ag);
 	void show();
 private:
@@ -13,7 +13,7 @@ private:
 	char sex;
 	int age;
 };
-Student::Student(string na, string sn, char s, int ag)//¹¹Ôìº¯Êı
+Student::Student(string na, string sn, char s, int ag)//æ„é€ å‡½æ•°
 {
 	name = na; sno = sn; sex = s; age = ag;
 }
@@ -23,25 +23,25 @@ void Student::set(string na, string sn, char s, int ag)
 }
 void Student::show()
 {
-	cout << "ĞÕÃû£º" << name << "\tÑ§ºÅ£º" << sno << "\tĞÔ±ğ£º" << sex << "\tÄêÁä£º" << age << endl;
+	cout << "å§“åï¼š" << name << "\tå­¦å·ï¼š" << sno << "\tæ€§åˆ«ï¼š" << sex << "\tå¹´é¾„ï¼š" << age << endl;
 }
 
-void Change(Student* p)	//¶ÔÏóÖ¸Õë×÷Îªº¯Êı²ÎÊı:
+void Change(Student* p)	//å¯¹è±¡æŒ‡é’ˆä½œä¸ºå‡½æ•°å‚æ•°:
 {
-	p->set("Îâ»áÓî", "20181251162", 'm', 20);
-	cout << "ÔÚº¯ÊıChangeÄÚ£¬ĞÎ²Î¶ÔÏópµÄÊı¾İ³ÉÔ±ÖµÎª:" << endl;
+	p->set("å´ä¼šå®‡", "20181251162", 'm', 20);
+	cout << "åœ¨å‡½æ•°Changeå†…ï¼Œå½¢å‚å¯¹è±¡pçš„æ•°æ®æˆå‘˜å€¼ä¸º:" << endl;
 	p->show();
 }
 
 int main()
 {
-	Student s1("ÕÅÔª½Ú", "20181251215", 'm', 19);
-	//¶ÔÏóÖ¸Õë×÷Îªº¯Êı²ÎÊı
-	cout << "¶ÔÏóÖ¸Õë×÷Îªº¯Êı²ÎÊı:" << endl;
-	cout << "ÔÚµ÷ÓÃº¯ÊıChangeÇ°£¬Êµ²Î¶ÔÏós1µÄÊı¾İ³ÉÔ±ÖµÎª:" << endl;
+	Student s1("å¼ å…ƒèŠ‚", "20181251215", 'm', 19);
+	//å¯¹è±¡æŒ‡é’ˆä½œä¸ºå‡½æ•°å‚æ•°
+	cout << "å¯¹è±¡æŒ‡é’ˆä½œä¸ºå‡½æ•°å‚æ•°:" << endl;
+	cout << "åœ¨è°ƒç”¨å‡½æ•°Changeå‰ï¼Œå®å‚å¯¹è±¡s1çš„æ•°æ®æˆå‘˜å€¼ä¸º:" << endl;
 	s1.show();
 	Change(&s1);
-	cout << "ÔÚµ÷ÓÃº¯ÊıChangeºó£¬Êµ²Î¶ÔÏós1µÄÊı¾İ³ÉÔ±ÖµÎª:" << endl;
+	cout << "åœ¨è°ƒç”¨å‡½æ•°Changeåï¼Œå®å‚å¯¹è±¡s1çš„æ•°æ®æˆå‘˜å€¼ä¸º:" << endl;
 	s1.show();
 	return 0;
 }

@@ -1,56 +1,56 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<string>
-#define MAX 1000//Í¨Ñ¶Â¼µÄ×î´óÈİÁ¿£»
+#define MAX 1000//é€šè®¯å½•çš„æœ€å¤§å®¹é‡ï¼›
 //test;
 using namespace std;
-//¶¨ÒåÁªÏµÈËÀà£»
+//å®šä¹‰è”ç³»äººç±»ï¼›
 class Lxr
 {
 private:
-	int tag;//tag±íÊ¾µ±Ç°´æ´¢µ¥Ôª×´Ì¬£¬1±íÊ¾±»Õ¼ÓÃ£¬0±íÊ¾¿ÕÏĞ£»
+	int tag;//tagè¡¨ç¤ºå½“å‰å­˜å‚¨å•å…ƒçŠ¶æ€ï¼Œ1è¡¨ç¤ºè¢«å ç”¨ï¼Œ0è¡¨ç¤ºç©ºé—²ï¼›
 	string name;
 	int sex;
 	int age;
-	string tel;//ÊÖ»úºÅÂë
+	string tel;//æ‰‹æœºå·ç 
 	string address;
 public:
-	//2¡¢²éÕÒÁªÏµÈË£¬ÈôÕÒµ½·µ»ØÆäËùÔÚÎ»ÖÃ£¬ÕÒ²»µ½Ôò·µ»Ø-1£»
+	//2ã€æŸ¥æ‰¾è”ç³»äººï¼Œè‹¥æ‰¾åˆ°è¿”å›å…¶æ‰€åœ¨ä½ç½®ï¼Œæ‰¾ä¸åˆ°åˆ™è¿”å›-1ï¼›
 	static int Find(Lxr* p, string s);
-	//3¡¢Ìí¼ÓÁªÏµÈË£¬ÉÏÏŞMAXÃû£»
+	//3ã€æ·»åŠ è”ç³»äººï¼Œä¸Šé™MAXåï¼›
 	static void Add(Lxr* p);
-	//4¡¢ÏÔÊ¾Í¨Ñ¶Â¼ÖĞµÄËùÓĞÁªÏµÈË£»
+	//4ã€æ˜¾ç¤ºé€šè®¯å½•ä¸­çš„æ‰€æœ‰è”ç³»äººï¼›
 	static void Showcontects(Lxr* p);
-	//5¡¢É¾³ıÁªÏµÈË£»
+	//5ã€åˆ é™¤è”ç³»äººï¼›
 	static void Delete(Lxr* p);
-	//6¡¢ÏÔÊ¾µ¥¸öÁªÏµÈË;
+	//6ã€æ˜¾ç¤ºå•ä¸ªè”ç³»äºº;
 	static void Showone(Lxr* p, int pl);
-	//8¡¢ĞŞ¸ÄÁªÏµÈËĞÅÏ¢£»
+	//8ã€ä¿®æ”¹è”ç³»äººä¿¡æ¯ï¼›
 	static void Modify(Lxr* p);
-	//9¡¢Çå¿ÕËùÓĞÁªÏµÈË(²»ĞèÒªÇå¿ÕÊı×é£¬Ö»ĞèÒª½«tagÖÃÁã£¬×öÂß¼­ÉÏµÄÇå¿Õ¼´¿É)£»
+	//9ã€æ¸…ç©ºæ‰€æœ‰è”ç³»äºº(ä¸éœ€è¦æ¸…ç©ºæ•°ç»„ï¼Œåªéœ€è¦å°†tagç½®é›¶ï¼Œåšé€»è¾‘ä¸Šçš„æ¸…ç©ºå³å¯)ï¼›
 	static void Clearall(Lxr* p);
 	static int sort(Lxr p[]);
 	static int sortByName(Lxr p[]);
 	static int sortBytel(Lxr p[]);
 };
 
-int Total = 0;//Í¨Ñ¶Â¼ÖĞ×ÜÈËÊı£»
+int Total = 0;//é€šè®¯å½•ä¸­æ€»äººæ•°ï¼›
 
-//1¡¢ÏÔÊ¾¹¦ÄÜÑ¡Ôñ²Ëµ¥£»
+//1ã€æ˜¾ç¤ºåŠŸèƒ½é€‰æ‹©èœå•ï¼›
 void Showmenu()
 {
 	cout << "********************" << endl;
-	cout << "***1¡¢Ìí¼ÓÁªÏµÈË****" << endl;
-	cout << "***2¡¢ÏÔÊ¾ÁªÏµÈË****" << endl;
-	cout << "***3¡¢É¾³ıÁªÏµÈË****" << endl;
-	cout << "***4¡¢²éÕÒÁªÏµÈË****" << endl;
-	cout << "***5¡¢ĞŞ¸ÄÁªÏµÈË****" << endl;
-	cout << "***6¡¢Çå¿ÕÁªÏµÈË****" << endl;
-	cout << "***7¡¢ÅÅĞòÁªÏµÈË****" << endl;
-	cout << "***0¡¢ÍË³öÍ¨Ñ¶Â¼****" << endl;
+	cout << "***1ã€æ·»åŠ è”ç³»äºº****" << endl;
+	cout << "***2ã€æ˜¾ç¤ºè”ç³»äºº****" << endl;
+	cout << "***3ã€åˆ é™¤è”ç³»äºº****" << endl;
+	cout << "***4ã€æŸ¥æ‰¾è”ç³»äºº****" << endl;
+	cout << "***5ã€ä¿®æ”¹è”ç³»äºº****" << endl;
+	cout << "***6ã€æ¸…ç©ºè”ç³»äºº****" << endl;
+	cout << "***7ã€æ’åºè”ç³»äºº****" << endl;
+	cout << "***0ã€é€€å‡ºé€šè®¯å½•****" << endl;
 	cout << "********************" << endl;
 }
 
-//2¡¢²éÕÒÁªÏµÈË£¬ÈôÕÒµ½·µ»ØÆäËùÔÚÎ»ÖÃ£¬ÕÒ²»µ½Ôò·µ»Ø-1£»
+//2ã€æŸ¥æ‰¾è”ç³»äººï¼Œè‹¥æ‰¾åˆ°è¿”å›å…¶æ‰€åœ¨ä½ç½®ï¼Œæ‰¾ä¸åˆ°åˆ™è¿”å›-1ï¼›
 int Lxr::Find(Lxr* p, string s)
 {
 	int i, flag = 0;
@@ -68,7 +68,7 @@ int Lxr::Find(Lxr* p, string s)
 		return -1;
 }
 
-//3¡¢Ìí¼ÓÁªÏµÈË£¬ÉÏÏŞMAXÃû£»
+//3ã€æ·»åŠ è”ç³»äººï¼Œä¸Šé™MAXåï¼›
 void Lxr::Add(Lxr* p)
 {
 	if (Total == MAX)
@@ -77,13 +77,13 @@ void Lxr::Add(Lxr* p)
 	}
 	else
 	{
-		int flag = 0, k = 0;//flag¼ÇÂ¼Êı×éÖĞ×îĞ¡µÄ¿ÕÏĞÎ»ÖÃ£¬k±íÊ¾µ±Ç°Êı×éµ¥ÔªÕ¼ÓÃ×´Ì¬£»
+		int flag = 0, k = 0;//flagè®°å½•æ•°ç»„ä¸­æœ€å°çš„ç©ºé—²ä½ç½®ï¼Œkè¡¨ç¤ºå½“å‰æ•°ç»„å•å…ƒå ç”¨çŠ¶æ€ï¼›
 		for (int i = 0; i < MAX; i++)
 		{
 			if (p[i].tag == 0)
 			{
 				flag = i;
-				k = 1;//kÎª1±íÊ¾Õ¼ÓÃµ±Ç°Êı×éµ¥Ôª£»
+				k = 1;//kä¸º1è¡¨ç¤ºå ç”¨å½“å‰æ•°ç»„å•å…ƒï¼›
 				break;
 			}
 		}
@@ -98,7 +98,7 @@ void Lxr::Add(Lxr* p)
 			}
 			else
 			{
-				p[flag].tag = 1;//tagÎª1±íÊ¾Õ¼ÓÃµ±Ç°Êı×éµ¥Ôª£»
+				p[flag].tag = 1;//tagä¸º1è¡¨ç¤ºå ç”¨å½“å‰æ•°ç»„å•å…ƒï¼›
 				cout << "sex(male is 1 and female is 2):";
 				cin >> p[flag].sex;
 				while (1)
@@ -122,12 +122,12 @@ void Lxr::Add(Lxr* p)
 			}
 		}
 	}
-	//°´ÈÎÒâ¼üÇåÆÁ£»
+	//æŒ‰ä»»æ„é”®æ¸…å±ï¼›
 	system("pause");
 	system("cls");
 }
 
-//4¡¢ÏÔÊ¾Í¨Ñ¶Â¼ÖĞµÄËùÓĞÁªÏµÈË£»
+//4ã€æ˜¾ç¤ºé€šè®¯å½•ä¸­çš„æ‰€æœ‰è”ç³»äººï¼›
 void Lxr::Showcontects(Lxr* p)
 {
 	if (Total == 0)
@@ -147,12 +147,12 @@ void Lxr::Showcontects(Lxr* p)
 			}
 		}
 	}
-	//°´ÈÎÒâ¼üÇåÆÁ£»
+	//æŒ‰ä»»æ„é”®æ¸…å±ï¼›
 	system("pause");
 	system("cls");
 }
 
-//5¡¢É¾³ıÁªÏµÈË£»
+//5ã€åˆ é™¤è”ç³»äººï¼›
 void Lxr::Delete(Lxr* p)
 {
 	cout << "Please input the name:" << endl;
@@ -169,31 +169,31 @@ void Lxr::Delete(Lxr* p)
 		Total--;
 		cout << "Succeed in deleting the record!" << endl;
 	}
-	//°´ÈÎÒâ¼üÇåÆÁ£»
+	//æŒ‰ä»»æ„é”®æ¸…å±ï¼›
 	system("pause");
 	system("cls");
 }
 
-//6¡¢ÏÔÊ¾µ¥¸öÁªÏµÈË£»
+//6ã€æ˜¾ç¤ºå•ä¸ªè”ç³»äººï¼›
 void Lxr::Showone(Lxr* p, int pl)
 {
 	cout << "Name\t" << "Sex:\t" << "Age:\t" << "Tel:\t\t" << "Address:" << endl;
 	cout << p[pl].name << "\t" << (p[pl].sex == 1 ? "Male" : "Female") << "\t"
 		<< p[pl].age << "\t" << p[pl].tel << "\t\t" << p[pl].address << endl;
-	//°´ÈÎÒâ¼üÇåÆÁ£»
+	//æŒ‰ä»»æ„é”®æ¸…å±ï¼›
 	system("pause");
 	system("cls");
 }
 
-//7¡¢·µ»Ø¹¦ÄÜÑ¡Ôñ²Ëµ¥
+//7ã€è¿”å›åŠŸèƒ½é€‰æ‹©èœå•
 int confirmOperation()
 {
-	cout << "È·ÈÏÖ´ĞĞÄãËùÑ¡µÄ²Ù×÷Âğ£¿y-yes,n-no" << endl;
+	cout << "ç¡®è®¤æ‰§è¡Œä½ æ‰€é€‰çš„æ“ä½œå—ï¼Ÿy-yes,n-no" << endl;
 	string b;
 	cin >> b;
 	if (b == "n")
 	{
-		//ÇåÆÁ
+		//æ¸…å±
 		system("cls");
 		return 1;
 	}
@@ -204,7 +204,7 @@ int confirmOperation()
 	return -1;
 }
 
-//8¡¢ĞŞ¸ÄÁªÏµÈËĞÅÏ¢£»
+//8ã€ä¿®æ”¹è”ç³»äººä¿¡æ¯ï¼›
 void Lxr::Modify(Lxr* p)
 {
 	cout << "Please input the name of the target:" << endl;
@@ -230,12 +230,12 @@ void Lxr::Modify(Lxr* p)
 		cout << "input the address:";
 		cin >> p[f].address;
 	}
-	//°´ÈÎÒâ¼üÇåÆÁ£»
+	//æŒ‰ä»»æ„é”®æ¸…å±ï¼›
 	system("pause");
 	system("cls");
 }
 
-//9¡¢Çå¿ÕËùÓĞÁªÏµÈË(²»ĞèÒªÇå¿ÕÊı×é£¬Ö»ĞèÒª½«tagÖÃÁã£¬×öÂß¼­ÉÏµÄÇå¿Õ¼´¿É)£»
+//9ã€æ¸…ç©ºæ‰€æœ‰è”ç³»äºº(ä¸éœ€è¦æ¸…ç©ºæ•°ç»„ï¼Œåªéœ€è¦å°†tagç½®é›¶ï¼Œåšé€»è¾‘ä¸Šçš„æ¸…ç©ºå³å¯)ï¼›
 void Lxr::Clearall(Lxr* p)
 {
 	for (int i = 0; i < MAX; i++)
@@ -244,25 +244,25 @@ void Lxr::Clearall(Lxr* p)
 	}
 	Total = 0;
 	cout << "Succeed to clear the contects!" << endl;
-	//°´ÈÎÒâ¼üÇåÆÁ
+	//æŒ‰ä»»æ„é”®æ¸…å±
 	system("pause");
 	system("cls");
 }
-//ÊµÏÖÒ»¸ö Ã°ÅİÅÅĞò(Ä¿Â¼)
+//å®ç°ä¸€ä¸ª å†’æ³¡æ’åº(ç›®å½•)
 int Lxr::sort(Lxr* p)
 {
-	int key;//¼üÅÌÊäÈë²Ù×÷ºÅ
-	while (getchar() != '\n');                     //Çå¿Õ¼üÅÌ»º³åÇø
+	int key;//é”®ç›˜è¾“å…¥æ“ä½œå·
+	while (getchar() != '\n');                     //æ¸…ç©ºé”®ç›˜ç¼“å†²åŒº
 
 	while (1)
 	{
 		system("cls");
 		cout << "------------------" << endl;
-		cout << "-----1.°´ÊÖ»úºÅÅÅĞò-----" << endl;
-		cout << "-----2.°´ĞÕÃûÅÅĞò-----" << endl;
-		cout << "-----3.ÍË³ö±¾²Ëµ¥-----" << endl;
+		cout << "-----1.æŒ‰æ‰‹æœºå·æ’åº-----" << endl;
+		cout << "-----2.æŒ‰å§“åæ’åº-----" << endl;
+		cout << "-----3.é€€å‡ºæœ¬èœå•-----" << endl;
 		cout << "------------------" << endl;
-		cout << "ÇëÑ¡Ôñ×Ó²Ëµ¥ÊÖ»úºÅ:" << endl;
+		cout << "è¯·é€‰æ‹©å­èœå•æ‰‹æœºå·:" << endl;
 		cin >> key;
 		switch (key)
 		{
@@ -273,11 +273,11 @@ int Lxr::sort(Lxr* p)
 		}
 	}
 }
-//ÊµÏÖÒ»¸ö Ã°ÅİÅÅĞò,°´ÕÕÊÖ»úºÅË³ĞòÅÅĞò
+//å®ç°ä¸€ä¸ª å†’æ³¡æ’åº,æŒ‰ç…§æ‰‹æœºå·é¡ºåºæ’åº
 int Lxr::sortBytel(Lxr* p)
 {
 	Lxr temp;
-	for (int i = 0; i < Total - 1; i++)//Ã°ÅİÅÅĞò£¬°´ÕÕÆ´ÒôË³ĞòÅÅĞò
+	for (int i = 0; i < Total - 1; i++)//å†’æ³¡æ’åºï¼ŒæŒ‰ç…§æ‹¼éŸ³é¡ºåºæ’åº
 	{
 		int mint = i;
 		for (int j = i + 1; j < Total; j++)
@@ -289,16 +289,16 @@ int Lxr::sortBytel(Lxr* p)
 			temp = p[i]; p[i] = p[mint]; p[mint] = temp;
 		}
 	}
-	cout << "ÅÅĞòºó½á¹û£º" << endl;
+	cout << "æ’åºåç»“æœï¼š" << endl;
 	Showcontects(p);
 	//	saveInformation(p, N);
-	return 1;//ÅÅĞò³É¹¦·µ»Ø
+	return 1;//æ’åºæˆåŠŸè¿”å›
 }
-//ÊµÏÖÒ»¸ö Ã°ÅİÅÅĞò,°´ÕÕÆ´ÒôË³ĞòÅÅĞò
+//å®ç°ä¸€ä¸ª å†’æ³¡æ’åº,æŒ‰ç…§æ‹¼éŸ³é¡ºåºæ’åº
 int Lxr::sortByName(Lxr p[])
 {
 	Lxr temp;
-	for (int i = 0; i < Total - 1; i++)//Ã°ÅİÅÅĞò£¬°´ÕÕÆ´ÒôË³ĞòÅÅĞò
+	for (int i = 0; i < Total - 1; i++)//å†’æ³¡æ’åºï¼ŒæŒ‰ç…§æ‹¼éŸ³é¡ºåºæ’åº
 	{
 		int mint = i;
 		for (int j = i + 1; j < Total; j++)
@@ -310,17 +310,17 @@ int Lxr::sortByName(Lxr p[])
 			temp = p[i]; p[i] = p[mint]; p[mint] = temp;
 		}
 	}
-	cout << "ÅÅĞòºó½á¹û£º" << endl;
+	cout << "æ’åºåç»“æœï¼š" << endl;
 
 	Showcontects(p);
 	//	Save(p, N);
-	return 1;//ÅÅĞò³É¹¦·µ»Ø
+	return 1;//æ’åºæˆåŠŸè¿”å›
 }
 
 int main()
 {
 	int n;
-	Lxr Info[MAX];//´´½¨Í¨Ñ¶Â¼£»
+	Lxr Info[MAX];//åˆ›å»ºé€šè®¯å½•ï¼›
 	while (1)
 	{
 		system("cls");
@@ -328,28 +328,28 @@ int main()
 		cout << "Please input the service you need:" << endl;
 		cin >> n;
 		switch (n) {
-		case 1://1¡¢Ìí¼ÓÁªÏµÈË
+		case 1://1ã€æ·»åŠ è”ç³»äºº
 		{
 			if (confirmOperation() == 1)break;
 			Lxr::Add(Info);
 			break;
 		}
 
-		case 2: //2¡¢ÏÔÊ¾ÁªÏµÈË
+		case 2: //2ã€æ˜¾ç¤ºè”ç³»äºº
 		{
 			if (confirmOperation() == 1)break;
 			Lxr::Showcontects(Info);
 			break;
 		}
 
-		case 3://3¡¢É¾³ıÁªÏµÈË
+		case 3://3ã€åˆ é™¤è”ç³»äºº
 		{
 			if (confirmOperation() == 1)break;
 			Lxr::Delete(Info);
 			break;
 		}
 
-		case 4://4¡¢²éÕÒÁªÏµÈË
+		case 4://4ã€æŸ¥æ‰¾è”ç³»äºº
 		{
 			if (confirmOperation() == 1)break;
 			cout << "please input the name:" << endl;
@@ -359,7 +359,7 @@ int main()
 			if (f == -1)
 			{
 				cout << "Cannot find the target! Please check again!" << endl;
-				//°´ÈÎÒâ¼üÇåÆÁ£»
+				//æŒ‰ä»»æ„é”®æ¸…å±ï¼›
 				system("pause");
 				system("cls");
 				break;
@@ -367,13 +367,13 @@ int main()
 			Lxr::Showone(Info, f);
 			break;
 		}
-		case 5://5¡¢ĞŞ¸ÄÁªÏµÈË
+		case 5://5ã€ä¿®æ”¹è”ç³»äºº
 		{
 			if (confirmOperation() == 1)break;
 			Lxr::Modify(Info);
 			break;
 		}
-		case 6://6¡¢Çå¿ÕÁªÏµÈË
+		case 6://6ã€æ¸…ç©ºè”ç³»äºº
 		{
 			if (confirmOperation() == 1)break;
 			Lxr::Clearall(Info);
@@ -392,7 +392,7 @@ int main()
 		}
 		}
 		//		cout << "Please input the service you need:" << endl;
-//		Showmenu();//Èô²»ÍË³ö£¬ÔòÓÃ»§¿ÉÒÔÒ»Ö±ÔÚ¹¦ÄÜÑ¡Ôñ½çÃæ½øĞĞÑ¡Ôñ£»
+//		Showmenu();//è‹¥ä¸é€€å‡ºï¼Œåˆ™ç”¨æˆ·å¯ä»¥ä¸€ç›´åœ¨åŠŸèƒ½é€‰æ‹©ç•Œé¢è¿›è¡Œé€‰æ‹©ï¼›
 //		cin >> n;
 	}
 	//	if (n == 0)cout << "Thanks! Welcome to your use next time!" << endl;

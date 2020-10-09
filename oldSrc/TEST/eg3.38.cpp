@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<string>
 using namespace std;
 class Score {
@@ -18,9 +18,9 @@ Score::Score(float c, float e, float m)
 }
 void Score::show()
 {
-	cout << "\n¼ÆËã»ú³É¼¨£º" << computer;
-	cout << "\nÓ¢Óï³É¼¨£º" << english;
-	cout << "\nÊýÑ§³É¼¨£º" << mathematics;
+	cout << "\nè®¡ç®—æœºæˆç»©ï¼š" << computer;
+	cout << "\nè‹±è¯­æˆç»©ï¼š" << english;
+	cout << "\næ•°å­¦æˆç»©ï¼š" << mathematics;
 }
 class Student {
 private:
@@ -38,17 +38,17 @@ Student::Student(string name1, string stu_no1, float s1, float s2, float s3) :sc
 }
 void Student::show()
 {
-	cout << "\nÐÕÃû£º" << name;
-	cout << "\nÑ§ºÅ£º" << stu_no;
+	cout << "\nå§“åï¼š" << name;
+	cout << "\nå­¦å·ï¼š" << stu_no;
 	score1.show();
 }
 int main()
 {
-	Student stu1("ÀîÐ¡Ã÷", "990201", 90, 80, 70);
+	Student stu1("æŽå°æ˜Ž", "990201", 90, 80, 70);
 	stu1.show();
 
 	cout << endl;
-	Student stu2("ÕÅÓÀÉú", "990202", 95, 85, 75);
+	Student stu2("å¼ æ°¸ç”Ÿ", "990202", 95, 85, 75);
 	stu2.show();
 
 	return 0;

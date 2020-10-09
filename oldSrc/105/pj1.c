@@ -1,9 +1,9 @@
-#include<stdio.h>
+ï»¿#include<stdio.h>
 #include<stdlib.h>
-#define BUFFERSIZE 1024  /*ÔÊĞí´¦ÀíµÄ×î³¤ĞĞÓĞ1024¸ö×Ö·û*/
+#define BUFFERSIZE 1024  /*å…è®¸å¤„ç†çš„æœ€é•¿è¡Œæœ‰1024ä¸ªå­—ç¬¦*/
 int main()
 {
-	unsigned short a, b, sum;         /*½«ÊäÈëµÄÁ½¸öÊı·Ö±ğ´æ´¢ÔÚ±äÁ¿aºÍbÖĞ£¬sum=a+b*/
+	unsigned short a, b, sum;         /*å°†è¾“å…¥çš„ä¸¤ä¸ªæ•°åˆ†åˆ«å­˜å‚¨åœ¨å˜é‡aå’Œbä¸­ï¼Œsum=a+b*/
 	char buffer[BUFFERSIZE];
 	printf("***********************************\n");
 	printf("*  Welcome to use our counter     *\n");
@@ -11,14 +11,14 @@ int main()
 	printf("*  The sum will be printed        *\n");
 	printf("*  Input the char '#' to quit  s  *\n");
 	printf("***********************************\n");
-	/*´Ó±ê×¼ÊäÈë£¨stdin£©¶ÁÈ¡ÊäÈëµÄÊı¾İ£¬´æ´¢ÔÚbufferÖĞ.
-	Èç¹û¶ÁÈ¡µÄµÚÒ»¸ö×Ö·ûÊÇ'#'ÔòÍÆ³ö³ÌĞò*/
+	/*ä»æ ‡å‡†è¾“å…¥ï¼ˆstdinï¼‰è¯»å–è¾“å…¥çš„æ•°æ®ï¼Œå­˜å‚¨åœ¨bufferä¸­.
+	å¦‚æœè¯»å–çš„ç¬¬ä¸€ä¸ªå­—ç¬¦æ˜¯'#'åˆ™æ¨å‡ºç¨‹åº*/
 	while ((fgets(buffer, BUFFERSIZE, stdin) != NULL) && (buffer[0] != '#'))
 	{
-		if (sscanf(buffer, "%hd %hd", &a, &b) != 2)            /*´¦Àí´æ´¢ÔÚbufferÖĞµÄÒ»ĞĞÊı¾İ*/
+		if (sscanf(buffer, "%hd %hd", &a, &b) != 2)            /*å¤„ç†å­˜å‚¨åœ¨bufferä¸­çš„ä¸€è¡Œæ•°æ®*/
 			fprintf(stderr, "The input is skipped:%s", buffer);
-		sum = a + b;                                       /*¼ÆËãaÓëbµÄºÍ*/
-		printf("The sum of %d and %d is %d\n", a, b, sum);/*Êä³ö¼ÆËã½á¹û*/
+		sum = a + b;                                       /*è®¡ç®—aä¸bçš„å’Œ*/
+		printf("The sum of %d and %d is %d\n", a, b, sum);/*è¾“å‡ºè®¡ç®—ç»“æœ*/
 	}
 	return 0;
 }

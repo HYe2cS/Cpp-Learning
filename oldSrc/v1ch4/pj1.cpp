@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 using namespace std;
 class Base {
 public:
@@ -7,14 +7,14 @@ private:   int a;
 };
 class  Base1 : virtual public Base {
 public:
-	Base1(int sa, int sb) :Base(sa) {//±ØĞë×ºÉÏ¶ÔÀàBase¹¹Ôìº¯ÊıµÄµ÷ÓÃ
+	Base1(int sa, int sb) :Base(sa) {//å¿…é¡»ç¼€ä¸Šå¯¹ç±»Baseæ„é€ å‡½æ•°çš„è°ƒç”¨
 		b = sb; cout << "Constructing Base1" << endl;
 	}
 private:   int b;
 };
 class Base2 : virtual public Base {
 public:
-	Base2(int sa, int sc) :Base(sa) {//±ØĞë×ºÉÏ¶ÔÀàBase¹¹Ôìº¯ÊıµÄµ÷ÓÃ
+	Base2(int sa, int sc) :Base(sa) {//å¿…é¡»ç¼€ä¸Šå¯¹ç±»Baseæ„é€ å‡½æ•°çš„è°ƒç”¨
 		c = sc; cout << "Constructing Base2" << endl;
 	}
 private:  int c;

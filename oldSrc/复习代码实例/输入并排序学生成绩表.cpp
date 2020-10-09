@@ -1,6 +1,6 @@
-/*
-2¡¢Ò»¸ö½á¹¹ÌåÀàĞÍÎªstruct student£¬ËüµÄ³ÉÔ±Îªchar name[20],int score¡£
-±à³Ì¿ÉÊäÈëÒ»¸ö°àµÄÑ§ÉúĞÕÃûºÍ³É¼¨[°à¼¶µÄÈËÊı²»¶¨]£¬²¢°´³É¼¨¸ßµ½µÍÅÅĞòÊä³ö¡£
+ï»¿/*
+2ã€ä¸€ä¸ªç»“æ„ä½“ç±»å‹ä¸ºstruct studentï¼Œå®ƒçš„æˆå‘˜ä¸ºchar name[20],int scoreã€‚
+ç¼–ç¨‹å¯è¾“å…¥ä¸€ä¸ªç­çš„å­¦ç”Ÿå§“åå’Œæˆç»©[ç­çº§çš„äººæ•°ä¸å®š]ï¼Œå¹¶æŒ‰æˆç»©é«˜åˆ°ä½æ’åºè¾“å‡ºã€‚
 */
 #include<stdio.h>
 struct student {
@@ -19,7 +19,7 @@ void output(struct student* s, int n)
 	*/
 	fp = fopen("stu.txt", "w");
 	struct student* p;
-	printf("Êä³öÑ§ÉúĞÕÃû¡¢³É¼¨µ½ÎÄ±¾ÎÄ¼ş\n");
+	printf("è¾“å‡ºå­¦ç”Ÿå§“åã€æˆç»©åˆ°æ–‡æœ¬æ–‡ä»¶\n");
 	for (p = s; p < s + n; p++)
 		fprintf(fp, "%9s%5d\n", p->name, p->score);
 	fclose(fp);
@@ -27,10 +27,10 @@ void output(struct student* s, int n)
 int main()
 {
 	int n, i, j, max;
-	printf("ÇëÊäÈë°à¼¶µÄÈËÊı£º");
+	printf("è¯·è¾“å…¥ç­çº§çš„äººæ•°ï¼š");
 	scanf("%d", &n);
 	struct student stu[n], t;
-	printf("ÇëÊäÈëÑ§ÉúµÄĞÕÃûºÍ³É¼¨£º\n");
+	printf("è¯·è¾“å…¥å­¦ç”Ÿçš„å§“åå’Œæˆç»©ï¼š\n");
 	//inpout
 	for (i = 0; i < n; i++)
 	{

@@ -1,7 +1,7 @@
-#include<stdio.h>
+ï»¿#include<stdio.h>
 
-int remainder[101], quotient[101];    /*remainder:´æ·Å³ı·¨µÄÓàÊı£» quotie
-nt:ÒÀ´Î´æ·ÅÉÌµÄÃ¿Ò»Î»*/
+int remainder[101], quotient[101];    /*remainder:å­˜æ”¾é™¤æ³•çš„ä½™æ•°ï¼› quotie
+nt:ä¾æ¬¡å­˜æ”¾å•†çš„æ¯ä¸€ä½*/
 
 main()
 
@@ -10,44 +10,44 @@ main()
 
 	printf("Please input a fraction(m/n)(<0<m<n<=100):");
 
-	scanf("%d/%d", &m, &n);      /*ÊäÈë±»³ıÊıºÍ³ıÊı*/
+	scanf("%d/%d", &m, &n);      /*è¾“å…¥è¢«é™¤æ•°å’Œé™¤æ•°*/
 
 	printf("%d/%d it's accuracy value is:0.", m, n);
 
-	for (i = 1; i <= 100; i++)             /*i: ÉÌµÄÎ»Êı*/
+	for (i = 1; i <= 100; i++)             /*i: å•†çš„ä½æ•°*/
 
 	{
-		remainder[m] = i;       /*m:³ıµÄÓàÊı remainder[m]:¸ÃÓàÊı¶ÔÓ¦µÄÉÌµÄ
-Î»Êı*/
+		remainder[m] = i;       /*m:é™¤çš„ä½™æ•° remainder[m]:è¯¥ä½™æ•°å¯¹åº”çš„å•†çš„
+ä½æ•°*/
 
-		m *= 10;                /*ÓàÊıÀ©´ó10Î»*/
+		m *= 10;                /*ä½™æ•°æ‰©å¤§10ä½*/
 
-		quotient[i] = m / n;      /*ÉÌ*/
+		quotient[i] = m / n;      /*å•†*/
 
-		m = m % n;                /*ÇóÓàÊı*/
+		m = m % n;                /*æ±‚ä½™æ•°*/
 
-		if (m == 0)              /*ÓàÊıÎª0 Ôò±íÊ¾ÊÇÓĞÏŞĞ¡Êı*/
+		if (m == 0)              /*ä½™æ•°ä¸º0 åˆ™è¡¨ç¤ºæ˜¯æœ‰é™å°æ•°*/
 
 		{
-			for (j = 1; j <= 1; j++) printf("%d", quotient[j]);    /*Êä³öÉÌ*/
+			for (j = 1; j <= 1; j++) printf("%d", quotient[j]);    /*è¾“å‡ºå•†*/
 
-			break;             /*ÍË³öÑ­»·*/
+			break;             /*é€€å‡ºå¾ªç¯*/
 		}
 
-		if (remainder[m] != 0)     /*Èô¸ÃÓàÊı¶ÔÓ¦µÄÎ»ÔÚÇ°ÃæÒÑ¾­³öÏÖ¹ı*/
+		if (remainder[m] != 0)     /*è‹¥è¯¥ä½™æ•°å¯¹åº”çš„ä½åœ¨å‰é¢å·²ç»å‡ºç°è¿‡*/
 
 		{
-			for (j = 1; j <= i; j++) printf("%d", quotient[j]);   /*ÔòÊä³öÑ­»·Ğ¡
-Êı*/
+			for (j = 1; j <= i; j++) printf("%d", quotient[j]);   /*åˆ™è¾“å‡ºå¾ªç¯å°
+æ•°*/
 
 			printf("\n\tand it is a infinite cyclic fraction from %d\n",
 				remainder[m]);
 
 			printf("\tdigit to %d digit after decimal point.\n", i);
 
-			/*Êä³öÑ­»·½ÚµÄÎ»ÖÃ*/
+			/*è¾“å‡ºå¾ªç¯èŠ‚çš„ä½ç½®*/
 
-			break;                /*ÍË³ö*/
+			break;                /*é€€å‡º*/
 		}
 	}
 }

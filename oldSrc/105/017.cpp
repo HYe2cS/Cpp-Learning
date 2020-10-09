@@ -1,7 +1,7 @@
-#include<stdio.h>
+ï»¿#include<stdio.h>
 
-#define NUM 10/* ¶¨ÒåÎïÆ·×ÜÊı*/
-#define CONTENT 10 /*¶¨Òå°üµÄÈİÁ¿*/
+#define NUM 10/* å®šä¹‰ç‰©å“æ€»æ•°*/
+#define CONTENT 10 /*å®šä¹‰åŒ…çš„å®¹é‡*/
 void knapsack(int v[NUM], int w[NUM], int c, int m[NUM][CONTENT])
 {
 	int n = NUM - 1;
@@ -11,12 +11,12 @@ void knapsack(int v[NUM], int w[NUM], int c, int m[NUM][CONTENT])
 		jMax = w[n] - 1;
 	else
 		jMax = c;
-	/* ³õÊ¼»¯m[n][j] */
+	/* åˆå§‹åŒ–m[n][j] */
 	for (j = 0; j <= jMax; j++)
 		m[n][j] = 0;
 	for (j = jMax + 1; j <= c; j++)
 		m[n][j] = v[n];
-	/*Ê¹ÓÃ·Çµİ¹éµÄËã·¨À´Çó½âm[i][j] */
+	/*ä½¿ç”¨éé€’å½’çš„ç®—æ³•æ¥æ±‚è§£m[i][j] */
 	for (i = n - 1; i > 0; i--)
 	{
 		if ((w[i] - 1) < c)
@@ -43,7 +43,7 @@ void knapsack(int v[NUM], int w[NUM], int c, int m[NUM][CONTENT])
 	else
 		m[0][c] = m[1][c];
 }
-/*Ñ°ÕÒ×îÓÅ½â*/
+/*å¯»æ‰¾æœ€ä¼˜è§£*/
 void traceback(int flag[NUM], int w[NUM], int m[NUM][CONTENT])
 {
 	int n = NUM - 1;
@@ -64,7 +64,7 @@ void traceback(int flag[NUM], int w[NUM], int m[NUM][CONTENT])
 	else
 		flag[n] = 0;
 }
-/* ´òÓ¡×îÓÅ½â*/
+/* æ‰“å°æœ€ä¼˜è§£*/
 void printResult(int flag[NUM], int w[NUM], int v[NUM], int m[NUM][CONTENT])
 {
 	int i;
@@ -89,11 +89,11 @@ int main()
 	printf("*      this program will solve         *\n");
 	printf("*    the problem of 0-1knapsack        *\n");
 	printf("****************************************\n");
-	/*¼ÆËã×îÓÅÖµ*/
+	/*è®¡ç®—æœ€ä¼˜å€¼*/
 	knapsack(value, weight, c, maxvalue);
-	/*¹¹Ôì×îÓÅ½â*/
+	/*æ„é€ æœ€ä¼˜è§£*/
 	traceback(flag, weight, maxvalue);
-	/*´òÓ¡³ÌĞòµÄ½á¹û*/
+	/*æ‰“å°ç¨‹åºçš„ç»“æœ*/
 	printResult(flag, weight, value, maxvalue);
 	getchar();
 	return 0;

@@ -1,19 +1,19 @@
-#include<stdio.h>
+ï»¿#include<stdio.h>
 main()
 {
 	int i, num1, num2, temp;
 	printf("The fraction serials with demominator 40 is:\n");
-	for (i = 1; i <= 40; i++)                     /*Çî¾Ù40ÒÔÄÚµÄÈ«²¿·Ö×Ó*/
+	for (i = 1; i <= 40; i++)                     /*ç©·ä¸¾40ä»¥å†…çš„å…¨éƒ¨åˆ†å­*/
 	{
 		num1 = 40;
 		num2 = i;
-		while (num2 != 0)              /*²ÉÓÃÕ·×ªÏà³ý·¨Çó³ö×î´ó¹«Ô¼Êý*/
+		while (num2 != 0)              /*é‡‡ç”¨è¾—è½¬ç›¸é™¤æ³•æ±‚å‡ºæœ€å¤§å…¬çº¦æ•°*/
 		{
 			temp = num1 % num2;
 			num1 = num2;
 			num2 = temp;
 		}
-		if (num1 == 1)           /*Èô×î´ó¹«Ô¼ÊýÎª1£¬ÔòÎª×î¼òÕæ·ÖÊý*/
+		if (num1 == 1)           /*è‹¥æœ€å¤§å…¬çº¦æ•°ä¸º1ï¼Œåˆ™ä¸ºæœ€ç®€çœŸåˆ†æ•°*/
 			printf("%d/40  ", i);
 	}
 }

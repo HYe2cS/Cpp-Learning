@@ -1,4 +1,4 @@
-/*£¨1£©ÉùÃ÷PointÀà£¬ÓĞ×ø±êx¡¢yÁ½¸ö³ÉÔ±±äÁ¿£»¶ÔÀàÖØÔØ++ºÍ--ÔËËã·û£¬ÊµÏÖ×ø±êÖµµÄ¸Ä±ä¡£*/
+ï»¿/*ï¼ˆ1ï¼‰å£°æ˜Pointç±»ï¼Œæœ‰åæ ‡xã€yä¸¤ä¸ªæˆå‘˜å˜é‡ï¼›å¯¹ç±»é‡è½½++å’Œ--è¿ç®—ç¬¦ï¼Œå®ç°åæ ‡å€¼çš„æ”¹å˜ã€‚*/
 #include<iostream>
 using  namespace std;
 class Point {
@@ -8,7 +8,7 @@ private:
 public:
 	Point(float a = 0, float b = 0);
 	void print();
-	//ÓÑÔªÔËËã·ûÖØÔØ ,Ç°×º·½Ê½++a
+	//å‹å…ƒè¿ç®—ç¬¦é‡è½½ ,å‰ç¼€æ–¹å¼++a
 	friend Point operator++(Point& a);
 	friend Point operator--(Point& a);
 };

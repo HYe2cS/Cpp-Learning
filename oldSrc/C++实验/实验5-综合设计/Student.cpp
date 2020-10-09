@@ -1,8 +1,8 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<string>
 #include<fstream>
 #include<io.h>
-//ÕÅÔª½Ú£ºÅÅĞò£¬²éÕÒ preTopº¯Êı printInforº¯Êı ,StudentÀà³ÉÔ±¼°Ö÷º¯ÊıµÄÊéĞ´¹æ·¶ÖÆ¶¨
+//å¼ å…ƒèŠ‚ï¼šæ’åºï¼ŒæŸ¥æ‰¾ preTopå‡½æ•° printInforå‡½æ•° ,Studentç±»æˆå‘˜åŠä¸»å‡½æ•°çš„ä¹¦å†™è§„èŒƒåˆ¶å®š
 using namespace std;
 class Date {
 public:
@@ -27,44 +27,44 @@ void Date::set(int y, int m, int d)
 }
 void Date::show()
 {
-	cout << year << "Äê" << month << "ÔÂ" << day << "ÈÕ";
+	cout << year << "å¹´" << month << "æœˆ" << day << "æ—¥";
 }
 class Student {
 public:
 	Student(int y = 2000, int m = 00, int d = 00,
-		string name = "ÕÅÈı",
+		string name = "å¼ ä¸‰",
 		string id = "340321200000000000",
 		string number = "20000000000",
-		string sex = "ÄĞ",
+		string sex = "ç”·",
 		float chinese = 0,
 		float math = 0,
 		float english = 0);
 	void set(int y = 2000, int m = 00, int d = 00,
-		string name = "ÕÅÈı",
+		string name = "å¼ ä¸‰",
 		string id = "340321200000000000",
 		string number = "20000000000",
-		string sex = "ÄĞ",
+		string sex = "ç”·",
 		float chinese = 0,
 		float math = 0,
 		float english = 0);
 	void show();
 
-	//ÊµÏÖÒ»¸ö¶ÁÈ¡ÎÄ¼ş±£´æº¯Êı,
+	//å®ç°ä¸€ä¸ªè¯»å–æ–‡ä»¶ä¿å­˜å‡½æ•°,
 	static void readInformation(Student stu[], int& N);
 	static void saveInformation(Student stu[], int& N);
 	static void preMenu();
-	static void preTop();//Êä³öÊ±µÄ½çÃæÍ·²¿
+	static void preTop();//è¾“å‡ºæ—¶çš„ç•Œé¢å¤´éƒ¨
 
-	//ÊµÏÖÒ»¸ö¶ÔÊı×éµÄÌí¼Ó(add)Êä³ö(printInfor)º¯Êı
+	//å®ç°ä¸€ä¸ªå¯¹æ•°ç»„çš„æ·»åŠ (add)è¾“å‡º(printInfor)å‡½æ•°
 	static void addInfor(Student stu[], int& N);
 	static void printInfor(Student stu[], int N);
 
-	//ÊµÏÖÒ»¸ö Ã°ÅİÅÅĞò,·Ö±ğ°´ÕÕÑ§ºÅ¡¢ĞÕÃûºÍ¸öÈËÆ½¾ù·ÖË³ĞòÅÅĞò
+	//å®ç°ä¸€ä¸ª å†’æ³¡æ’åº,åˆ†åˆ«æŒ‰ç…§å­¦å·ã€å§“åå’Œä¸ªäººå¹³å‡åˆ†é¡ºåºæ’åº
 	static int sort(Student stu[], int& N);
 	static int sortByNumber(Student stu[], int& N);
 	static int sortByName(Student stu[], int& N);
 
-	//ÊµÏÖÒ»¸ö¶ÔÊı×éµÄ²éÕÒº¯Êı
+	//å®ç°ä¸€ä¸ªå¯¹æ•°ç»„çš„æŸ¥æ‰¾å‡½æ•°
 	static int search(Student stu[], int N);
 	static int searchByNumber(Student stu[], int N);
 	static int searchByName(Student stu[], int N);
@@ -73,14 +73,14 @@ public:
 	static int del(Student stu[], int& N);
 
 private:
-	Date birthday;//ÉúÈÕ
-	string name;//ĞÕÃû
-	string id;//Éí·İÖ¤ºÅ
-	string number; //Ñ§ºÅ
-	string sex;//ĞÔ±ğ
-	float chinese;//ÓïÎÄ³É¼¨
-	float math;//ÊıÑ§³É¼¨
-	float english;//Ó¢Óï³É¼¨
+	Date birthday;//ç”Ÿæ—¥
+	string name;//å§“å
+	string id;//èº«ä»½è¯å·
+	string number; //å­¦å·
+	string sex;//æ€§åˆ«
+	float chinese;//è¯­æ–‡æˆç»©
+	float math;//æ•°å­¦æˆç»©
+	float english;//è‹±è¯­æˆç»©
 };
 Student::Student(int y, int m, int d,
 	string name,
@@ -131,54 +131,54 @@ void Student::show()
 }
 inline void Student::preTop()
 {
-	cout << "ĞÕÃû\t"
-		<< "Éí·İÖ¤ºÅ\t\t"
-		<< "Ñ§ºÅ\t\t"
-		<< "³öÉúÄêÔÂÈÕ\t"
-		<< "ĞÔ±ğ\t"
-		<< "ÓïÎÄ\t"
-		<< "ÊıÑ§\t"
-		<< "Ó¢Óï" << endl;
+	cout << "å§“å\t"
+		<< "èº«ä»½è¯å·\t\t"
+		<< "å­¦å·\t\t"
+		<< "å‡ºç”Ÿå¹´æœˆæ—¥\t"
+		<< "æ€§åˆ«\t"
+		<< "è¯­æ–‡\t"
+		<< "æ•°å­¦\t"
+		<< "è‹±è¯­" << endl;
 }
 
 inline void Student::preMenu()
 {
-	cout << "                   »¶Ó­Ê¹ÓÃÑ§ÉúĞÅÏ¢¹ÜÀíÏµÍ³" << endl;
+	cout << "                   æ¬¢è¿ä½¿ç”¨å­¦ç”Ÿä¿¡æ¯ç®¡ç†ç³»ç»Ÿ" << endl;
 	cout << "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" << endl;
-	cout << "                       1.ÏÔÊ¾Ñ§ÉúĞÅÏ¢" << endl;
-	cout << "                       2.Ìí¼ÓÑ§ÉúĞÅÏ¢" << endl;
-	cout << "                       3.É¾³ıÑ§ÉúĞÅÏ¢" << endl;
-	cout << "                       4.²éÑ¯Ñ§ÉúĞÅÏ¢" << endl;
-	cout << "                       5.ĞŞ¸ÄÑ§ÉúĞÅÏ¢" << endl;
-	cout << "                       6.ÅÅĞòÑ§ÉúĞÅÏ¢" << endl;
-	cout << "                       7.ÍË³öÏµÍ³" << endl;
+	cout << "                       1.æ˜¾ç¤ºå­¦ç”Ÿä¿¡æ¯" << endl;
+	cout << "                       2.æ·»åŠ å­¦ç”Ÿä¿¡æ¯" << endl;
+	cout << "                       3.åˆ é™¤å­¦ç”Ÿä¿¡æ¯" << endl;
+	cout << "                       4.æŸ¥è¯¢å­¦ç”Ÿä¿¡æ¯" << endl;
+	cout << "                       5.ä¿®æ”¹å­¦ç”Ÿä¿¡æ¯" << endl;
+	cout << "                       6.æ’åºå­¦ç”Ÿä¿¡æ¯" << endl;
+	cout << "                       7.é€€å‡ºç³»ç»Ÿ" << endl;
 	cout << "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" << endl;
-	cout << "ÇëÑ¡Ôñ:" << endl;
+	cout << "è¯·é€‰æ‹©:" << endl;
 }
 
-void Student::readInformation(Student stu[], int& N)//Ã»Íê³É
+void Student::readInformation(Student stu[], int& N)//æ²¡å®Œæˆ
 {
 	char dir[] = { "TEST.txt" };
-	if (_access(dir, 0) == -1) {//Èç¹ûÃ»ÓĞÎÄ¼ş,´´½¨ÎÄ¼ş
+	if (_access(dir, 0) == -1) {//å¦‚æœæ²¡æœ‰æ–‡ä»¶,åˆ›å»ºæ–‡ä»¶
 		fstream iofile(dir, ios::out);
 		if (!iofile)
 		{
-			cout << "´´½¨ÎÄ¼şÊ§°Ü£¡" << "TEST.txt" << endl;
-			exit(1);//Ê§°ÜÍË»Ø²Ù×÷ÏµÍ³
+			cout << "åˆ›å»ºæ–‡ä»¶å¤±è´¥ï¼" << "TEST.txt" << endl;
+			exit(1);//å¤±è´¥é€€å›æ“ä½œç³»ç»Ÿ
 		}
 		iofile << 0;
 		N = 0;
 		iofile.close();
 	}
-	else {//´ò¿ªÎÄ¼ş
+	else {//æ‰“å¼€æ–‡ä»¶
 		fstream iofile(dir, ios::in);
-		if (!iofile)//Èç¹û²»ÄÜ´ò¿ª
+		if (!iofile)//å¦‚æœä¸èƒ½æ‰“å¼€
 		{
-			cout << "²»ÄÜ´ò¿ª" << endl;
-			exit(1);//Ê§°ÜÍË»Ø²Ù×÷ÏµÍ³
+			cout << "ä¸èƒ½æ‰“å¼€" << endl;
+			exit(1);//å¤±è´¥é€€å›æ“ä½œç³»ç»Ÿ
 		}
-		iofile >> N; //ÊÔÍ¼È¥¶ÁÒ»¸ö×Ö·û
-		while (!iofile.eof()) //±íÊ¾ÎÄ¼ş²»Îª¿Õ
+		iofile >> N; //è¯•å›¾å»è¯»ä¸€ä¸ªå­—ç¬¦
+		while (!iofile.eof()) //è¡¨ç¤ºæ–‡ä»¶ä¸ä¸ºç©º
 		{
 			if (!N) {
 				N = 0; break;
@@ -203,13 +203,13 @@ void Student::readInformation(Student stu[], int& N)//Ã»Íê³É
 	}
 }
 
-void Student::saveInformation(Student stu[], int& N)//Ã»Íê³É
+void Student::saveInformation(Student stu[], int& N)//æ²¡å®Œæˆ
 {
 	fstream iofile("TEST.txt", ios::out);
 	if (!iofile)
 	{
-		cout << "´ò¿ªÎÄ¼şÊ§°Ü£¡" << "TEST.txt" << endl;
-		exit(1);//Ê§°ÜÍË»Ø²Ù×÷ÏµÍ³
+		cout << "æ‰“å¼€æ–‡ä»¶å¤±è´¥ï¼" << "TEST.txt" << endl;
+		exit(1);//å¤±è´¥é€€å›æ“ä½œç³»ç»Ÿ
 	}
 	iofile << N;
 	for (int i = 0; i < N; i++)
@@ -228,55 +228,55 @@ void Student::saveInformation(Student stu[], int& N)//Ã»Íê³É
 	iofile.close();
 }
 
-//ÊµÏÖÒ»¸ö¶ÔÊı×éµÄÌí¼Ó(add)º¯Êı
+//å®ç°ä¸€ä¸ªå¯¹æ•°ç»„çš„æ·»åŠ (add)å‡½æ•°
 void Student::addInfor(Student stu[], int& N)
 {
 	int k;
-	int j = 1;//´¢´æµÚ¶àÉÙÎ»ĞÅÏ¢
+	int j = 1;//å‚¨å­˜ç¬¬å¤šå°‘ä½ä¿¡æ¯
 
 	int year;
 	int month;
 	int day;
-	string name;//ĞÕÃû
-	string id;//Éí·İÖ¤ºÅ
-	string number; //Ñ§ºÅ
-	string sex;//ĞÔ±ğ
-	float chinese;//ÓïÎÄ³É¼¨
-	float math;//ÊıÑ§³É¼¨
-	float english;//Ó¢Óï³É¼¨
+	string name;//å§“å
+	string id;//èº«ä»½è¯å·
+	string number; //å­¦å·
+	string sex;//æ€§åˆ«
+	float chinese;//è¯­æ–‡æˆç»©
+	float math;//æ•°å­¦æˆç»©
+	float english;//è‹±è¯­æˆç»©
 
-	cout << "ÒªÌí¼ÓµÄÈËÊı(ÕûÊı)£º";
-	while (getchar() != '\n');                     //Çå¿Õ¼üÅÌ»º³åÇø
-	cin >> k;//ÊäÈëÊı¾İ
+	cout << "è¦æ·»åŠ çš„äººæ•°(æ•´æ•°)ï¼š";
+	while (getchar() != '\n');                     //æ¸…ç©ºé”®ç›˜ç¼“å†²åŒº
+	cin >> k;//è¾“å…¥æ•°æ®
 	for (int i = N; i < N + k; i++)
 	{
-		cout << "ÇëÊäÈëµÚ" << j << "Î»ÈËÔ±ĞÅÏ¢£º" << endl;
+		cout << "è¯·è¾“å…¥ç¬¬" << j << "ä½äººå‘˜ä¿¡æ¯ï¼š" << endl;
 		j++;
-		cout << "ĞÕÃû£º";
+		cout << "å§“åï¼š";
 		cin >> name;
-		cout << "Éí·İÖ¤ºÅ£º";
+		cout << "èº«ä»½è¯å·ï¼š";
 		cin >> id;
-		cout << "Ñ§ºÅ£º";
+		cout << "å­¦å·ï¼š";
 		cin >> number;
-		cout << "³öÉúÄêÔÂÈÕ£º";
+		cout << "å‡ºç”Ÿå¹´æœˆæ—¥ï¼š";
 		cin >> year >> month >> day;
-		cout << "ĞÔ±ğ£º";
+		cout << "æ€§åˆ«ï¼š";
 		cin >> sex;
-		cout << "ÓïÎÄ£º";
+		cout << "è¯­æ–‡ï¼š";
 		cin >> chinese;
-		cout << "ÊıÑ§£º";
+		cout << "æ•°å­¦ï¼š";
 		cin >> math;
-		cout << "Ó¢Óï£º";
+		cout << "è‹±è¯­ï¼š";
 		cin >> english;
 		stu[i].set(year, month, day, name, id, number, sex, chinese, math, english);
-		cout << "µÚ" << j << "Î»ÈËÔ±ĞÅÏ¢:" << endl;
+		cout << "ç¬¬" << j << "ä½äººå‘˜ä¿¡æ¯:" << endl;
 		preTop();
 		stu[i].show();
 	}
 	N = N + k;
 	saveInformation(stu, N);
 }
-//ÊµÏÖÒ»¸ö¶ÔÊı×éµÄÊä³ö(printInfor)º¯Êı
+//å®ç°ä¸€ä¸ªå¯¹æ•°ç»„çš„è¾“å‡º(printInfor)å‡½æ•°
 void Student::printInfor(Student stu[], int N)
 {
 	if (N)preTop();
@@ -285,24 +285,24 @@ void Student::printInfor(Student stu[], int N)
 		stu[i].show();
 	}
 
-	cout << "È«²¿Êä³öÍê³É!" << endl;
+	cout << "å…¨éƒ¨è¾“å‡ºå®Œæˆ!" << endl;
 	system("pause");
 }
-//ÊµÏÖÒ»¸ö Ã°ÅİÅÅĞò(Ä¿Â¼)
+//å®ç°ä¸€ä¸ª å†’æ³¡æ’åº(ç›®å½•)
 int Student::sort(Student stu[], int& N)
 {
-	int key;//¼üÅÌÊäÈë²Ù×÷ºÅ
-	while (getchar() != '\n');                     //Çå¿Õ¼üÅÌ»º³åÇø
+	int key;//é”®ç›˜è¾“å…¥æ“ä½œå·
+	while (getchar() != '\n');                     //æ¸…ç©ºé”®ç›˜ç¼“å†²åŒº
 
 	while (1)
 	{
 		system("cls");
 		cout << "------------------" << endl;
-		cout << "-----1.°´Ñ§ºÅÅÅĞò-----" << endl;
-		cout << "-----2.°´ĞÕÃûÅÅĞò-----" << endl;
-		cout << "-----3.ÍË³ö±¾²Ëµ¥-----" << endl;
+		cout << "-----1.æŒ‰å­¦å·æ’åº-----" << endl;
+		cout << "-----2.æŒ‰å§“åæ’åº-----" << endl;
+		cout << "-----3.é€€å‡ºæœ¬èœå•-----" << endl;
 		cout << "------------------" << endl;
-		cout << "ÇëÑ¡Ôñ×Ó²Ëµ¥Ñ§ºÅ:" << endl;
+		cout << "è¯·é€‰æ‹©å­èœå•å­¦å·:" << endl;
 		cin >> key;
 		switch (key)
 		{
@@ -313,11 +313,11 @@ int Student::sort(Student stu[], int& N)
 		}
 	}
 }
-//ÊµÏÖÒ»¸ö Ã°ÅİÅÅĞò,°´ÕÕÑ§ºÅË³ĞòÅÅĞò
+//å®ç°ä¸€ä¸ª å†’æ³¡æ’åº,æŒ‰ç…§å­¦å·é¡ºåºæ’åº
 int Student::sortByNumber(Student stu[], int& N)
 {
 	Student temp;
-	for (int i = 0; i < N - 1; i++)//Ã°ÅİÅÅĞò£¬°´ÕÕÆ´ÒôË³ĞòÅÅĞò
+	for (int i = 0; i < N - 1; i++)//å†’æ³¡æ’åºï¼ŒæŒ‰ç…§æ‹¼éŸ³é¡ºåºæ’åº
 	{
 		int mint = i;
 		for (int j = i + 1; j < N; j++)
@@ -329,17 +329,17 @@ int Student::sortByNumber(Student stu[], int& N)
 			temp = stu[i]; stu[i] = stu[mint]; stu[mint] = temp;
 		}
 	}
-	cout << "ÅÅĞòºó½á¹û£º" << endl;
+	cout << "æ’åºåç»“æœï¼š" << endl;
 	//	preTop();
 	printInfor(stu, N);
 	saveInformation(stu, N);
-	return 1;//ÅÅĞò³É¹¦·µ»Ø
+	return 1;//æ’åºæˆåŠŸè¿”å›
 }
-//ÊµÏÖÒ»¸ö Ã°ÅİÅÅĞò,°´ÕÕÆ´ÒôË³ĞòÅÅĞò
+//å®ç°ä¸€ä¸ª å†’æ³¡æ’åº,æŒ‰ç…§æ‹¼éŸ³é¡ºåºæ’åº
 int Student::sortByName(Student stu[], int& N)
 {
 	Student temp;
-	for (int i = 0; i < N - 1; i++)//Ã°ÅİÅÅĞò£¬°´ÕÕÆ´ÒôË³ĞòÅÅĞò
+	for (int i = 0; i < N - 1; i++)//å†’æ³¡æ’åºï¼ŒæŒ‰ç…§æ‹¼éŸ³é¡ºåºæ’åº
 	{
 		int mint = i;
 		for (int j = i + 1; j < N; j++)
@@ -351,45 +351,45 @@ int Student::sortByName(Student stu[], int& N)
 			temp = stu[i]; stu[i] = stu[mint]; stu[mint] = temp;
 		}
 	}
-	cout << "ÅÅĞòºó½á¹û£º" << endl;
+	cout << "æ’åºåç»“æœï¼š" << endl;
 	//	preTop();
 	printInfor(stu, N);
 	saveInformation(stu, N);
-	return 1;//ÅÅĞò³É¹¦·µ»Ø
+	return 1;//æ’åºæˆåŠŸè¿”å›
 }
 
-//ÊµÏÖÒ»¸ö¶ÔÊı×éµÄ²éÕÒº¯Êı(Ä¿Â¼)
+//å®ç°ä¸€ä¸ªå¯¹æ•°ç»„çš„æŸ¥æ‰¾å‡½æ•°(ç›®å½•)
 int Student::search(Student stu[], int N)
 {
-	int key;//¼üÅÌÊäÈë²Ù×÷ºÅ
-	while (getchar() != '\n');                     //Çå¿Õ¼üÅÌ»º³åÇø
+	int key;//é”®ç›˜è¾“å…¥æ“ä½œå·
+	while (getchar() != '\n');                     //æ¸…ç©ºé”®ç›˜ç¼“å†²åŒº
 
 	while (1)
 	{
 		system("cls");
 		cout << "------------------" << endl;
-		cout << "-----1.°´Ñ§ºÅ²éÑ¯-----" << endl;
-		cout << "-----2.°´ĞÕÃû²éÑ¯-----" << endl;
-		cout << "-----3.ÍË³ö±¾²Ëµ¥-----" << endl;
+		cout << "-----1.æŒ‰å­¦å·æŸ¥è¯¢-----" << endl;
+		cout << "-----2.æŒ‰å§“åæŸ¥è¯¢-----" << endl;
+		cout << "-----3.é€€å‡ºæœ¬èœå•-----" << endl;
 		cout << "------------------" << endl;
-		cout << "ÇëÑ¡Ôñ×Ó²Ëµ¥Ñ§ºÅ:" << endl;
+		cout << "è¯·é€‰æ‹©å­èœå•å­¦å·:" << endl;
 		cin >> key;
 		switch (key)
 		{
-		case 1:cout << "ÇëÊäÈëÒª²éÕÒÑ§ÉúµÄÑ§ºÅ:" << endl; searchByNumber(stu, N); break;
-		case 2:cout << "ÇëÊäÈëÒª²éÕÒÑ§ÉúµÄĞÕÃû£º" << endl; searchByName(stu, N); break;
+		case 1:cout << "è¯·è¾“å…¥è¦æŸ¥æ‰¾å­¦ç”Ÿçš„å­¦å·:" << endl; searchByNumber(stu, N); break;
+		case 2:cout << "è¯·è¾“å…¥è¦æŸ¥æ‰¾å­¦ç”Ÿçš„å§“åï¼š" << endl; searchByName(stu, N); break;
 		case 3:return 0;
 		default:break;
 		}
 	}
 }
 
-//ÊµÏÖÒ»¸ö¶ÔÊı×éµÄ²éÕÒº¯Êı(Í¨¹ıÑ§ºÅ)
+//å®ç°ä¸€ä¸ªå¯¹æ•°ç»„çš„æŸ¥æ‰¾å‡½æ•°(é€šè¿‡å­¦å·)
 int Student::searchByNumber(Student stu[], int N)
 {
-	string number;//¼üÅÌÊäÈëĞÕÃû
-	int result;//·µ»ØËÑË÷½á¹û
-	while (getchar() != '\n');                     //Çå¿Õ¼üÅÌ»º³åÇø
+	string number;//é”®ç›˜è¾“å…¥å§“å
+	int result;//è¿”å›æœç´¢ç»“æœ
+	while (getchar() != '\n');                     //æ¸…ç©ºé”®ç›˜ç¼“å†²åŒº
 	cin >> number;
 	result = -1;
 	for (int i = 0; i < N; i++)
@@ -402,27 +402,27 @@ int Student::searchByNumber(Student stu[], int N)
 	}
 
 	if (result == -1)
-	{//Ã»ÕÒµ½¸öÈËĞÅÏ¢
-		cout << "Ã»ÓĞÕÒµ½¸Ã¸öÈËĞÅÏ¢£¡" << endl;
+	{//æ²¡æ‰¾åˆ°ä¸ªäººä¿¡æ¯
+		cout << "æ²¡æœ‰æ‰¾åˆ°è¯¥ä¸ªäººä¿¡æ¯ï¼" << endl;
 		system("pause");
 		return -1;
 	}
-	else //ÕÒµ½ÁË¸öÈËĞÅÏ¢Ôòshow³öÀ´
+	else //æ‰¾åˆ°äº†ä¸ªäººä¿¡æ¯åˆ™showå‡ºæ¥
 	{
-		preTop();//½çÃæº¯Êı
+		preTop();//ç•Œé¢å‡½æ•°
 		stu[result].show();
 		system("pause");
 		return result;
 	}
 }
 
-//ÊµÏÖÒ»¸ö¶ÔÊı×éµÄ²éÕÒº¯Êı(Í¨¹ıĞÕÃû)
+//å®ç°ä¸€ä¸ªå¯¹æ•°ç»„çš„æŸ¥æ‰¾å‡½æ•°(é€šè¿‡å§“å)
 int Student::searchByName(Student stu[], int N)
 {
-	string name;//¼üÅÌÊäÈëĞÕÃû
-	int result;//·µ»ØËÑË÷½á¹û
+	string name;//é”®ç›˜è¾“å…¥å§“å
+	int result;//è¿”å›æœç´¢ç»“æœ
 
-	while (getchar() != '\n');                     //Çå¿Õ¼üÅÌ»º³åÇø
+	while (getchar() != '\n');                     //æ¸…ç©ºé”®ç›˜ç¼“å†²åŒº
 	cin >> name;
 	result = -1;
 	for (int i = 0; i < N; i++)
@@ -435,64 +435,64 @@ int Student::searchByName(Student stu[], int N)
 	}
 
 	if (result == -1)
-	{//Ã»ÕÒµ½¸öÈËĞÅÏ¢
-		cout << "Ã»ÓĞÕÒµ½¸Ã¸öÈËĞÅÏ¢£¡" << endl;
+	{//æ²¡æ‰¾åˆ°ä¸ªäººä¿¡æ¯
+		cout << "æ²¡æœ‰æ‰¾åˆ°è¯¥ä¸ªäººä¿¡æ¯ï¼" << endl;
 		system("pause");
 		return -1;
 	}
-	else //ÕÒµ½ÁË¸öÈËĞÅÏ¢Ôòshow³öÀ´
+	else //æ‰¾åˆ°äº†ä¸ªäººä¿¡æ¯åˆ™showå‡ºæ¥
 	{
-		preTop();//½çÃæº¯Êı
+		preTop();//ç•Œé¢å‡½æ•°
 		stu[result].show();
 		system("pause");
 		return result;
 	}
 }
 
-//ÊµÏÖÒ»¸ö¶ÔÊı×éµÄ±à¼­º¯Êı
+//å®ç°ä¸€ä¸ªå¯¹æ•°ç»„çš„ç¼–è¾‘å‡½æ•°
 int Student::edit(Student stu[], int& N)
 {
-	int result;//ËÑË÷½á¹û
-	char key; //key´¢´æ¼üÅÌÊäÈë²Ù×÷ºÅ
+	int result;//æœç´¢ç»“æœ
+	char key; //keyå‚¨å­˜é”®ç›˜è¾“å…¥æ“ä½œå·
 	int year;
 	int month;
 	int day;
-	string name;//ĞÕÃû
-	string id;//Éí·İÖ¤ºÅ
-	string number; //Ñ§ºÅ
-	string sex;//ĞÔ±ğ
-	float chinese;//ÓïÎÄ³É¼¨
-	float math;//ÊıÑ§³É¼¨
-	float english;//Ó¢Óï³É¼¨
-	cout << "ÇëÊäÈëĞèÒª±à¼­Ñ§ÉúµÄĞÕÃû£º" << endl;
+	string name;//å§“å
+	string id;//èº«ä»½è¯å·
+	string number; //å­¦å·
+	string sex;//æ€§åˆ«
+	float chinese;//è¯­æ–‡æˆç»©
+	float math;//æ•°å­¦æˆç»©
+	float english;//è‹±è¯­æˆç»©
+	cout << "è¯·è¾“å…¥éœ€è¦ç¼–è¾‘å­¦ç”Ÿçš„å§“åï¼š" << endl;
 	result = searchByName(stu, N);
 	if (result >= 0)
 	{
 		system("cls");
-		printf("ÄúÈ·ÈÏÒªĞŞ¸ÄÂğ?y-yes,n-no\n");
-		while (getchar() != '\n');                     //Çå¿Õ¼üÅÌ»º³åÇø
+		printf("æ‚¨ç¡®è®¤è¦ä¿®æ”¹å—?y-yes,n-no\n");
+		while (getchar() != '\n');                     //æ¸…ç©ºé”®ç›˜ç¼“å†²åŒº
 		cin >> key;
 		if (key == 'y')
 		{
-			cout << "ÇëÖØĞÂÊäÈë¸Ã¸öÈËĞÅÏ¢£º" << endl;
-			cout << "ĞÕÃû£º";
+			cout << "è¯·é‡æ–°è¾“å…¥è¯¥ä¸ªäººä¿¡æ¯ï¼š" << endl;
+			cout << "å§“åï¼š";
 			cin >> name;
-			cout << "Éí·İÖ¤ºÅ£º";
+			cout << "èº«ä»½è¯å·ï¼š";
 			cin >> id;
-			cout << "Ñ§ºÅ£º";
+			cout << "å­¦å·ï¼š";
 			cin >> number;
-			cout << "³öÉúÄêÔÂÈÕ£º";
+			cout << "å‡ºç”Ÿå¹´æœˆæ—¥ï¼š";
 			cin >> year >> month >> day;
-			cout << "ĞÔ±ğ£º";
+			cout << "æ€§åˆ«ï¼š";
 			cin >> sex;
-			cout << "ÓïÎÄ£º";
+			cout << "è¯­æ–‡ï¼š";
 			cin >> chinese;
-			cout << "ÊıÑ§£º";
+			cout << "æ•°å­¦ï¼š";
 			cin >> math;
-			cout << "Ó¢Óï£º";
+			cout << "è‹±è¯­ï¼š";
 			cin >> english;
 			stu[result].set(year, month, day, name, id, number, sex, chinese, math, english);
-			cout << "ĞŞ¸ÄÍê³É£¬½á¹ûÈçÏÂ:" << endl;
+			cout << "ä¿®æ”¹å®Œæˆï¼Œç»“æœå¦‚ä¸‹:" << endl;
 			preTop();
 			stu[result].show();
 			saveInformation(stu, N);
@@ -501,13 +501,13 @@ int Student::edit(Student stu[], int& N)
 	}
 	return 0;
 }
-//ÊµÏÖÒ»¸ö¶ÔÊı×éµÄÉ¾³ıº¯Êı
+//å®ç°ä¸€ä¸ªå¯¹æ•°ç»„çš„åˆ é™¤å‡½æ•°
 int Student::del(Student stu[], int& N)
 {
 	int j;
-	int  flag = 0;//ÊÇ·ñÉ¾³ı³É¹¦µÄ±êÖ¾
+	int  flag = 0;//æ˜¯å¦åˆ é™¤æˆåŠŸçš„æ ‡å¿—
 	string s1;
-	cout << "ÇëÊäÈëÒªÉ¾³ıÑ§ÉúµÄĞÕÃû:";
+	cout << "è¯·è¾“å…¥è¦åˆ é™¤å­¦ç”Ÿçš„å§“å:";
 	cin >> s1;
 	for (int i = 0; i < N; i++)
 		if (stu[i].name == s1)
@@ -517,15 +517,15 @@ int Student::del(Student stu[], int& N)
 				stu[j] = stu[j + 1];
 		}
 	if (flag == 0)
-		cout << "¸ÃÑ§Éú²»´æÔÚ£¡" << endl;
+		cout << "è¯¥å­¦ç”Ÿä¸å­˜åœ¨ï¼" << endl;
 	if (flag == 1)
 	{
-		cout << "É¾³ı³É¹¦,ÏÔÊ¾½á¹ûÇëÑ¡Ôñ²Ëµ¥\n" << endl;
+		cout << "åˆ é™¤æˆåŠŸ,æ˜¾ç¤ºç»“æœè¯·é€‰æ‹©èœå•\n" << endl;
 		N--;
 		saveInformation(stu, N);
 	}
 	system("pause");
-	return 1;//É¾³ı³É¹¦·µ»Ø1
+	return 1;//åˆ é™¤æˆåŠŸè¿”å›1
 }
 //int Student::count =0;
 int main()
@@ -537,7 +537,7 @@ int main()
 		system("cls");
 		Student::readInformation(stu, N);
 		Student::preMenu();
-		int key;//key´æ´¢¼üÅÌÊäÈëµÄ²Ù×÷ºÅ
+		int key;//keyå­˜å‚¨é”®ç›˜è¾“å…¥çš„æ“ä½œå·
 		cin >> key;
 		switch (key)
 		{

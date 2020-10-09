@@ -1,7 +1,7 @@
-/*£¨2£©ÉùÃ÷Ò»¸öPeople£¨ÈËÔ±£©Àà£¬¾ßÓÐÊôÐÔÈçÏÂ£ºnumber£¨±àºÅ£©¡¢name£¨ÐÕÃû£©¡¢sex£¨ÐÔ±ð£©¡¢birthday£¨³öÉúÈÕÆÚ£©¡¢id£¨Éí·ÝÖ¤ºÅ£©¡£
-ÆäÖÐ"³öÉúÈÕÆÚ"ÊÇÒ»¸ö×Ó¶ÔÏó£¨Çë×ÔÐÐÉè¼ÆÈÕÆÚÀà£©¡£ÓÃ³ÉÔ±º¯ÊýÊµÏÖ¶ÔÈËÔ±ÐÅÏ¢µÄÂ¼ÈëºÍÏÔÊ¾¡£
-ÔÚ²âÊÔ³ÌÐòÖÐÉùÃ÷PeopleÀàµÄ¶ÔÏóÊý×é£¬Â¼ÈëÊý¾Ý²¢ÏÔÊ¾¡£
-Í¬Ê±ÎªPeopleÖØÔØÔËËã·û"=="£¬ÔËËã·û"=="ÎªÅÐ¶ÏÁ½¸öPeople¶ÔÓ¦µÄidÊôÐÔÊÇ·ñÏàÍ¬¡£*/
+ï»¿/*ï¼ˆ2ï¼‰å£°æ˜Žä¸€ä¸ªPeopleï¼ˆäººå‘˜ï¼‰ç±»ï¼Œå…·æœ‰å±žæ€§å¦‚ä¸‹ï¼šnumberï¼ˆç¼–å·ï¼‰ã€nameï¼ˆå§“åï¼‰ã€sexï¼ˆæ€§åˆ«ï¼‰ã€birthdayï¼ˆå‡ºç”Ÿæ—¥æœŸï¼‰ã€idï¼ˆèº«ä»½è¯å·ï¼‰ã€‚
+å…¶ä¸­"å‡ºç”Ÿæ—¥æœŸ"æ˜¯ä¸€ä¸ªå­å¯¹è±¡ï¼ˆè¯·è‡ªè¡Œè®¾è®¡æ—¥æœŸç±»ï¼‰ã€‚ç”¨æˆå‘˜å‡½æ•°å®žçŽ°å¯¹äººå‘˜ä¿¡æ¯çš„å½•å…¥å’Œæ˜¾ç¤ºã€‚
+åœ¨æµ‹è¯•ç¨‹åºä¸­å£°æ˜ŽPeopleç±»çš„å¯¹è±¡æ•°ç»„ï¼Œå½•å…¥æ•°æ®å¹¶æ˜¾ç¤ºã€‚
+åŒæ—¶ä¸ºPeopleé‡è½½è¿ç®—ç¬¦"=="ï¼Œè¿ç®—ç¬¦"=="ä¸ºåˆ¤æ–­ä¸¤ä¸ªPeopleå¯¹åº”çš„idå±žæ€§æ˜¯å¦ç›¸åŒã€‚*/
 #include<iostream>
 #include<string>
 #define N 2
@@ -27,18 +27,18 @@ void Date::set(int y, int m, int d)
 }
 void Date::show()
 {
-	cout << "ÉúÈÕ£º" << year << "Äê" << month << "ÔÂ" << day << "ÈÕ" << endl;
+	cout << "ç”Ÿæ—¥ï¼š" << year << "å¹´" << month << "æœˆ" << day << "æ—¥" << endl;
 }
 class People {
 public:
-	People(int y = 2000, int m = 00, int d = 00, string i = "340321200000000000", string name = "ÕÅÈý", string nu = "20000000000", char se = 'm');
-	void set(int y = 2000, int m = 00, int d = 00, string i = "340321200000000000", string name = "ÕÅÈý", string nu = "20000000000", char se = 'm');
+	People(int y = 2000, int m = 00, int d = 00, string i = "340321200000000000", string name = "å¼ ä¸‰", string nu = "20000000000", char se = 'm');
+	void set(int y = 2000, int m = 00, int d = 00, string i = "340321200000000000", string name = "å¼ ä¸‰", string nu = "20000000000", char se = 'm');
 	void show();
-	//³ÉÔ±º¯ÊýÖØÔØÔËËã·û
+	//æˆå‘˜å‡½æ•°é‡è½½è¿ç®—ç¬¦
 	int operator==(People a);
 private:
 	Date birthday;
-	string id;//Éí·ÝÖ¤ºÅ
+	string id;//èº«ä»½è¯å·
 	string name;
 	string number;
 	char sex;
@@ -60,7 +60,7 @@ void People::set(int y, int m, int d, string i, string name, string nu, char se)
 }
 void People::show()
 {
-	cout << "Éí·ÝÖ¤ºÅ£º" << id << endl << "ÐÕÃû£º" << name << endl << "±àºÅ£º" << number << endl << "ÐÔ±ð£º" << sex << endl;
+	cout << "èº«ä»½è¯å·ï¼š" << id << endl << "å§“åï¼š" << name << endl << "ç¼–å·ï¼š" << number << endl << "æ€§åˆ«ï¼š" << sex << endl;
 	birthday.show();
 }
 int People::operator==(People a) {
@@ -70,27 +70,27 @@ int People::operator==(People a) {
 int main()
 {
 	People p[N];
-	int y; int m; int d; string i1; string na; string nu; char se;//¶¨ÒåÄêÁäÃû³ÆµÈ²ÎÊý£¬ÓÃÓÚ´«Èësetº¯Êý
+	int y; int m; int d; string i1; string na; string nu; char se;//å®šä¹‰å¹´é¾„åç§°ç­‰å‚æ•°ï¼Œç”¨äºŽä¼ å…¥setå‡½æ•°
 	for (int i = 0; i < N; i++)
 	{
-		cout << "ÇëÊäÈëµÚ" << i + 1 << "Î»ÈËÔ±ÐÅÏ¢£º" << endl;
-		cout << "³öÉúÄêÔÂÈÕ£º";
+		cout << "è¯·è¾“å…¥ç¬¬" << i + 1 << "ä½äººå‘˜ä¿¡æ¯ï¼š" << endl;
+		cout << "å‡ºç”Ÿå¹´æœˆæ—¥ï¼š";
 		cin >> y >> m >> d;
-		cout << "Éí·ÝÖ¤ºÅ£º";
+		cout << "èº«ä»½è¯å·ï¼š";
 		cin >> i1;
-		cout << "ÐÕÃû£º";
+		cout << "å§“åï¼š";
 		cin >> na;
-		cout << "±àºÅ£º";
+		cout << "ç¼–å·ï¼š";
 		cin >> nu;
-		cout << "ÐÔ±ð£º";
+		cout << "æ€§åˆ«ï¼š";
 		cin >> se;
 		//		cin>>y>>m>>d>>i1>>na>>nu>>se;
 		p[i].set(y, m, d, i1, na, nu, se);
-		cout << "µÚ" << i + 1 << "Î»ÈËÔ±ÐÅÏ¢:" << endl;
+		cout << "ç¬¬" << i + 1 << "ä½äººå‘˜ä¿¡æ¯:" << endl;
 		p[i].show();
 	}
-	if (p[0] == p[1])cout << "¶þÕßÉí·ÝÖ¤ºÅÏàÍ¬" << endl;
-	else cout << "¶þÕßÉí·ÝÖ¤ºÅ²»Í¬" << endl;
+	if (p[0] == p[1])cout << "äºŒè€…èº«ä»½è¯å·ç›¸åŒ" << endl;
+	else cout << "äºŒè€…èº«ä»½è¯å·ä¸åŒ" << endl;
 
 	return 0;
 }

@@ -1,4 +1,4 @@
-//ÈÕÆÚÀàµÄ±àĞ´£¬ÊäÈëÊä³ö
+ï»¿//æ—¥æœŸç±»çš„ç¼–å†™ï¼Œè¾“å…¥è¾“å‡º
 #include<iostream>
 using namespace std;
 class Date {
@@ -16,18 +16,18 @@ void Date::set(int y, int m, int d)
 }
 void Date::show()
 {
-	cout << "ÈÕÆÚÊÇ£º" << year << " Äê " << month << " ÔÂ " << day << " ÈÕ " << endl;
+	cout << "æ—¥æœŸæ˜¯ï¼š" << year << " å¹´ " << month << " æœˆ " << day << " æ—¥ " << endl;
 }
 int main()
 {
 	Date date1;
 
-	date1.set(2019, 9, 11);//ÆÕÍ¨·½Ê½
+	date1.set(2019, 9, 11);//æ™®é€šæ–¹å¼
 	date1.show();
 	Date* p = &date1;
-	(*p).set(2019, 9, 11);//(*p).·½Ê½
+	(*p).set(2019, 9, 11);//(*p).æ–¹å¼
 	(*p).show();
-	p->set(2019, 9, 11);//p->·½Ê½
+	p->set(2019, 9, 11);//p->æ–¹å¼
 	p->show();
 	return 0;
 }

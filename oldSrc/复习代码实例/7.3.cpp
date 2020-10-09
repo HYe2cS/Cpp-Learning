@@ -1,5 +1,5 @@
-/*
-3£® ±à³ÌĞò½«Ò»¸öÖ¸¶¨ÎÄ¼ş¸´ÖÆµ½Ò»¸öĞÂÎÄ¼şÖĞ£¬ĞÂ¾ÉÎÄ¼şÃû¾ùÓÉ¼üÅÌÊäÈë¡£
+ï»¿/*
+3ï¼ ç¼–ç¨‹åºå°†ä¸€ä¸ªæŒ‡å®šæ–‡ä»¶å¤åˆ¶åˆ°ä¸€ä¸ªæ–°æ–‡ä»¶ä¸­ï¼Œæ–°æ—§æ–‡ä»¶åå‡ç”±é”®ç›˜è¾“å…¥ã€‚
 */
 #include<stdio.h>
 #include<stdlib.h>
@@ -7,14 +7,14 @@ int main()
 {
 	FILE* fps, * fpd;
 	char fsname[20], fdname[20], c;
-	printf("ÊäÈëÔ´ÎÄ¼şÃû\n");
+	printf("è¾“å…¥æºæ–‡ä»¶å\n");
 	scanf("%s", fsname);
 	if ((fps = fopen(fsname, "r")) == NULL)
 	{
 		printf("cannot open flie");
 		exit(0);
 	}
-	printf("ÊäÈëÄ¿±êÎÄ¼şÃû\n");
+	printf("è¾“å…¥ç›®æ ‡æ–‡ä»¶å\n");
 	scanf("%s", fdname);
 	if ((fpd = fopen(fdname, "w")) == NULL)
 	{
@@ -28,6 +28,6 @@ int main()
 	}
 	fclose(fps);
 	fclose(fpd);
-	printf("¸´ÖÆÎÄ¼şÍê³É\n");
+	printf("å¤åˆ¶æ–‡ä»¶å®Œæˆ\n");
 	return 0;
 }

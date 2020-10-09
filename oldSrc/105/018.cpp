@@ -1,19 +1,19 @@
-#include<stdio.h>
+ï»¿#include<stdio.h>
 #include<stdlib.h>
-/*¶¨ÒåÊ÷µÄ½áµã½á¹¹*/
+/*å®šä¹‰æ ‘çš„ç»“ç‚¹ç»“æ„*/
 
 typedef struct TreeNode {
-	char data;/*Ê÷ÖĞ½áµãµÄÊı¾İÊÇÒ»¸ö×Ö·û*/
+	char data;/*æ ‘ä¸­ç»“ç‚¹çš„æ•°æ®æ˜¯ä¸€ä¸ªå­—ç¬¦*/
 	struct TreeNode* lchild;
 	struct TreeNode* rchild;
 }TREENODE;
-int NodeNum = 0;/*Í³¼ÆÊıµÄ½áµãÊı*/
-int LeafNum = 0;/*Í³¼ÆÊıµÄÒ¶×Ó½áµãÊı*/
+int NodeNum = 0;/*ç»Ÿè®¡æ•°çš„ç»“ç‚¹æ•°*/
+int LeafNum = 0;/*ç»Ÿè®¡æ•°çš„å¶å­ç»“ç‚¹æ•°*/
 char ch[] = { 'a', 'b', 'c', ' ', ' ', 'd', ' ', ' ', 'e',  'f', ' ', ' ', 'g', ' ', ' ' };
 int inc = 0;
-/*½¨Á¢Ò»¿Å¶ş²æÊ÷*/
+/*å»ºç«‹ä¸€é¢—äºŒå‰æ ‘*/
 int CreateBiTree(TREENODE** T)
-/*°´ÏÈĞò´ÎĞòÊäÈë¶ş²æÊ÷ÖĞ½áµãµÄÖµ,ÒÔ¿Õ×Ö·û±íÊ¾¿ÕÊ÷*/
+/*æŒ‰å…ˆåºæ¬¡åºè¾“å…¥äºŒå‰æ ‘ä¸­ç»“ç‚¹çš„å€¼,ä»¥ç©ºå­—ç¬¦è¡¨ç¤ºç©ºæ ‘*/
 {
 	char i;
 	if (ch[inc++] == ' ')
@@ -30,7 +30,7 @@ int CreateBiTree(TREENODE** T)
 	}
 	return 1;
 }
-/*ÏÈĞò±éÀú¶ş²æÊ÷*/
+/*å…ˆåºéå†äºŒå‰æ ‘*/
 int PreOderTraverse(TREENODE* T)
 {
 	if (T)
@@ -41,7 +41,7 @@ int PreOderTraverse(TREENODE* T)
 	}
 	return 1;
 }
-/*  ÖĞĞò±éÀú¶ş²æÊ÷*/
+/*  ä¸­åºéå†äºŒå‰æ ‘*/
 int InOderTraverse(TREENODE* T)
 {
 	if (T)
@@ -52,7 +52,7 @@ int InOderTraverse(TREENODE* T)
 	}
 	return 1;
 }
-/*  ºóĞò±éÀú¶ş²æÊ÷*/
+/*  ååºéå†äºŒå‰æ ‘*/
 int BackOderTraverse(TREENODE* T)
 {
 	if (T)
@@ -63,7 +63,7 @@ int BackOderTraverse(TREENODE* T)
 	}
 	return 1;
 }
-/*ÀûÓÃÏÈĞò±éÀúÀ´¼ÆËãÊ÷ÖĞµÄ½áµãÊı*/
+/*åˆ©ç”¨å…ˆåºéå†æ¥è®¡ç®—æ ‘ä¸­çš„ç»“ç‚¹æ•°*/
 void CountNodeNum(TREENODE* T)
 {
 	if (T)
@@ -73,7 +73,7 @@ void CountNodeNum(TREENODE* T)
 		CountNodeNum(T->rchild);
 	}
 }
-/*ÀûÓÃÏÈĞò±éÀú¼ÆËãÒ¶×Ó½ÚµãÊı*/
+/*åˆ©ç”¨å…ˆåºéå†è®¡ç®—å¶å­èŠ‚ç‚¹æ•°*/
 void CountLeafNum(TREENODE* T)
 {
 	if (T)

@@ -1,4 +1,4 @@
-//studentÀàµÄ±àĞ´ÊäÈëÊä³ö
+ï»¿//studentç±»çš„ç¼–å†™è¾“å…¥è¾“å‡º
 #include<iostream>
 #include<string.h>
 using namespace std;
@@ -18,18 +18,18 @@ void Student::set(string na, string sn, char s, int ag)
 }
 void Student::show()
 {
-	cout << "ĞÕÃû£º" << name << "\tÑ§ºÅ£º" << sno << "\tĞÔ±ğ£º" << sex << "\tÄêÁä£º" << age << endl;
+	cout << "å§“åï¼š" << name << "\tå­¦å·ï¼š" << sno << "\tæ€§åˆ«ï¼š" << sex << "\tå¹´é¾„ï¼š" << age << endl;
 }
 int main()
 {
 	Student stud1;
 
-	stud1.set("ÕÅÔª½Ú", "20181251215", 'm', 19);//ÆÕÍ¨·½Ê½
+	stud1.set("å¼ å…ƒèŠ‚", "20181251215", 'm', 19);//æ™®é€šæ–¹å¼
 	stud1.show();
 	Student* p = &stud1;
-	(*p).set("ÕÅÔª½Ú", "20181251215", 'm', 19);//(*p).·½Ê½
+	(*p).set("å¼ å…ƒèŠ‚", "20181251215", 'm', 19);//(*p).æ–¹å¼
 	(*p).show();
-	p->set("ÕÅÔª½Ú", "20181251215", 'm', 19);//p->·½Ê½
+	p->set("å¼ å…ƒèŠ‚", "20181251215", 'm', 19);//p->æ–¹å¼
 	p->show();
 	return 0;
 }

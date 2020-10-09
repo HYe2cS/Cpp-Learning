@@ -1,5 +1,5 @@
-/*
-4.ÓÃÒ»¸öº¯ÊýÀ´ÊµÏÖ½«Á½¸ö×Ö·û´®Á¬½Ó¡£
+ï»¿/*
+4.ç”¨ä¸€ä¸ªå‡½æ•°æ¥å®žçŽ°å°†ä¸¤ä¸ªå­—ç¬¦ä¸²è¿žæŽ¥ã€‚
 */
 #include<stdio.h>
 void join(char a[], char b[])

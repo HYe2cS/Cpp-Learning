@@ -1,4 +1,4 @@
-#include<stdio.h>
+ï»¿#include<stdio.h>
 
 main()
 
@@ -9,15 +9,15 @@ main()
 
 	scanf("%d%d", &num1, &num2);
 
-	if (num1 > num2)                /*ÕÒ³öÁ½¸öÊıÖĞµÄ½Ï´óÖµ*/
+	if (num1 > num2)                /*æ‰¾å‡ºä¸¤ä¸ªæ•°ä¸­çš„è¾ƒå¤§å€¼*/
 
 	{
-		temp = num1; num1 = num2; num2 = temp;     /*½»»»Á½¸öÕûÊı*/
+		temp = num1; num1 = num2; num2 = temp;     /*äº¤æ¢ä¸¤ä¸ªæ•´æ•°*/
 	}
 
 	a = num1; b = num2;
 
-	while (b != 0)             /*²ÉÓÃÕ·×ªÏà³ı·¨Çó×î´ó¹«Ô¼Êı*/
+	while (b != 0)             /*é‡‡ç”¨è¾—è½¬ç›¸é™¤æ³•æ±‚æœ€å¤§å…¬çº¦æ•°*/
 
 	{
 		temp = a % b;
@@ -27,9 +27,9 @@ main()
 		b = temp;
 	}
 
-	printf("The GCD of %d and %d is: %d\n", num1, num2, a);  /*Êä³ö×î´ó¹«Ô¼
-Êı*/
+	printf("The GCD of %d and %d is: %d\n", num1, num2, a);  /*è¾“å‡ºæœ€å¤§å…¬çº¦
+æ•°*/
 
-	printf("The LCM of them is: %d\n", num1 * num2 / a);       /*Êä³ö×îĞ¡¹«±¶
-Êı*/
+	printf("The LCM of them is: %d\n", num1 * num2 / a);       /*è¾“å‡ºæœ€å°å…¬å€
+æ•°*/
 }

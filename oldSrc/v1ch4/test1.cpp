@@ -1,6 +1,6 @@
-#include<iostream>
+ï»¿#include<iostream>
 using namespace std;
-//»ùÀà
+//åŸºç±»
 class A {
 public:
 	A(int x1, float y1);
@@ -22,7 +22,7 @@ void A::showa()
 	cout << "x=" << x << "," << "y=" << y << endl;
 }
 
-//ÅÉÉúÀà
+//æ´¾ç”Ÿç±»
 class B :private A {
 public:
 	B(int x1, float y1, int z1, int x2, float y2) :A(x1, y1), a(x2, y2)

@@ -1,97 +1,97 @@
-/*
-ÏîÄ¿Ò» Ð¡Ñ§Éú²âÑé          16Ñ§Ê±
-ÎÊÌâÃèÊö£ºÃæÏòÐ¡Ñ§1~2Äê¼¶Ñ§Éú£¬Ëæ»úÑ¡ÔñÁ½¸öÕûÊýµÄ¼Ó¼õ·¨ÐÎ³ÉËãÊ½ÒªÇóÑ§Éú½â´ð¡£
-»ù±¾ÒªÇó
-£¨1£©µçÄÔËæ»ú³ö10µÀÌâ£¬Ã¿Ìâ10·Ö£¬³ÌÐò½áÊøÊ±ÏÔÊ¾Ñ§ÉúµÃ·Ö£»
-£¨2£©È·±£ËãÊ½Ã»ÓÐ³¬³ö1~2Äê¼¶µÄË®Æ½£¬Ö»ÔÊÐí½øÐÐ50ÒÔÄÚµÄ¼Ó¼õ·¨£¬²»ÔÊÐíÁ½ÊýÖ®ºÍ»ò²î³¬³ö0~50µÄ·¶Î§£¬¸ºÊý¸üÊÇ²»ÔÊÐíµÄ£»
-£¨3£©Ã¿µÀÌâÑ§ÉúÓÐÈý´Î»ú»áÊäÈë´ð°¸£¬µ±Ñ§ÉúÊäÈë´íÎó´ð°¸Ê±£¬ÌáÐÑÑ§ÉúÖØÐÂÊäÈë£¬Èç¹ûÈý´Î»ú»á½áÊøÔòÊä³öÕýÈ·´ð°¸£»
-£¨4£©¶ÔÓÚÃ¿µÀÌâ£¬Ñ§ÉúµÚÒ»´ÎÊäÈëÕýÈ·´ð°¸µÃ10·Ö£¬µÚ¶þ´ÎÊäÈëÕýÈ·´ð°¸µÃ7·Ö£¬µÚÈý´ÎÊäÈëÕýÈ·´ð°¸µÃ5·Ö£¬·ñÔò²»µÃ·Ö£»
-£¨5£©×Ü³É¼¨90ÒÔÉÏÏÔÊ¾"SMART"£¬80-90ÏÔÊ¾"GOOD"£¬70-80ÏÔÊ¾"OK"£¬60-70ÏÔÊ¾"PASS"£¬60ÒÔÏÂ"TRY AGAIN"¡£
+ï»¿/*
+é¡¹ç›®ä¸€ å°å­¦ç”Ÿæµ‹éªŒ          16å­¦æ—¶
+é—®é¢˜æè¿°ï¼šé¢å‘å°å­¦1~2å¹´çº§å­¦ç”Ÿï¼Œéšæœºé€‰æ‹©ä¸¤ä¸ªæ•´æ•°çš„åŠ å‡æ³•å½¢æˆç®—å¼è¦æ±‚å­¦ç”Ÿè§£ç­”ã€‚
+åŸºæœ¬è¦æ±‚
+ï¼ˆ1ï¼‰ç”µè„‘éšæœºå‡º10é“é¢˜ï¼Œæ¯é¢˜10åˆ†ï¼Œç¨‹åºç»“æŸæ—¶æ˜¾ç¤ºå­¦ç”Ÿå¾—åˆ†ï¼›
+ï¼ˆ2ï¼‰ç¡®ä¿ç®—å¼æ²¡æœ‰è¶…å‡º1~2å¹´çº§çš„æ°´å¹³ï¼Œåªå…è®¸è¿›è¡Œ50ä»¥å†…çš„åŠ å‡æ³•ï¼Œä¸å…è®¸ä¸¤æ•°ä¹‹å’Œæˆ–å·®è¶…å‡º0~50çš„èŒƒå›´ï¼Œè´Ÿæ•°æ›´æ˜¯ä¸å…è®¸çš„ï¼›
+ï¼ˆ3ï¼‰æ¯é“é¢˜å­¦ç”Ÿæœ‰ä¸‰æ¬¡æœºä¼šè¾“å…¥ç­”æ¡ˆï¼Œå½“å­¦ç”Ÿè¾“å…¥é”™è¯¯ç­”æ¡ˆæ—¶ï¼Œæé†’å­¦ç”Ÿé‡æ–°è¾“å…¥ï¼Œå¦‚æžœä¸‰æ¬¡æœºä¼šç»“æŸåˆ™è¾“å‡ºæ­£ç¡®ç­”æ¡ˆï¼›
+ï¼ˆ4ï¼‰å¯¹äºŽæ¯é“é¢˜ï¼Œå­¦ç”Ÿç¬¬ä¸€æ¬¡è¾“å…¥æ­£ç¡®ç­”æ¡ˆå¾—10åˆ†ï¼Œç¬¬äºŒæ¬¡è¾“å…¥æ­£ç¡®ç­”æ¡ˆå¾—7åˆ†ï¼Œç¬¬ä¸‰æ¬¡è¾“å…¥æ­£ç¡®ç­”æ¡ˆå¾—5åˆ†ï¼Œå¦åˆ™ä¸å¾—åˆ†ï¼›
+ï¼ˆ5ï¼‰æ€»æˆç»©90ä»¥ä¸Šæ˜¾ç¤º"SMART"ï¼Œ80-90æ˜¾ç¤º"GOOD"ï¼Œ70-80æ˜¾ç¤º"OK"ï¼Œ60-70æ˜¾ç¤º"PASS"ï¼Œ60ä»¥ä¸‹"TRY AGAIN"ã€‚
 */
 #include<stdio.h>
-#include<stdlib.h>/*ÓÃµ½ÁËsrandº¯Êý£¬ËùÒÔÒªÓÐÕâ¸öÍ·ÎÄ¼þ*/
-#include<time.h> /*ÓÃµ½ÁËtimeº¯Êý£¬ËùÒÔÒªÓÐÕâ¸öÍ·ÎÄ¼þ*/
+#include<stdlib.h>/*ç”¨åˆ°äº†srandå‡½æ•°ï¼Œæ‰€ä»¥è¦æœ‰è¿™ä¸ªå¤´æ–‡ä»¶*/
+#include<time.h> /*ç”¨åˆ°äº†timeå‡½æ•°ï¼Œæ‰€ä»¥è¦æœ‰è¿™ä¸ªå¤´æ–‡ä»¶*/
 void PrintScore(int score)
 {
-	switch (score / 10)//ÅÐ¶ÏµÈ¼¶
+	switch (score / 10)//åˆ¤æ–­ç­‰çº§
 	{
 	case 10:
-	case 9:printf("ÄãµÄ×ÜµÃ·ÖÊÇ:%d,ÆÀ¼ÛÊÇ:SMART \n", score); break;
-	case 8:printf("ÄãµÄ×ÜµÃ·ÖÊÇ:%d,ÆÀ¼ÛÊÇ:GOOD \n", score); break;
-	case 7:printf("ÄãµÄ×ÜµÃ·ÖÊÇ:%d,ÆÀ¼ÛÊÇ:OK \n", score); break;
-	case 6:printf("ÄãµÄ×ÜµÃ·ÖÊÇ:%d,ÆÀ¼ÛÊÇ:PASS \n", score); break;
-	default:printf("ÄãµÄ×ÜµÃ·ÖÊÇ:%d,µÍÓÚ60·Ö£¬ÆÀ¼ÛÊÇ:TRY AGAIN \n", score); break;
+	case 9:printf("ä½ çš„æ€»å¾—åˆ†æ˜¯:%d,è¯„ä»·æ˜¯:SMART \n", score); break;
+	case 8:printf("ä½ çš„æ€»å¾—åˆ†æ˜¯:%d,è¯„ä»·æ˜¯:GOOD \n", score); break;
+	case 7:printf("ä½ çš„æ€»å¾—åˆ†æ˜¯:%d,è¯„ä»·æ˜¯:OK \n", score); break;
+	case 6:printf("ä½ çš„æ€»å¾—åˆ†æ˜¯:%d,è¯„ä»·æ˜¯:PASS \n", score); break;
+	default:printf("ä½ çš„æ€»å¾—åˆ†æ˜¯:%d,ä½ŽäºŽ60åˆ†ï¼Œè¯„ä»·æ˜¯:TRY AGAIN \n", score); break;
 	}
 	printf("------------------------------\n");
 }
 
-int PD(int a, int b)//·µ»ØÖµÎª1Ê¹ÓÃ¼Ó·¨£¬·µ»ØÖµÎª0Ê¹ÓÃ¼õ·¨
+int PD(int a, int b)//è¿”å›žå€¼ä¸º1ä½¿ç”¨åŠ æ³•ï¼Œè¿”å›žå€¼ä¸º0ä½¿ç”¨å‡æ³•
 {
-	int sum = 0;//³õÊ¼»¯
+	int sum = 0;//åˆå§‹åŒ–
 	if (rand() % 2 == 1)
 	{
 		sum = a + b;
-		printf("ÇëÊäÈë%d+%d=?\n", a, b);
-	}//·µ»ØÖµÎª1Ê¹ÓÃ¼Ó·¨
+		printf("è¯·è¾“å…¥%d+%d=?\n", a, b);
+	}//è¿”å›žå€¼ä¸º1ä½¿ç”¨åŠ æ³•
 	else
 	{
 		sum = a - b;
-		printf("ÇëÊäÈë%d-%d=?\n", a, b);
-	}//·µ»ØÖµÎª0Ê¹ÓÃ¼õ·¨
+		printf("è¯·è¾“å…¥%d-%d=?\n", a, b);
+	}//è¿”å›žå€¼ä¸º0ä½¿ç”¨å‡æ³•
 	return sum;
 }
 
-int YunSuan(int sum, int& score)//½ÓÊÜÑ§ÉúÊäÈë½á¹û£¬²¢ÅÐ¶ÏÕýÈ·´íÎó
+int YunSuan(int sum, int& score)//æŽ¥å—å­¦ç”Ÿè¾“å…¥ç»“æžœï¼Œå¹¶åˆ¤æ–­æ­£ç¡®é”™è¯¯
 {
-	int s = 0;//¼ÇÂ¼ÊäÈë½á¹û
-	int k;//ÓÃÀ´¼ÇÂ¼ºÍÅÐ¶ÏÊäÈë´íÎóµÄ´ÎÊý
+	int s = 0;//è®°å½•è¾“å…¥ç»“æžœ
+	int k;//ç”¨æ¥è®°å½•å’Œåˆ¤æ–­è¾“å…¥é”™è¯¯çš„æ¬¡æ•°
 	for (k = 0; k < 3;)
 	{
-		printf("ÇëÊäÈëÕýÈ·´ð°¸£º");
-		scanf("%d", &s);//s½ÓÊÕÊäÈë½á¹û
-		if (s == sum)//Èç¹ûµÚÒ»´ÎÊäÈë½á¹û´íÎó£¬½øÐÐÌáÊ¾²¢¿ªÊ¼µÚ¶þ´ÎÊäÈë
+		printf("è¯·è¾“å…¥æ­£ç¡®ç­”æ¡ˆï¼š");
+		scanf("%d", &s);//sæŽ¥æ”¶è¾“å…¥ç»“æžœ
+		if (s == sum)//å¦‚æžœç¬¬ä¸€æ¬¡è¾“å…¥ç»“æžœé”™è¯¯ï¼Œè¿›è¡Œæç¤ºå¹¶å¼€å§‹ç¬¬äºŒæ¬¡è¾“å…¥
 		{
-			printf("*********Äú´ð¶ÔÁË£¡*********\n"); break;
+			printf("*********æ‚¨ç­”å¯¹äº†ï¼*********\n"); break;
 		}
 		else
 		{
-			printf("*********Äú´ð´íÁË£¡*********\n"); k++;
+			printf("*********æ‚¨ç­”é”™äº†ï¼*********\n"); k++;
 		}
 	}
 	switch (k)
 	{
-	case 0:score += 10; break;//Èç¹ûµÚÒ»´ÎÊäÈë½á¹ûÕýÈ·£¬·ÖÊý¼Ó10
-	case 1:score += 7; break;//Èç¹ûµÚ¶þ´ÎÊäÈë½á¹ûÕýÈ·£¬·ÖÊý¼Ó7
-	case 2:score += 5; break;//Èç¹ûµÚÈý´ÎÊäÈë½á¹ûÕýÈ·£¬·ÖÊý¼Ó5
+	case 0:score += 10; break;//å¦‚æžœç¬¬ä¸€æ¬¡è¾“å…¥ç»“æžœæ­£ç¡®ï¼Œåˆ†æ•°åŠ 10
+	case 1:score += 7; break;//å¦‚æžœç¬¬äºŒæ¬¡è¾“å…¥ç»“æžœæ­£ç¡®ï¼Œåˆ†æ•°åŠ 7
+	case 2:score += 5; break;//å¦‚æžœç¬¬ä¸‰æ¬¡è¾“å…¥ç»“æžœæ­£ç¡®ï¼Œåˆ†æ•°åŠ 5
 	default:break;
 	}
-	printf("ÏÖÔÚµÄ·ÖÊýÎª£º%d\n", score);
+	printf("çŽ°åœ¨çš„åˆ†æ•°ä¸ºï¼š%d\n", score);
 	printf("------------------------------\n");
 	return score;
 }
 
 int main()
 {
-	int a = 0, b = 0;//ÓÃÓÚÉú³ÉËæ»úÊý
-	int sum = 0;//¼ÇÂ¼¼Ó»ò¼õµÄÕýÈ·½á¹û
-	int i = 0;//¼ÇÂ¼µÚ¼¸Ìâ
-	int score = 0;//¼ÇÂ¼·ÖÊý
+	int a = 0, b = 0;//ç”¨äºŽç”Ÿæˆéšæœºæ•°
+	int sum = 0;//è®°å½•åŠ æˆ–å‡çš„æ­£ç¡®ç»“æžœ
+	int i = 0;//è®°å½•ç¬¬å‡ é¢˜
+	int score = 0;//è®°å½•åˆ†æ•°
 	printf("\t***********************************************\n");
 
-	printf("\t*********»¶Ó­Ê¹ÓÃÐ¡Ñ§Éú²âÑéÏµÍ³****************\n");
+	printf("\t*********æ¬¢è¿Žä½¿ç”¨å°å­¦ç”Ÿæµ‹éªŒç³»ç»Ÿ****************\n");
 	printf("\t***********************************************\n");
-	printf("\tÈÎÒâÊäÈëÒ»¸öÊý£¬¿ªÊ¼²âÊÔ\n");
-	printf("\t²âÊÔ10µÀÌâ\n");
-	printf("\tµÚÒ»´Î´ð¶Ô¼Ó10·Ö\n");
-	printf("\tµÚ¶þ´Î´ð¶Ô¼Ó7·Ö\n");
-	printf("\tµÚÈý´Î´ð¶Ô¼Ó5·Ö\n");
-	printf("\tµÚÈý´ÎÈôÎ´´ð¶Ô²»¼Ó·Ö£¬Ìø¹ý´ËÌâ¿ªÊ¼ÏÂÒ»Ìâ²âÊÔ\n");
+	printf("\tä»»æ„è¾“å…¥ä¸€ä¸ªæ•°ï¼Œå¼€å§‹æµ‹è¯•\n");
+	printf("\tæµ‹è¯•10é“é¢˜\n");
+	printf("\tç¬¬ä¸€æ¬¡ç­”å¯¹åŠ 10åˆ†\n");
+	printf("\tç¬¬äºŒæ¬¡ç­”å¯¹åŠ 7åˆ†\n");
+	printf("\tç¬¬ä¸‰æ¬¡ç­”å¯¹åŠ 5åˆ†\n");
+	printf("\tç¬¬ä¸‰æ¬¡è‹¥æœªç­”å¯¹ä¸åŠ åˆ†ï¼Œè·³è¿‡æ­¤é¢˜å¼€å§‹ä¸‹ä¸€é¢˜æµ‹è¯•\n");
 	printf("\t***********************************************\n");
 	srand(time(NULL));
 	printf("------------------------------\n");
-	for (i = 0; i < 10; i++)//ÓÃÀ´¼ÇÂ¼µÚ¼¸Ìâ£¬²¢ÒÀ´Î×÷´ð
+	for (i = 0; i < 10; i++)//ç”¨æ¥è®°å½•ç¬¬å‡ é¢˜ï¼Œå¹¶ä¾æ¬¡ä½œç­”
 	{
-		printf("Çë»Ø´ðµÚ%dÌâ:\n", i + 1);
+		printf("è¯·å›žç­”ç¬¬%dé¢˜:\n", i + 1);
 		a = rand() % 51;
 		b = rand() % 51;
 		while (a + b > 50 || a - b < 0)
@@ -99,10 +99,10 @@ int main()
 			a = rand() % 51;
 			b = rand() % 51;
 		}
-		//ÅÐ¶Ï¼Ó·¨ºÍ¼õ·¨£¬²¢Ëã³ö½á¹û
+		//åˆ¤æ–­åŠ æ³•å’Œå‡æ³•ï¼Œå¹¶ç®—å‡ºç»“æžœ
 
 		sum = PD(a, b);
-		YunSuan(sum, score);//½ÓÊÜÑ§ÉúÊäÈë½á¹û£¬²¢ÅÐ¶ÏÕýÈ·´íÎó
+		YunSuan(sum, score);//æŽ¥å—å­¦ç”Ÿè¾“å…¥ç»“æžœï¼Œå¹¶åˆ¤æ–­æ­£ç¡®é”™è¯¯
 	}
 	PrintScore(score);
 	return 0;

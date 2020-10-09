@@ -1,6 +1,6 @@
-/*£¨3£©ÉùÃ÷Ò»¸ö³µVehicle»ùÀà£¬ÓÐrun¡¢stopµÈ³ÉÔ±º¯Êý£¬
-ÓÉ´ËÅÉÉú³ö×ÔÐÐ³µBicycleÀà¡¢Æû³µMotorcarÀà£¬´ÓBicycle¡¢MotorcarÀàÅÉÉú³öÄ¦ÍÐ³µMotorcycleÀà£¬
-ËüÃÇ¶¼ÓÐrun¡¢stopµÈ³ÉÔ±º¯Êý£¬¹Û²ìÐéº¯ÊýµÄ×÷ÓÃ¡£*/
+ï»¿/*ï¼ˆ3ï¼‰å£°æ˜Žä¸€ä¸ªè½¦VehicleåŸºç±»ï¼Œæœ‰runã€stopç­‰æˆå‘˜å‡½æ•°ï¼Œ
+ç”±æ­¤æ´¾ç”Ÿå‡ºè‡ªè¡Œè½¦Bicycleç±»ã€æ±½è½¦Motorcarç±»ï¼Œä»ŽBicycleã€Motorcarç±»æ´¾ç”Ÿå‡ºæ‘©æ‰˜è½¦Motorcycleç±»ï¼Œ
+å®ƒä»¬éƒ½æœ‰runã€stopç­‰æˆå‘˜å‡½æ•°ï¼Œè§‚å¯Ÿè™šå‡½æ•°çš„ä½œç”¨ã€‚*/
 #include<iostream>
 using namespace std;
 class Vehicle {
@@ -14,10 +14,10 @@ public:
 	void stop();
 };
 void Bicycle::run() {
-	cout << "×ÔÐÐ³µÔËÐÐÖÐ" << endl;
+	cout << "è‡ªè¡Œè½¦è¿è¡Œä¸­" << endl;
 }
 void Bicycle::stop() {
-	cout << "×ÔÐÐ³µÍ£×¡ÁË" << endl;
+	cout << "è‡ªè¡Œè½¦åœä½äº†" << endl;
 }
 
 class Motorcar :virtual public Vehicle {
@@ -26,10 +26,10 @@ public:
 	void stop();
 };
 void Motorcar::run() {
-	cout << "Ä¦ÍÐ³µÔËÐÐÖÐ" << endl;
+	cout << "æ‘©æ‰˜è½¦è¿è¡Œä¸­" << endl;
 }
 void Motorcar::stop() {
-	cout << "Ä¦ÍÐ³µÍ£×¡ÁË" << endl;
+	cout << "æ‘©æ‰˜è½¦åœä½äº†" << endl;
 }
 
 class Motorcycle :public Bicycle, public Motorcar {
@@ -38,10 +38,10 @@ public:
 	void stop();
 };
 void Motorcycle::run() {
-	cout << "MotorcycleÔËÐÐÖÐ" << endl;
+	cout << "Motorcycleè¿è¡Œä¸­" << endl;
 }
 void Motorcycle::stop() {
-	cout << "MotorcycleÍ£×¡ÁË" << endl;
+	cout << "Motorcycleåœä½äº†" << endl;
 }
 int main() {
 	Vehicle* p;

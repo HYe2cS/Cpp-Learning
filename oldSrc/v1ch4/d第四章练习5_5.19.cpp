@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<string>
 using namespace std;
 class base {
@@ -11,13 +11,13 @@ public:
 		age = ag;
 	}
 	show() {
-		cout << "ÐÕÃû:" << name << endl << "ÄêÁä:" << age << endl;
+		cout << "å§“å:" << name << endl << "å¹´é¾„:" << age << endl;
 	}
 };
 class leader :virtual public base {
 protected:
-	string zhiwu;//Ö°Îñ
-	string bumeng;//²¿ÃÅ
+	string zhiwu;//èŒåŠ¡
+	string bumeng;//éƒ¨é—¨
 public:
 	leader(string na, int ag, string zw, string bm) :base(na, ag)
 	{
@@ -25,7 +25,7 @@ public:
 		bumeng = bm;
 	}
 	show() {
-		cout << "ÐÕÃû:" << name << endl << "ÄêÁä:" << age << endl << "Ö°Îñ:" << zhiwu << endl << "²¿ÃÅ" << bumeng << endl;
+		cout << "å§“å:" << name << endl << "å¹´é¾„:" << age << endl << "èŒåŠ¡:" << zhiwu << endl << "éƒ¨é—¨" << bumeng << endl;
 	}
 };
 class engieer :virtual public base {
@@ -47,13 +47,13 @@ public:
 	{
 	}
 	show() {
-		cout << "ÐÕÃû:" << name << endl << "ÄêÁä:" << age << endl << "Ö°Îñ:" << zhiwu << endl << "²¿ÃÅ" << bumeng << endl
-			<< "Ö°³Æ:" << zhicheng << endl << "×¨Òµ" << zhuanye << endl;
+		cout << "å§“å:" << name << endl << "å¹´é¾„:" << age << endl << "èŒåŠ¡:" << zhiwu << endl << "éƒ¨é—¨" << bumeng << endl
+			<< "èŒç§°:" << zhicheng << endl << "ä¸“ä¸š" << zhuanye << endl;
 	}
 };
 int main()
 {
-	chairman c1("ÕÅÔª½Ú", 20, "Ñ§Éú", "¼Æ¿ÆÔº", "Ñ§Éú", "¼ÆËã»úÀà");
+	chairman c1("å¼ å…ƒèŠ‚", 20, "å­¦ç”Ÿ", "è®¡ç§‘é™¢", "å­¦ç”Ÿ", "è®¡ç®—æœºç±»");
 	c1.show();
 	return 0;
 }

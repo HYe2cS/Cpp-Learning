@@ -1,4 +1,4 @@
-#include <stdio.h>
+ï»¿#include <stdio.h>
 #include <stdlib.h>
 
 int main()
@@ -18,7 +18,7 @@ int main()
 	EndByte = input_IP & ~(~0 << 8);
 	printf("******************************************************\n");
 	printf("The IP address after parsed is: %d.%d.%d.%d\n", BeginByte, MidByte, ThirdByte, EndByte);
-	/*½éÉÜÁ½¸öÑ­»·ÒÆÎ»º¯Êý*/
+	/*ä»‹ç»ä¸¤ä¸ªå¾ªçŽ¯ç§»ä½å‡½æ•°*/
 	printf("******************************************************\n");
 	printf("%u after rotated twice is =%u\n", int_rotate, _rotl(int_rotate, 2));
 	printf("%u after rotated once is =%u\n", int_rotate, _rotr(int_rotate, 1));

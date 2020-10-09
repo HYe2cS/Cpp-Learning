@@ -1,4 +1,4 @@
-#include<stdio.h>
+ï»¿#include<stdio.h>
 
 int zxgb(int a, int b);
 
@@ -9,15 +9,15 @@ main()
 
 	printf("Input two FENSHU:\n");
 
-	scanf("%d/%d,%d/%d", &i, &j, &k, &l);       /*ÊäÈëÁ½¸ö·ÖÊı*/
+	scanf("%d/%d,%d/%d", &i, &j, &k, &l);       /*è¾“å…¥ä¸¤ä¸ªåˆ†æ•°*/
 
-	m = zxgb(j, l) / j * i;                  /*Çó³öµÚÒ»¸ö·ÖÊıÍ¨·ÖºóµÄ·Ö×Ó*/
+	m = zxgb(j, l) / j * i;                  /*æ±‚å‡ºç¬¬ä¸€ä¸ªåˆ†æ•°é€šåˆ†åçš„åˆ†å­*/
 
-	n = zxgb(j, l) / l * k;                  /*Çó³öµÚ¶ş¸ö·ÖÊıÍ¨·ÖºóµÄ·Ö×Ó*/
+	n = zxgb(j, l) / l * k;                  /*æ±‚å‡ºç¬¬äºŒä¸ªåˆ†æ•°é€šåˆ†åçš„åˆ†å­*/
 
-	if (m > n)   printf("%d/%d>%d/%d\n", i, j, k, l);    /*±È½Ï·Ö×ÓµÄ´óĞ¡*/
+	if (m > n)   printf("%d/%d>%d/%d\n", i, j, k, l);    /*æ¯”è¾ƒåˆ†å­çš„å¤§å°*/
 
-	else if (m == n)   printf("%d/%d=%d/%d\n", i, j, k, l);    /*Êä³ö±È½ÏµÄ½á¹û
+	else if (m == n)   printf("%d/%d=%d/%d\n", i, j, k, l);    /*è¾“å‡ºæ¯”è¾ƒçš„ç»“æœ
 */
 
 	else        printf("%d/%d<%d/%d\n", i, j, k, l);
@@ -30,7 +30,7 @@ int zxgb(int a, int b)
 
 	int d;
 
-	if (a < b) c = a, a = b, b = c;     /*Èôa<b,Ôò½»»»Á½±äÁ¿µÄÖµ*/
+	if (a < b) c = a, a = b, b = c;     /*è‹¥a<b,åˆ™äº¤æ¢ä¸¤å˜é‡çš„å€¼*/
 
 	for (c = a * b; b != 0;)
 

@@ -1,8 +1,8 @@
-//ÀàµÄÉùÃ÷
+ï»¿//ç±»çš„å£°æ˜
 #ifndef CIRCLE_H
 #define CIRCLE_H
 
-//Àà
+//ç±»
 class circle{
 public:
 	circle(double r=0.0);

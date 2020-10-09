@@ -1,4 +1,4 @@
-#include<stdio.h>
+ï»¿#include<stdio.h>
 
 #define MAX 2147483647
 
@@ -19,8 +19,8 @@ main()
 
 	printf("The generation process of palindrome:\n");
 
-	while (!nonres((m = re(n)) + n))     /*ÅĞ¶ÏÕûÊıÓëÆä·´ĞòÊıÏà¼ÓºóÊÇ·ñÎª»ØÎÄ
-Êı*/
+	while (!nonres((m = re(n)) + n))     /*åˆ¤æ–­æ•´æ•°ä¸å…¶ååºæ•°ç›¸åŠ åæ˜¯å¦ä¸ºå›æ–‡
+æ•°*/
 
 	{
 		if (m + n >= MAX)
@@ -40,28 +40,28 @@ main()
 		}
 	}
 
-	printf("[%d]:%ld+%ld=%ld\n", ++count, n, m, m + n);     /*Êä³ö×îºóµÃµ½µÄ»Ø
-ÎÄÊı*/
+	printf("[%d]:%ld+%ld=%ld\n", ++count, n, m, m + n);     /*è¾“å‡ºæœ€åå¾—åˆ°çš„å›
+æ–‡æ•°*/
 
 	printf("Here we reached the aim at last!\n");
 }
 
-long re(long int a)     /*ÇóÊäÈëÕûÊıµÄ·´ĞòÊı*/
+long re(long int a)     /*æ±‚è¾“å…¥æ•´æ•°çš„ååºæ•°*/
 
 {
 	long int t;
 
-	for (t = 0; a > 0; a /= 10)    /*½«ÕûÊı·´Ğò*/
+	for (t = 0; a > 0; a /= 10)    /*å°†æ•´æ•°ååº*/
 
 		t = t * 10 + a % 10;
 
 	return t;
 }
 
-int nonres(long int s)   /*ÅĞ¶Ï¸ø¶¨µÄÕûÊıÊÇ·ñÊÇ»ØÎÄÊı*/
+int nonres(long int s)   /*åˆ¤æ–­ç»™å®šçš„æ•´æ•°æ˜¯å¦æ˜¯å›æ–‡æ•°*/
 
 {
-	if (re(s) == s) return 1;       /*ÈôÊÇ»ØÎÄÊıÔò·µ»Ø£±*/
+	if (re(s) == s) return 1;       /*è‹¥æ˜¯å›æ–‡æ•°åˆ™è¿”å›ï¼‘*/
 
-	else return 0;               /*·ñÔò·µ»Ø¡¡£°*/
+	else return 0;               /*å¦åˆ™è¿”å›ã€€ï¼*/
 }

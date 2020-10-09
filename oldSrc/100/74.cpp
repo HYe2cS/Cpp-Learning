@@ -1,16 +1,16 @@
-#include<stdio.h>
+ï»¿#include<stdio.h>
 
 #include<math.h>
 
 main()
 
 {
-	int weight1, weight2, weight3, weight4, d1, d2, d3, d4, x, flag;     /*flag:Âú
- ×ãÌâÒâµÄ±ê¼Ç*/
+	int weight1, weight2, weight3, weight4, d1, d2, d3, d4, x, flag;     /*flag:æ»¡
+ è¶³é¢˜æ„çš„æ ‡è®°*/
 
 	printf("The weight is broke up as following 4 pieces:");
 
-	for (weight1 = 1; weight1 <= 40; weight1++)         /*½«40·Ö½â³É4·İ*/
+	for (weight1 = 1; weight1 <= 40; weight1++)         /*å°†40åˆ†è§£æˆ4ä»½*/
 
 		for (weight2 = weight1 + 1; weight2 <= 40 - weight1; weight2++)
 
@@ -19,20 +19,20 @@ main()
 				if ((weight4 = 40 - weight1 - weight2 - weight3) >= weight3)
 
 				{
-					for (flag = 1, x = 1; x < 41 && flag; x++)     /*ÅĞ¶Ï¿É·ñ³Æ³ö1~40Ö®
-   ¼äµÄÈ«²¿ÖØÁ¿*/
+					for (flag = 1, x = 1; x < 41 && flag; x++)     /*åˆ¤æ–­å¯å¦ç§°å‡º1~40ä¹‹
+   é—´çš„å…¨éƒ¨é‡é‡*/
 
-						for (flag = 0, d1 = 1; d1 > -2; d1--)     /*½«ÖØÎï·ÅÔÚÌìÆ½µÄ×ó
-   ±ß*/
+						for (flag = 0, d1 = 1; d1 > -2; d1--)     /*å°†é‡ç‰©æ”¾åœ¨å¤©å¹³çš„å·¦
+   è¾¹*/
 
-							for (d2 = 1; d2 > -2 && !flag; d2--)   /*1:íÀÂëÔÚÌìÆ½ÓÒ±ß
+							for (d2 = 1; d2 > -2 && !flag; d2--)   /*1:ç ç åœ¨å¤©å¹³å³è¾¹
 	*/
 
-								for (d3 = 1; d3 > -2 && !flag; d3--)    /*0£º²»ÓÃ¸ÃíÀÂë
+								for (d3 = 1; d3 > -2 && !flag; d3--)    /*0ï¼šä¸ç”¨è¯¥ç ç 
 	 */
 
-									for (d4 = 1; d4 > -2 && !flag; d4--)    /*-1:íÀÂëÔÚÌìÆ½
-		 µÄ×ó±ß*/
+									for (d4 = 1; d4 > -2 && !flag; d4--)    /*-1:ç ç åœ¨å¤©å¹³
+		 çš„å·¦è¾¹*/
 
 										if (x == weight1 * d1 + weight2 * d2 + weight3 * d3 + weight4 * d4)
 

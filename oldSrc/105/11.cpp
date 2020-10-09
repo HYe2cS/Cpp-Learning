@@ -1,19 +1,19 @@
-#include<stdio.h>
+ï»¿#include<stdio.h>
 void simpleDebug(int i, char ch, float fl, char a_char[], int a_int[], int size, int option)
 {
 	int j;
 	switch (option)
 	{
-	case 1:/*ÕûÐÍÊý*/
+	case 1:/*æ•´åž‹æ•°*/
 		printf("The int value is %d\n", i);
 		break;
-	case 2:/*×Ö·ûÐÍ*/
+	case 2:/*å­—ç¬¦åž‹*/
 		printf("The char is %c\n", ch);
 		break;
-	case 3:/*¸¡µãÐÍ*/
+	case 3:/*æµ®ç‚¹åž‹*/
 		printf("The float value is %f\n", fl);
 		break;
-	case 4: /*×Ö·ûÐÍÊý×é*/
+	case 4: /*å­—ç¬¦åž‹æ•°ç»„*/
 	{
 		printf("The char array is\n");
 		for (j = 0; j < size; ++j)
@@ -21,7 +21,7 @@ void simpleDebug(int i, char ch, float fl, char a_char[], int a_int[], int size,
 		printf("\n");
 		break;
 	}
-	case 5: /*ÕûÐÍÊý×é*/
+	case 5: /*æ•´åž‹æ•°ç»„*/
 	{
 		printf("The integer array is:\n");
 		for (i = 0; j < size; ++j)
@@ -53,11 +53,11 @@ int main()
 	ch = 'x';
 	fl = 6.5;
 	//clrscr();
-	simpleDebug(i, 0, 0, 0, 0, 0, 1); /*Êä³öÕûÐÍiµÄÖµ*/
-	simpleDebug(0, ch, 0, 0, 0, 0, 2);/*Êä³ö×Ö·ûÐÍchµÄÖµ*/
-	simpleDebug(0, 0, fl, 0, 0, 0, 3);/*Êä³ö×Ö·ûÐÍchµÄÖµ*/
-	simpleDebug(0, 0, 0, a_char, 0, 8, 4);/*Êä³ö×Ö·ûÐÍÊý×éa_charÖÐ¸÷ÔªËØµÄÖµ*/
-	simpleDebug(0, 0, 0, string, 0, 13, 4);/*Êä³ö×Ö·û´®stringµÄÖµ*/
-	simpleDebug(0, 0, 0, 0, a_int, 8, 3);/*Êä³öÕûÐÎÊý×éa_intÖÐ¸÷ÔªËØµÄÖµ*/
-	simpleDebug(0, 0, 0, 0, 0, 0, 10);/*³ö´í*/
+	simpleDebug(i, 0, 0, 0, 0, 0, 1); /*è¾“å‡ºæ•´åž‹içš„å€¼*/
+	simpleDebug(0, ch, 0, 0, 0, 0, 2);/*è¾“å‡ºå­—ç¬¦åž‹chçš„å€¼*/
+	simpleDebug(0, 0, fl, 0, 0, 0, 3);/*è¾“å‡ºå­—ç¬¦åž‹chçš„å€¼*/
+	simpleDebug(0, 0, 0, a_char, 0, 8, 4);/*è¾“å‡ºå­—ç¬¦åž‹æ•°ç»„a_charä¸­å„å…ƒç´ çš„å€¼*/
+	simpleDebug(0, 0, 0, string, 0, 13, 4);/*è¾“å‡ºå­—ç¬¦ä¸²stringçš„å€¼*/
+	simpleDebug(0, 0, 0, 0, a_int, 8, 3);/*è¾“å‡ºæ•´å½¢æ•°ç»„a_intä¸­å„å…ƒç´ çš„å€¼*/
+	simpleDebug(0, 0, 0, 0, 0, 0, 10);/*å‡ºé”™*/
 }

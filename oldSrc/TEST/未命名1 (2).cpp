@@ -1,8 +1,8 @@
-#include<stdio.h>
+ï»¿#include<stdio.h>
 int main()
 {
 	int a;
-	printf("ÇåÝ”ÈëÒ»¸ö·ÖÊý\n");
+	printf("æ¸…è¼¸å…¥ä¸€ä¸ªåˆ†æ•°\n");
 	scanf("%d", &a);
 	if (a >= 0 && a <= 100)
 		switch (a / 10) {

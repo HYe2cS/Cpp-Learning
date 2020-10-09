@@ -1,16 +1,16 @@
-#include<iostream>
+ï»¿#include<iostream>
 using namespace std;
-class Base {//Ğé»ùÀà
+class Base {//è™šåŸºç±»
 public:
 	Base()
 	{
-		a = 5;//³õÊ¼Öµa=5
+		a = 5;//åˆå§‹å€¼a=5
 		cout << "Base a=" << a << endl;
 	}
 protected:
 	int a;
 };
-class  Base1 : virtual public Base {//·ÇĞé»ùÀà
+class  Base1 : virtual public Base {//éè™šåŸºç±»
 public:
 	int b1;
 	Base1()
@@ -19,7 +19,7 @@ public:
 		cout << "Base1 a=" << a << endl;
 	}
 };
-class Base2 : virtual public Base {//·ÇĞé»ùÀà
+class Base2 : virtual public Base {//éè™šåŸºç±»
 public:
 	int b2;
 	Base2()
@@ -30,11 +30,11 @@ public:
 };
 
 class Derived :public Base1, public Base2 {
-	//µ÷ÓÃÇÒÖ»µ÷ÓÃÒ»±ébase¹¹Ôìº¯Êı£¬
-	//ÓÉ×îÔ¶ÅÉÉúÀà(Derived)µÄ¹¹Ôìº¯ÊıÍ¨¹ıµ÷ÓÃĞé»ùÀàµÄ¹¹Ôìº¯Êı½øĞĞ³õÊ¼»¯µÄ
+	//è°ƒç”¨ä¸”åªè°ƒç”¨ä¸€ébaseæ„é€ å‡½æ•°ï¼Œ
+	//ç”±æœ€è¿œæ´¾ç”Ÿç±»(Derived)çš„æ„é€ å‡½æ•°é€šè¿‡è°ƒç”¨è™šåŸºç±»çš„æ„é€ å‡½æ•°è¿›è¡Œåˆå§‹åŒ–çš„
 	//base--base1--derived
-	//Ö®ºóÆäËû»ùÀà¶Ôbase¹¹Ôìº¯ÊıµÄµ÷ÓÃ±»ºöÂÔ
-	//base1¹¹Ôìº¯Êı--base2¹¹Ôìº¯Êı--derived¹¹Ôìº¯Êı
+	//ä¹‹åå…¶ä»–åŸºç±»å¯¹baseæ„é€ å‡½æ•°çš„è°ƒç”¨è¢«å¿½ç•¥
+	//base1æ„é€ å‡½æ•°--base2æ„é€ å‡½æ•°--derivedæ„é€ å‡½æ•°
 public:
 	int d;
 	Derived()

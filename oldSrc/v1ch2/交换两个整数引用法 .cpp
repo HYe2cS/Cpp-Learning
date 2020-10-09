@@ -1,4 +1,4 @@
-//½»»»Á½¸öÕûÊı ÒıÓÃ·¨
+ï»¿//äº¤æ¢ä¸¤ä¸ªæ•´æ•° å¼•ç”¨æ³•
 #include<iostream>
 using namespace std;
 void Swap(int& a, int& b)

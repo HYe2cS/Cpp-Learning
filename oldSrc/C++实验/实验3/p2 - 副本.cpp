@@ -1,16 +1,16 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <string>
 using namespace std;
-class MyArray              //ÉùÃ÷Ò»¸ö»ùÀàMyArray
+class MyArray              //å£°æ˜ä¸€ä¸ªåŸºç±»MyArray
 {
 public:
-	MyArray(int leng);      //¹¹Ôìº¯Êı
-	~MyArray();           //Îö¹¹º¯Êı
-	void Input();           //ÊäÈëÊı¾İµÄ³ÉÔ±º¯Êı
-	void Display(string);    //Êä³öº¯ÊıµÄ³ÉÔ±º¯Êı
+	MyArray(int leng);      //æ„é€ å‡½æ•°
+	~MyArray();           //ææ„å‡½æ•°
+	void Input();           //è¾“å…¥æ•°æ®çš„æˆå‘˜å‡½æ•°
+	void Display(string);    //è¾“å‡ºå‡½æ•°çš„æˆå‘˜å‡½æ•°
 protected:
-	int* alist;             //»ùÀàÖĞ´æ·ÅÒ»×éÕûÊı
-	int length;            //ÕûÊıµÄ¸öÊı
+	int* alist;             //åŸºç±»ä¸­å­˜æ”¾ä¸€ç»„æ•´æ•°
+	int length;            //æ•´æ•°çš„ä¸ªæ•°
 };
 MyArray::MyArray(int leng)
 {
@@ -26,17 +26,17 @@ MyArray::MyArray(int leng)
 		cout << "assign failure";
 		exit(1);
 	}
-	cout << "MyArrayÀà¶ÔÏóÒÑ´´½¨¡£" << endl;
+	cout << "MyArrayç±»å¯¹è±¡å·²åˆ›å»ºã€‚" << endl;
 }
 MyArray::~MyArray()
 {
 	delete[] alist;
-	cout << "MyArrayÀà¶ÔÏó±»³·Ïú¡£" << endl;
+	cout << "MyArrayç±»å¯¹è±¡è¢«æ’¤é”€ã€‚" << endl;
 }
 
 void MyArray::Input()
 {
-	cout << "Çë´Ó¼üÅÌÊäÈë" << length << "¸öÕûÊı£º";
+	cout << "è¯·ä»é”®ç›˜è¾“å…¥" << length << "ä¸ªæ•´æ•°ï¼š";
 	int i;
 	int* p = alist;
 	for (i = 0; i < length; i++, p++)
@@ -47,7 +47,7 @@ void MyArray::Display(string str)
 {
 	int i;
 	int* p = alist;
-	cout << str << length << "¸öÕûÊı£º";
+	cout << str << length << "ä¸ªæ•´æ•°ï¼š";
 	for (i = 0; i < length; i++, p++)
 		cout << *p << " ";
 	cout << endl;
@@ -57,6 +57,6 @@ int main()
 {
 	MyArray a(5);
 	a.Input();
-	a.Display("ÏÔÊ¾ÒÑÊäÈëµÄ");
+	a.Display("æ˜¾ç¤ºå·²è¾“å…¥çš„");
 	return 0;
 }

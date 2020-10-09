@@ -1,9 +1,9 @@
-/*
-Íê³É³É¼¨ÊäÈë£¨°üÀ¨ÓïÎÄ£¬ÊıÑ§£¬Ó¢ÓïÈıÃÅ¿Î£©£»
-¼ÆËã×Ü·Ö²¢ÅÅÃû
-¼ÆËã¸÷¿ÆÆ½¾ù·Ö
-Í³¼Æ¸÷¿Æ²»¼°¸ñµÄÑ§ÉúÈËÊı²¢Êä³ö²»¼°¸ñµÄÑ§ÉúµÄÏêÏ¸ĞÅÏ¢
-½«ÊäÈëµÄÑ§ÉúĞÅÏ¢¼°·ÖÎöµÄÊı¾İ´æÈë´ÅÅÌÎÄ¼ş
+ï»¿/*
+å®Œæˆæˆç»©è¾“å…¥ï¼ˆåŒ…æ‹¬è¯­æ–‡ï¼Œæ•°å­¦ï¼Œè‹±è¯­ä¸‰é—¨è¯¾ï¼‰ï¼›
+è®¡ç®—æ€»åˆ†å¹¶æ’å
+è®¡ç®—å„ç§‘å¹³å‡åˆ†
+ç»Ÿè®¡å„ç§‘ä¸åŠæ ¼çš„å­¦ç”Ÿäººæ•°å¹¶è¾“å‡ºä¸åŠæ ¼çš„å­¦ç”Ÿçš„è¯¦ç»†ä¿¡æ¯
+å°†è¾“å…¥çš„å­¦ç”Ÿä¿¡æ¯åŠåˆ†æçš„æ•°æ®å­˜å…¥ç£ç›˜æ–‡ä»¶
 */
 #include<stdio.h>
 #define N 3
@@ -19,14 +19,14 @@ typedef struct student STU;
 void input_info(STU* s, int n)
 {
 	STU* p;
-	printf("ÊäÈëÑ§ÉúÑ§ºÅÓëĞÕÃûĞÅÏ¢£º\n");
+	printf("è¾“å…¥å­¦ç”Ÿå­¦å·ä¸å§“åä¿¡æ¯ï¼š\n");
 	for (p = s; p < s + n; p++)
 		scanf("%d%s", &p->num, &p->name);
 }
 void input_score(STU* s, int n)
 {
 	STU* p;
-	printf("ÊäÈëÑ§ÉúÓïÎÄ¡¢ÊıÑ§¡¢Ó¢Óï³É¼¨£º\n");
+	printf("è¾“å…¥å­¦ç”Ÿè¯­æ–‡ã€æ•°å­¦ã€è‹±è¯­æˆç»©ï¼š\n");
 	for (p = s; p < s + n; p++)
 	{
 		printf("%d %s:", p->num, p->name);
@@ -37,8 +37,8 @@ void input_score(STU* s, int n)
 void output(STU* s, int n, FILE* fp)
 {
 	STU* p;
-	printf("Êä³öÑ§ÉúÑ§ºÅ¡¢ĞÕÃû¡¢ÓïÎÄ¡¢ÊıÑ§¡¢Ó¢Óï¡¢×Ü·Ö\n");
-	fprintf(fp, "Êä³öÑ§ÉúÑ§ºÅ¡¢ĞÕÃû¡¢ÓïÎÄ¡¢ÊıÑ§¡¢Ó¢Óï¡¢×Ü·Ö\n");
+	printf("è¾“å‡ºå­¦ç”Ÿå­¦å·ã€å§“åã€è¯­æ–‡ã€æ•°å­¦ã€è‹±è¯­ã€æ€»åˆ†\n");
+	fprintf(fp, "è¾“å‡ºå­¦ç”Ÿå­¦å·ã€å§“åã€è¯­æ–‡ã€æ•°å­¦ã€è‹±è¯­ã€æ€»åˆ†\n");
 	for (p = s; p < s + n; p++)
 	{
 		printf("%d %9s %4d %4d %4d %4d\n", p->num, p->name, p->yuwen, p->shuxue, p->yingyu, p->total);
@@ -69,8 +69,8 @@ void avg_cnt(STU* s, int n, FILE* fp)
 	STU* p;
 	float avg_yuwen = 0, avg_shuxue = 0, avg_yingyu = 0;
 	int cnt_yuwen = 0, cnt_shuxue = 0, cnt_yingyu = 0;
-	printf("Êä³ö²»¼°¸ñÑ§ÉúÑ§ºÅ¡¢ĞÕÃû¡¢ÓïÎÄ¡¢ÊıÑ§¡¢Ó¢Óï¡¢×Ü·Ö£º\n");
-	fprintf(fp, "Êä³ö²»¼°¸ñÑ§ÉúÑ§ºÅ¡¢ĞÕÃû¡¢ÓïÎÄ¡¢ÊıÑ§¡¢Ó¢Óï¡¢×Ü·Ö£º\n");
+	printf("è¾“å‡ºä¸åŠæ ¼å­¦ç”Ÿå­¦å·ã€å§“åã€è¯­æ–‡ã€æ•°å­¦ã€è‹±è¯­ã€æ€»åˆ†ï¼š\n");
+	fprintf(fp, "è¾“å‡ºä¸åŠæ ¼å­¦ç”Ÿå­¦å·ã€å§“åã€è¯­æ–‡ã€æ•°å­¦ã€è‹±è¯­ã€æ€»åˆ†ï¼š\n");
 	for (p = s; p < s + n; p++)
 	{
 		avg_yuwen += p->yuwen; avg_shuxue += p->shuxue; avg_yingyu += p->yingyu;
@@ -81,18 +81,18 @@ void avg_cnt(STU* s, int n, FILE* fp)
 			printf("%d %9s %4d %4d %4d %4d\n", p->num, p->name, p->yuwen, p->shuxue, p->yingyu, p->total);
 		fprintf(fp, "%d %9s %4d %4d %4d %4d\n", p->num, p->name, p->yuwen, p->shuxue, p->yingyu, p->total);
 	}
-	printf("ÓïÎÄÆ½¾ù·Ö£º%.1f\n", avg_yuwen / n);
-	printf("ÊıÑ§Æ½¾ù·Ö£º%.1f\n", avg_shuxue / n);
-	printf("Ó¢ÓïÆ½¾ù·Ö£º%.1f\n", avg_yingyu / n);
-	printf("ÓïÎÄ²»¼°¸ñÈËÊı£º%d\n", cnt_yuwen);
-	printf("ÊıÑ§²»¼°¸ñÈËÊı£º%d\n", cnt_shuxue);
-	printf("Ó¢Óï²»¼°¸ñÈËÊı£º%d\n", cnt_yingyu);
-	fprintf(fp, "ÓïÎÄÆ½¾ù·Ö£º%.1f\n", avg_yuwen / n);
-	fprintf(fp, "ÊıÑ§Æ½¾ù·Ö£º%.1f\n", avg_shuxue / n);
-	fprintf(fp, "Ó¢ÓïÆ½¾ù·Ö£º%.1f\n", avg_yingyu / n);
-	fprintf(fp, "ÓïÎÄ²»¼°¸ñÈËÊı£º%d\n", cnt_yuwen);
-	fprintf(fp, "ÊıÑ§²»¼°¸ñÈËÊı£º%d\n", cnt_shuxue);
-	fprintf(fp, "Ó¢Óï²»¼°¸ñÈËÊı£º%d\n", cnt_yingyu);
+	printf("è¯­æ–‡å¹³å‡åˆ†ï¼š%.1f\n", avg_yuwen / n);
+	printf("æ•°å­¦å¹³å‡åˆ†ï¼š%.1f\n", avg_shuxue / n);
+	printf("è‹±è¯­å¹³å‡åˆ†ï¼š%.1f\n", avg_yingyu / n);
+	printf("è¯­æ–‡ä¸åŠæ ¼äººæ•°ï¼š%d\n", cnt_yuwen);
+	printf("æ•°å­¦ä¸åŠæ ¼äººæ•°ï¼š%d\n", cnt_shuxue);
+	printf("è‹±è¯­ä¸åŠæ ¼äººæ•°ï¼š%d\n", cnt_yingyu);
+	fprintf(fp, "è¯­æ–‡å¹³å‡åˆ†ï¼š%.1f\n", avg_yuwen / n);
+	fprintf(fp, "æ•°å­¦å¹³å‡åˆ†ï¼š%.1f\n", avg_shuxue / n);
+	fprintf(fp, "è‹±è¯­å¹³å‡åˆ†ï¼š%.1f\n", avg_yingyu / n);
+	fprintf(fp, "è¯­æ–‡ä¸åŠæ ¼äººæ•°ï¼š%d\n", cnt_yuwen);
+	fprintf(fp, "æ•°å­¦ä¸åŠæ ¼äººæ•°ï¼š%d\n", cnt_shuxue);
+	fprintf(fp, "è‹±è¯­ä¸åŠæ ¼äººæ•°ï¼š%d\n", cnt_yingyu);
 }
 int main()
 {

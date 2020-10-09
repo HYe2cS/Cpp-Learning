@@ -1,5 +1,5 @@
-/*
-ÓÃÑ¡ÔñÅÅÐò·¨¶Ô 10 ¸öÕûÊýÅÅÐò¡£ 10 ¸öÕûÊýÓÃ scanf º¯ÊýÊäÈë¡£
+ï»¿/*
+ç”¨é€‰æ‹©æŽ’åºæ³•å¯¹ 10 ä¸ªæ•´æ•°æŽ’åºã€‚ 10 ä¸ªæ•´æ•°ç”¨ scanf å‡½æ•°è¾“å…¥ã€‚
 */
 #include<stdio.h>
 int main()

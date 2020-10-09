@@ -1,10 +1,10 @@
-#include<stdio.h>
+ï»¿#include<stdio.h>
 int main()
 {
-	int i, x, y, last = 1;    /*±äÁ¿last±£´æÇóXµÄY´Î·½¹ı³ÌÖĞµÄ²¿·Ö³Ë»ıµÄºóÈıÎ»*/
+	int i, x, y, last = 1;    /*å˜é‡lastä¿å­˜æ±‚Xçš„Yæ¬¡æ–¹è¿‡ç¨‹ä¸­çš„éƒ¨åˆ†ä¹˜ç§¯çš„åä¸‰ä½*/
 	printf("Input X and Y(X**Y):");
 	scanf("%d**%d", &x, &y);
-	for (i = 1; i <= y; i++)                /*X×Ô³ËY´Î*/
-		last = last * x % 1000;     /*½«last³ËXºó¶Ô1000È¡Ä££¬¼´Çó»ıµÄºóÈıÎ»*/
-	printf("The last 3 digits of %d**%d is:%d\n", x, y, last % 1000); /*´òÓ¡½á¹û*/
+	for (i = 1; i <= y; i++)                /*Xè‡ªä¹˜Yæ¬¡*/
+		last = last * x % 1000;     /*å°†lastä¹˜Xåå¯¹1000å–æ¨¡ï¼Œå³æ±‚ç§¯çš„åä¸‰ä½*/
+	printf("The last 3 digits of %d**%d is:%d\n", x, y, last % 1000); /*æ‰“å°ç»“æœ*/
 }

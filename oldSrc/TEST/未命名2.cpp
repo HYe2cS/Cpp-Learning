@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<string>
 using namespace std;
 class CPU {
@@ -15,24 +15,24 @@ public:
 	void Run();
 	void Stop();
 private:
-	string rank;//µÈ¼¶
-	int frequency;//ÆµÂÊ
-	float voltage;//µçÑ¹
+	string rank;//ç­‰çº§
+	int frequency;//é¢‘çŽ‡
+	float voltage;//ç”µåŽ‹
 };
 CPU::CPU()
 {
-	cout << "¹¹ÔìÒ»¸öCPU" << endl;
+	cout << "æž„é€ ä¸€ä¸ªCPU" << endl;
 }
 CPU::CPU(string r, int f, float v)
 {
-	cout << "¹¹ÔìÒ»¸öCPU" << endl;
+	cout << "æž„é€ ä¸€ä¸ªCPU" << endl;
 	rank = r;
 	frequency = f;
 	voltage = v;
 }
 CPU::~CPU()
 {
-	cout << "Îö¹¹Ò»¸öCPU" << endl;
+	cout << "æžæž„ä¸€ä¸ªCPU" << endl;
 }
 string CPU::GetRank()
 {
@@ -47,7 +47,7 @@ float CPU::GetVoltage()
 	return voltage;
 }
 /**/
-//*****************************Èý¸ösetº¯Êý
+//*****************************ä¸‰ä¸ªsetå‡½æ•°
 void CPU::SetRank(string r)
 {
 	rank = r;
@@ -63,11 +63,11 @@ void CPU::SetVoltage(float v)
 //******************************************
 void CPU::Run()
 {
-	cout << "CPU¿ªÊ¼ÔËÐÐ£¡" << endl;
+	cout << "CPUå¼€å§‹è¿è¡Œï¼" << endl;
 }
 void CPU::Stop()
 {
-	cout << "CPUÍ£Ö¹ÔËÐÐ£¡" << endl;
+	cout << "CPUåœæ­¢è¿è¡Œï¼" << endl;
 }
 int main()
 {
@@ -76,9 +76,9 @@ int main()
 	cpu1.SetFrequency(3000);
 	cpu1.SetVoltage(220);
 	cpu1.Run();
-	cout << "cpu1µÄµÈ¼¶ÊÇ:" << cpu1.GetRank() << endl;
-	cout << "cpu1µÄÆµÂÊÊÇ:" << cpu1.GetFrequency() << endl;
-	cout << "cpu1µÄµçÑ¹ÊÇ:" << cpu1.GetVoltage() << endl;
+	cout << "cpu1çš„ç­‰çº§æ˜¯:" << cpu1.GetRank() << endl;
+	cout << "cpu1çš„é¢‘çŽ‡æ˜¯:" << cpu1.GetFrequency() << endl;
+	cout << "cpu1çš„ç”µåŽ‹æ˜¯:" << cpu1.GetVoltage() << endl;
 	cpu1.Stop();
 	return 0;
 }

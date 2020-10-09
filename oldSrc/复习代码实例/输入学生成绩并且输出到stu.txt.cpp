@@ -1,5 +1,5 @@
-/*
-1������һ���ļ�����ѧ����¼����ѧ�� ���������ɼ���ɣ������и�ʽд���ļ� stu.txt �С�
+﻿/*
+1．建立一个文件，将学生记录（由学号 、姓名、成绩组成）按下列格式写到文件 stu.txt 中。
 1 Li 90
 2 Wang 45
 3 Zhao 58
@@ -17,14 +17,14 @@ typedef struct student STU;
 void in(STU* s, int n)
 {
 	STU* p;
-	printf("����ѧ��ѧ�š��������ɼ�\n");
+	printf("输入学生学号、姓名、成绩\n");
 	for (p = s; p < s + n; p++)
 		scanf("%d%s%d", &p->num, &p->name, &p->score);
 }
 void out(STU* s, int n, FILE* fp)
 {
 	STU* p;
-	printf("���ѧ��ѧ�š��������ɼ�\n");
+	printf("输出学生学号、姓名、成绩\n");
 	for (p = s; p < s + n; p++)
 		fprintf(fp, "%d %s %d\n", p->num, p->name, p->score);
 }

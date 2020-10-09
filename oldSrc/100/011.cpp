@@ -1,4 +1,4 @@
-#include<stdio.h>
+ï»¿#include<stdio.h>
 int days(struct date day);
 struct date {
 	int year;
@@ -11,31 +11,31 @@ main()
 	struct date today, term;
 	int yearday, year, day;
 	printf("Enter year/month/day:");
-	scanf("%d%d%d", &today.year, &today.month, &today.day);  /*ÊäÈëÈÕÆÚ*/
-	term.month = 12;               /*ÉèÖÃ±äÁ¿µÄ³õÊ¼Öµ£ºÔÂ*/
-	term.day = 31;                 /*ÉèÖÃ±äÁ¿µÄ³õÊ¼Öµ£ºÈÕ*/
+	scanf("%d%d%d", &today.year, &today.month, &today.day);  /*è¾“å…¥æ—¥æœŸ*/
+	term.month = 12;               /*è®¾ç½®å˜é‡çš„åˆå§‹å€¼ï¼šæœˆ*/
+	term.day = 31;                 /*è®¾ç½®å˜é‡çš„åˆå§‹å€¼ï¼šæ—¥*/
 	for (yearday = 0, year = 1990; year < today.year; year++)
 	{
 		term.year = year;
-		yearday += days(term);     /*¼ÆËã´Ó1990ÄêÖÁÖ¸¶¨ÄêµÄÇ°Ò»Äê¹²ÓĞ¶àÉÙÌì*/
+		yearday += days(term);     /*è®¡ç®—ä»1990å¹´è‡³æŒ‡å®šå¹´çš„å‰ä¸€å¹´å…±æœ‰å¤šå°‘å¤©*/
 	}
-	yearday += days(today);       /*¼ÓÉÏÖ¸¶¨ÄêÖĞµ½Ö¸¶¨ÈÕÆÚµÄÌìÊı*/
-	day = yearday % 5;               /*ÇóÓàÊı*/
-	if (day > 0 && day < 4) printf("he was fishing at that day.\n");   /*´òÓ¡½á¹û*/
+	yearday += days(today);       /*åŠ ä¸ŠæŒ‡å®šå¹´ä¸­åˆ°æŒ‡å®šæ—¥æœŸçš„å¤©æ•°*/
+	day = yearday % 5;               /*æ±‚ä½™æ•°*/
+	if (day > 0 && day < 4) printf("he was fishing at that day.\n");   /*æ‰“å°ç»“æœ*/
 	else printf("He was sleeping at that day.\n");
 }
 
 int days(struct date day)
 {
 	static int day_tab[2][13] =
-	{ {0,31,28,31,30,31,30,31,31,30,31,30,31,},      /*Æ½¾ùÃ¿ÔÂµÄÌìÊı
+	{ {0,31,28,31,30,31,30,31,31,30,31,30,31,},      /*å¹³å‡æ¯æœˆçš„å¤©æ•°
 */
 			 {0,31,29,31,30,31,30,31,31,30,31,30,31,},
 	};
 	int i, lp;
 	lp = day.year % 4 == 0 && day.year % 100 != 0 || day.year % 400 == 0;
-	/*ÅĞ¶¨yearÎªÈòÄê»¹ÊÇÆ½Äê£¬lp=0ÎªÆ½Äê£¬·Ç0ÎªÈòÄê*/
-	for (i = 1; i < day.month; i++)            /*¼ÆËã±¾ÄêÖĞ×Ô1ÔÂ1ÈÕÆğµÄÌìÊı*/
+	/*åˆ¤å®šyearä¸ºé—°å¹´è¿˜æ˜¯å¹³å¹´ï¼Œlp=0ä¸ºå¹³å¹´ï¼Œé0ä¸ºé—°å¹´*/
+	for (i = 1; i < day.month; i++)            /*è®¡ç®—æœ¬å¹´ä¸­è‡ª1æœˆ1æ—¥èµ·çš„å¤©æ•°*/
 		day.day += day_tab[lp][i];
 	return day.day;
 }

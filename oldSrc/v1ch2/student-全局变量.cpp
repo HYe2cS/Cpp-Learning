@@ -1,4 +1,4 @@
-//studentÀàµÄ±àĞ´ÊäÈëÊä³ö
+ï»¿//studentç±»çš„ç¼–å†™è¾“å…¥è¾“å‡º
 #include<iostream>
 #include<string>
 using namespace std;
@@ -7,7 +7,7 @@ float sum = 0;
 float avg = 0.0;
 class Student {
 public:
-	Student(string na = "ÕÅÈı", string sn = "20190000000", char s = 'm', int ag = 20, int sco = 0);//¹¹Ôìº¯Êı
+	Student(string na = "å¼ ä¸‰", string sn = "20190000000", char s = 'm', int ag = 20, int sco = 0);//æ„é€ å‡½æ•°
 	void set(string na, string sn, char s, int ag, int sco);
 	void show();
 private:
@@ -20,7 +20,7 @@ private:
 	//	float sum;
 	//	float avg;
 };
-Student::Student(string na, string sn, char s, int ag, int sco)//¹¹Ôìº¯Êı
+Student::Student(string na, string sn, char s, int ag, int sco)//æ„é€ å‡½æ•°
 {
 	name = na; sno = sn; sex = s; age = ag; score = sco;
 	++count;
@@ -33,19 +33,19 @@ void Student::set(string na, string sn, char s, int ag, int sco)
 }
 void Student::show()
 {
-	cout << "ĞÕÃû£º" << name << "\tÑ§ºÅ£º" << sno << "\tĞÔ±ğ£º" << sex << "\tÄêÁä£º" << age << "\t³É¼¨" << score;
-	cout << "\t×Ü·Ö" << sum << "\tÆ½¾ù·Ö" << avg << endl;
+	cout << "å§“åï¼š" << name << "\tå­¦å·ï¼š" << sno << "\tæ€§åˆ«ï¼š" << sex << "\tå¹´é¾„ï¼š" << age << "\tæˆç»©" << score;
+	cout << "\tæ€»åˆ†" << sum << "\tå¹³å‡åˆ†" << avg << endl;
 }
 
 int main()
 {
-	Student s1("ÕÅÔª½Ú", "20181251215", 'm', 19, 98);
+	Student s1("å¼ å…ƒèŠ‚", "20181251215", 'm', 19, 98);
 	s1.show();
 
-	Student s2("ÕÅÔª½Ú", "20181251215", 'm', 19, 87);
+	Student s2("å¼ å…ƒèŠ‚", "20181251215", 'm', 19, 87);
 	s2.show();
 
-	Student s3("ÕÅÔª½Ú", "20181251215", 'm', 19, 66);
+	Student s3("å¼ å…ƒèŠ‚", "20181251215", 'm', 19, 66);
 	s3.show();
 
 	return 0;

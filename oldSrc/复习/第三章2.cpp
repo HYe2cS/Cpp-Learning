@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<string>
 using namespace std;
 
@@ -13,7 +13,7 @@ private:
 	int year, month, day;
 };
 
-date::date() { cout << "²»´ø²ÎÊýµÄ¹¹Ôìº¯Êý" << endl; }
+date::date() { cout << "ä¸å¸¦å‚æ•°çš„æž„é€ å‡½æ•°" << endl; }
 
 date::date(int y, int m, int d) :day(d)
 {
@@ -23,7 +23,7 @@ date::date(int y, int m, int d) :day(d)
 
 void date::show()
 {
-	cout << "³öÉúÈÕÆÚ:" << year << "-" << month << "-" << day << endl;
+	cout << "å‡ºç”Ÿæ—¥æœŸ:" << year << "-" << month << "-" << day << endl;
 }
 
 date::~date()
@@ -78,14 +78,14 @@ people::people(string na, char se, int ag, int y, int m, int d) :date1(y, m, d)
 }
 void people::show()
 {
-	cout << "ÐÕÃû:" << name << endl;
-	cout << "ÐÔ±ð:" << sex << endl;
-	cout << "ÄêÁä:" << age << endl;
+	cout << "å§“å:" << name << endl;
+	cout << "æ€§åˆ«:" << sex << endl;
+	cout << "å¹´é¾„:" << age << endl;
 	date1.show();
 }
 void people::showcount()
 {
-	cout << "×ÜÈËÊý:" << count << endl;
+	cout << "æ€»äººæ•°:" << count << endl;
 }
 int people::count = 0;
 int main()
@@ -94,9 +94,9 @@ int main()
 
 	//people s;
 	//s.show();
-	people s1("ÀîËÄ", 'm', 19, 2011, 2, 10);
+	people s1("æŽå››", 'm', 19, 2011, 2, 10);
 	s1.show();
-	people s2("ÀîËÄ", 'm', 19, 2011, 2, 10);
+	people s2("æŽå››", 'm', 19, 2011, 2, 10);
 	s2.show();
 	people::showcount();
 	s1.showcount();

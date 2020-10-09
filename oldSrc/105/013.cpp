@@ -1,34 +1,34 @@
-#include <stdlib.h>
+ï»¿#include <stdlib.h>
 #include <stdio.h>
 
-#define MAX_VEXTEX_NUM 9 /* Í¼ÖĞ¶¥µãÊı */
-#define ARC_NUM 12       /* Í¼ÖĞ»¡Êı */
+#define MAX_VEXTEX_NUM 9 /* å›¾ä¸­é¡¶ç‚¹æ•° */
+#define ARC_NUM 12       /* å›¾ä¸­å¼§æ•° */
 #define MAX_QUEUEMEM (MAX_VEXTEX_NUM+1)
 
-/* ¶¨ÒåÃèÊöÍ¼µÄ¶¥µãÖ®¼äÁ¬½ÓĞÅÏ¢µÄÊı×é */
+/* å®šä¹‰æè¿°å›¾çš„é¡¶ç‚¹ä¹‹é—´è¿æ¥ä¿¡æ¯çš„æ•°ç»„ */
 int GraphEdge[ARC_NUM * 2][2] = { {0,1},{1,0},{1,2},{2,1},{2,3},{3,2},{3,4},{4,3},{4,5},{5,4},{5,0},{0,5},{0,6},{6,0},{6,8},{8,6},{6,7},{7,6},{7,8},{8,7},{7,3},{3,7},{8,4},{4,8} };
-/*¶¨ÒåÊı×évisitedÓÃÀ´±êÊ¾Ò»¸ö¶¥µãÊÇ·ñ±»·ÃÎÊ¹ı*/
+/*å®šä¹‰æ•°ç»„visitedç”¨æ¥æ ‡ç¤ºä¸€ä¸ªé¡¶ç‚¹æ˜¯å¦è¢«è®¿é—®è¿‡*/
 int visited[MAX_VEXTEX_NUM] = { 0,0,0,0,0,0,0,0,0 };
-/*¶¨Òå±í½áµã£¬¼´Ã¿Ìõ»¡¶ÔÓ¦µÄ½áµã */
+/*å®šä¹‰è¡¨ç»“ç‚¹ï¼Œå³æ¯æ¡å¼§å¯¹åº”çš„ç»“ç‚¹ */
 typedef struct ArcNode {
-	int adjvex;                 /* ¸Ã»¡ËùÖ¸ÏòµÄ¶¥µãµÄÎ»ÖÃ */
-	struct ArcNode* nextarc;   /* Ö¸ÏòÏÂÒ»Ìõ»¡µÄÖ¸Õë */
+	int adjvex;                 /* è¯¥å¼§æ‰€æŒ‡å‘çš„é¡¶ç‚¹çš„ä½ç½® */
+	struct ArcNode* nextarc;   /* æŒ‡å‘ä¸‹ä¸€æ¡å¼§çš„æŒ‡é’ˆ */
 }ArcNode;
 
-/* ¶¨ÒåÍ·½áµã */
+/* å®šä¹‰å¤´ç»“ç‚¹ */
 typedef struct VNode {
-	int data;                    /* ¶¥µãĞÅÏ¢ */
-	struct ArcNode* firstarc;   /* Ö¸ÏòµÚÒ»ÌõÒÀ¸½¸Ã¶¥µãµÄ»¡µÄÖ¸Õë */
+	int data;                    /* é¡¶ç‚¹ä¿¡æ¯ */
+	struct ArcNode* firstarc;   /* æŒ‡å‘ç¬¬ä¸€æ¡ä¾é™„è¯¥é¡¶ç‚¹çš„å¼§çš„æŒ‡é’ˆ */
 }VNode, AdjList[MAX_VEXTEX_NUM];
 
-/* ¶¨ÒåÍ¼µÄ½á¹¹ */
+/* å®šä¹‰å›¾çš„ç»“æ„ */
 typedef struct {
-	VNode vertices[MAX_VEXTEX_NUM];/* ¶¨Òå±íÍ·Êı×é */
-	int vexnum;      /* ¶¨ÒåÍ¼ÖĞ¶¥µãÊı */
-	int arcnum;      /* ¶¨ÒåÍ¼ÖĞ»¡Êı */
+	VNode vertices[MAX_VEXTEX_NUM];/* å®šä¹‰è¡¨å¤´æ•°ç»„ */
+	int vexnum;      /* å®šä¹‰å›¾ä¸­é¡¶ç‚¹æ•° */
+	int arcnum;      /* å®šä¹‰å›¾ä¸­å¼§æ•° */
 }ALGraph;
 
-/*½¨Á¢Ò»¸öÊ¹ÓÃÁÚ½Ó±í´æ´¢µÄÍ¼*/
+/*å»ºç«‹ä¸€ä¸ªä½¿ç”¨é‚»æ¥è¡¨å­˜å‚¨çš„å›¾*/
 void CreateGraph(ALGraph* alGraph)
 {
 	int i, j;
@@ -36,7 +36,7 @@ void CreateGraph(ALGraph* alGraph)
 	ArcNode* vexNode;
 	alGraph->vexnum = MAX_VEXTEX_NUM;
 	alGraph->arcnum = ARC_NUM;
-	/* ³õÊ¼»¯±íÍ· */
+	/* åˆå§‹åŒ–è¡¨å¤´ */
 	for (i = 0; i < MAX_VEXTEX_NUM; i++)
 	{
 		alGraph->vertices[i].data = i;
@@ -66,7 +66,7 @@ void CreateGraph(ALGraph* alGraph)
 		}
 	}
 }
-/* ´òÓ¡Õâ¸öÍ¼ */
+/* æ‰“å°è¿™ä¸ªå›¾ */
 void OutputGraph(ALGraph* alGraph)
 {
 	int i;
@@ -84,7 +84,7 @@ void OutputGraph(ALGraph* alGraph)
 		printf("[END]\n");
 	}
 }
-/*µİ¹éÊµÏÖDFS*/
+/*é€’å½’å®ç°DFS*/
 void DFS(ALGraph* alGraph, int v)
 {
 	int w;
@@ -100,11 +100,11 @@ void DFS(ALGraph* alGraph, int v)
 		vexNode = vexNode->nextarc;
 	}
 }
-/* Í¼µÄÉî¶ÈÓÅÏÈ±éÀú */
+/* å›¾çš„æ·±åº¦ä¼˜å…ˆéå† */
 void DFSTraverse(ALGraph* alGraph)
 {
 	int i;
-	/*·ÃÎÊ±êÖ¾Êı×é³õÊ¼»¯*/
+	/*è®¿é—®æ ‡å¿—æ•°ç»„åˆå§‹åŒ–*/
 	for (i = 0; i < MAX_VEXTEX_NUM; i++)
 	{
 		visited[i] = 0;
@@ -122,7 +122,7 @@ void DFSTraverse(ALGraph* alGraph)
 	}
 	printf("[end]\n");
 }
-/*ÎªÁËÊµÏÖ¹ã¶ÈÓÅÏÈ±éÀú£¬ĞèÒª½èÖúÒ»¸ö¶ÓÁĞ */
+/*ä¸ºäº†å®ç°å¹¿åº¦ä¼˜å…ˆéå†ï¼Œéœ€è¦å€ŸåŠ©ä¸€ä¸ªé˜Ÿåˆ— */
 typedef struct {
 	int queuemem[MAX_QUEUEMEM];
 	int header;
@@ -148,7 +148,7 @@ int EmptyQueue(QUEUE* queue)
 		return 1;
 	return 0;
 }
-/* ¹ã¶ÈÓÅÏÈ±éÀú */
+/* å¹¿åº¦ä¼˜å…ˆéå† */
 void BFSTraverse(ALGraph* alGraph)
 {
 	int i;
@@ -156,7 +156,7 @@ void BFSTraverse(ALGraph* alGraph)
 	ArcNode* vexNode;
 	QUEUE queue;
 	InitQueue(&queue);
-	/*·ÃÎÊ±êÖ¾Êı×é³õÊ¼»¯*/
+	/*è®¿é—®æ ‡å¿—æ•°ç»„åˆå§‹åŒ–*/
 	for (i = 0; i < MAX_VEXTEX_NUM; i++)
 	{
 		visited[i] = 0;
@@ -196,17 +196,17 @@ void BFSTraverse(ALGraph* alGraph)
 }
 int main()
 {
-	/*¶¨ÒåÍ¼½áµã*/
+	/*å®šä¹‰å›¾ç»“ç‚¹*/
 	ALGraph alGraph;
 
 	system("cls");
-	/*½¨Á¢Í¼µÄÁÚ½Ó±í*/
+	/*å»ºç«‹å›¾çš„é‚»æ¥è¡¨*/
 	CreateGraph(&alGraph);
-	/*Êä³öÍ¼µÄÁÚ½Ó±í*/
+	/*è¾“å‡ºå›¾çš„é‚»æ¥è¡¨*/
 	OutputGraph(&alGraph);
-	/*Éî¶ÈÓÅÏÈ±éÀú*/
+	/*æ·±åº¦ä¼˜å…ˆéå†*/
 	DFSTraverse(&alGraph);
-	/*¹ã¶ÈÓÅÏÈ±éÀú*/
+	/*å¹¿åº¦ä¼˜å…ˆéå†*/
 	BFSTraverse(&alGraph);
 	getchar();
 	return 0;

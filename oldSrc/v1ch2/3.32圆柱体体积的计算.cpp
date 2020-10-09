@@ -1,4 +1,4 @@
-//Ô²ÖùÌåÌå»ıµÄ¼ÆËã
+ï»¿//åœ†æŸ±ä½“ä½“ç§¯çš„è®¡ç®—
 #include<iostream>
 #define pi 3.14
 using namespace std;
@@ -27,7 +27,7 @@ void cylinder::calculate()
 }
 void cylinder::vol()
 {
-	cout << "Ô²ÖùÌåµÄÌå»ıÊÇ:" << V << endl;
+	cout << "åœ†æŸ±ä½“çš„ä½“ç§¯æ˜¯:" << V << endl;
 }
 int main()
 {

@@ -1,10 +1,10 @@
-#include<stdio.h>
+ï»¿#include<stdio.h>
 #include<math.h>
 main()
 {
 	int i8, i5, i3, i2, i1, n8, n5, n3, n2, n1;
 	float max = 0, term;
-	for (i8 = 0; i8 < 3; i8++)       /*Çî¾ÙËùÓĞ¿ÉÄÜµÄ´æ¿î·½Ê½*/
+	for (i8 = 0; i8 < 3; i8++)       /*ç©·ä¸¾æ‰€æœ‰å¯èƒ½çš„å­˜æ¬¾æ–¹å¼*/
 		for (i5 = 0; i5 <= (20 - 8 * i8) / 5; i5++)
 			for (i3 = 0; i3 <= (20 - 8 * i8 - 5 * i5) / 3; i3++)
 				for (i2 = 0; i2 <= (20 - 8 * i8 - 5 * i5 - 3 * i3) / 2; i2++)
@@ -15,7 +15,7 @@ main()
 						* pow((double)(1 + 3 * 0.0069 * 12), (double)i3)
 						* pow((double)(1 + 5 * 0.0075 * 12), (double)i5)
 						* pow((double)(1 + 8 * 0.0084 * 12), (double)i8);
-					/*¼ÆËãµ½ÆÚÊ±µÄ±¾ÀûºÏ¼Æ*/
+					/*è®¡ç®—åˆ°æœŸæ—¶çš„æœ¬åˆ©åˆè®¡*/
 					if (term > max)
 					{
 						max = term; n1 = i1; n2 = i2; n3 = i3; n5 = i5; n8 = i8;
@@ -29,5 +29,5 @@ main()
 	printf("   made fixed deposit for 2 year: %d times\n", n2);
 	printf("   made fixed deposit for 1 year: %d times\n", n1);
 	printf("                            Toal: %.2f\n", max);
-	/*Êä³ö´æ¿î·½Ê½*/
+	/*è¾“å‡ºå­˜æ¬¾æ–¹å¼*/
 }

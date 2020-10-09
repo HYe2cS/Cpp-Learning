@@ -1,22 +1,22 @@
-#include<stdio.h>
+ï»¿#include<stdio.h>
 #include<stdlib.h>
 int main()
 {
-	int i = 0;/* iÎª¼ÆÊıÆ÷ */
+	int i = 0;/* iä¸ºè®¡æ•°å™¨ */
 	int n;
-	int factorial = 1;/* ±£´æ½×³ËµÄ½á¹û */
+	int factorial = 1;/* ä¿å­˜é˜¶ä¹˜çš„ç»“æœ */
 	puts("*************************************");
 	puts("*      The program will compute     *");
 	puts("*    the factotial of an integer    *");
 	puts("*************************************");
 	puts("please input the number n:");
 	scanf("%d", &n);
-	if (n < 0)/*ÅĞ¶ÏÊäÈëµÄÊéÊÇ·ñ´óÓÚ»òµÈÓÚ0*/
+	if (n < 0)/*åˆ¤æ–­è¾“å…¥çš„ä¹¦æ˜¯å¦å¤§äºæˆ–ç­‰äº0*/
 	{
 		printf("please input an interger >= 0.\n");
 		return 0;
 	}
-	if (n == 0)/* 0µÄ½×³ËÊÇ1 */
+	if (n == 0)/* 0çš„é˜¶ä¹˜æ˜¯1 */
 	{
 		printf("factorial of 0 is 1.\n");
 		return 0;

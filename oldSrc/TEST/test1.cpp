@@ -1,24 +1,24 @@
-#include<stdio.h>
+ï»¿#include<stdio.h>
 int main()
 {
 	printf("-----------------------------------------\n");
-	printf("            Ö÷ ²Ë µ¥\n\n");
-	printf("   1. Ìí¼Ó¼ÇÂ¼   2. ÏÔÊ¾¼ÇÂ¼ \n");
-	printf("   3. ¶ÁÈ¡¼ÇÂ¼   4. ±£´æ¼ÇÂ¼\n");
+	printf("            ä¸» èœ å•\n\n");
+	printf("   1. æ·»åŠ è®°å½•   2. æ˜¾ç¤ºè®°å½• \n");
+	printf("   3. è¯»å–è®°å½•   4. ä¿å­˜è®°å½•\n");
 	printf("-----------------------------------------\n");
-	printf("  ÇëÑ¡Ôñ 1-4 £¬ 0 ÍË³ö£º\n");
+	printf("  è¯·é€‰æ‹© 1-4 ï¼Œ 0 é€€å‡ºï¼š\n");
 
 	int x;
 	//x=getchar();
 	scanf("%d", &x);
 	switch (x)
 	{
-	case 0:printf("ÄãÑ¡ÔñÁË0\n"); break;
-	case 1:printf("ÄãÑ¡ÔñÁË1\n"); break;
-	case 2:printf("ÄãÑ¡ÔñÁË2\n"); break;
-	case 3:printf("ÄãÑ¡ÔñÁË3\n"); break;
-	case 4:printf("ÄãÑ¡ÔñÁË4\n"); break;
-	default:printf("Ñ¡Ôñ´íÎó£¡");
+	case 0:printf("ä½ é€‰æ‹©äº†0\n"); break;
+	case 1:printf("ä½ é€‰æ‹©äº†1\n"); break;
+	case 2:printf("ä½ é€‰æ‹©äº†2\n"); break;
+	case 3:printf("ä½ é€‰æ‹©äº†3\n"); break;
+	case 4:printf("ä½ é€‰æ‹©äº†4\n"); break;
+	default:printf("é€‰æ‹©é”™è¯¯ï¼");
 	}
 	return 0;
 }

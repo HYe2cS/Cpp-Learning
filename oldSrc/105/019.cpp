@@ -1,6 +1,6 @@
-#include<stdio.h>
+ï»¿#include<stdio.h>
 #include<stdlib.h>
-/*¶¨ÒåÊı×éµÄ×î´óÎ»Êı*/
+/*å®šä¹‰æ•°ç»„çš„æœ€å¤§ä½æ•°*/
 #define MAXARRAY 1000
 int main()
 {
@@ -10,7 +10,7 @@ int main()
 
 	while (1)
 	{
-		/*ÊäÈëÒª¼ÆËãµÄÕûÊı*/
+		/*è¾“å…¥è¦è®¡ç®—çš„æ•´æ•°*/
 		while (1)
 		{
 			printf("Please input the integer to compute:\n");
@@ -23,7 +23,7 @@ int main()
 			else
 				break;
 		}
-		/*³õÊ¼»¯½á¹ûÊı×éºÍ½øÎ»Êı×é*/
+		/*åˆå§‹åŒ–ç»“æœæ•°ç»„å’Œè¿›ä½æ•°ç»„*/
 		fac[0] = 1;
 		add[0] = 0;
 		for (j = 1; j <= MAXARRAY - 1; j++)
@@ -34,7 +34,7 @@ int main()
 		top = 0;
 		for (i = 1; i <= n; i++)
 		{
-			/*¼ÆËã½øÎ»Êı×éadd*/
+			/*è®¡ç®—è¿›ä½æ•°ç»„add*/
 			for (j = 0; j <= top; j++)
 			{
 				fac[j] = fac[j] * i;
@@ -43,10 +43,10 @@ int main()
 				else
 					add[j] = (fac[j] + add[j - 1]) / 10;
 			}
-			/*¸üĞÂtopµÄÖµ*/
+			/*æ›´æ–°topçš„å€¼*/
 			if (add[top] >= 1)
 				top++;
-			/*¼ÆËã½á¹ûÊı×éfac*/
+			/*è®¡ç®—ç»“æœæ•°ç»„fac*/
 			for (j = 0; j <= top; j++)
 			{
 				if (j == 0)
@@ -55,7 +55,7 @@ int main()
 					fac[j] = (fac[j] + add[j - 1]) % 10;
 			}
 		}
-		/*Êä³ö½á¹ûÊı×éfac*/
+		/*è¾“å‡ºç»“æœæ•°ç»„fac*/
 		printf("\n%d!=", n);
 		for (j = top; j >= 0; j--)
 		{

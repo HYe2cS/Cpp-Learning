@@ -1,7 +1,7 @@
-#include<iostream>
+ï»¿#include<iostream>
 #define pi 3.14
 using namespace std;
-//Ô²ÐÎÀà
+//åœ†å½¢ç±»
 class circle {
 public:
 	circle(double r = 0);
@@ -15,9 +15,9 @@ circle::circle(double r)
 }
 void circle::area()
 {
-	cout << "Ãæ»ýÊÇ:" << pi * re * re << endl;
+	cout << "é¢ç§¯æ˜¯:" << pi * re * re << endl;
 }
-//³¤·½ÐÎÀà
+//é•¿æ–¹å½¢ç±»
 class chang {
 public:
 	chang(double a = 0, double b = 0);
@@ -33,9 +33,9 @@ chang::chang(double a, double b)
 }
 void chang::area()
 {
-	cout << "Ãæ»ýÊÇ:" << ah * bh << endl;
+	cout << "é¢ç§¯æ˜¯:" << ah * bh << endl;
 }
-//Õý·½ÐÎÀà
+//æ­£æ–¹å½¢ç±»
 class zheng {
 public:
 	zheng(double a = 0);
@@ -49,13 +49,13 @@ zheng::zheng(double a)
 }
 void zheng::area()
 {
-	cout << "Ãæ»ýÊÇ:" << ah * ah << endl;
+	cout << "é¢ç§¯æ˜¯:" << ah * ah << endl;
 }
 
 void Yuan()
 {
 	double r;
-	cout << "ÇëÊäÈë°ë¾¶:";
+	cout << "è¯·è¾“å…¥åŠå¾„:";
 	cin >> r;
 	circle c1(r);
 	c1.area();
@@ -63,7 +63,7 @@ void Yuan()
 void Chang()
 {
 	double a, b;
-	cout << "ÇëÊäÈë³¤ºÍ¿íµÄÖµa b:";
+	cout << "è¯·è¾“å…¥é•¿å’Œå®½çš„å€¼a b:";
 	cin >> a >> b;
 	chang c2(a, b);
 	c2.area();
@@ -71,7 +71,7 @@ void Chang()
 void Zheng()
 {
 	double a;
-	cout << "ÇëÊäÈë±ß³¤:";
+	cout << "è¯·è¾“å…¥è¾¹é•¿:";
 	cin >> a;
 	zheng z1(a);
 	z1.area();
@@ -98,14 +98,14 @@ int main()
 
 	int key = -1;
 
-	cout << "ÇëÑ¡ÔñÄãÒª¼ÆËãÃæ»ýµÄÍ¼ÐÎ" << endl;
-	cout << "1 Ô²ÐÎ    2 ³¤·½ÐÎ    3 Õý·½ÐÎ" << endl;
+	cout << "è¯·é€‰æ‹©ä½ è¦è®¡ç®—é¢ç§¯çš„å›¾å½¢" << endl;
+	cout << "1 åœ†å½¢    2 é•¿æ–¹å½¢    3 æ­£æ–¹å½¢" << endl;
 	cin >> key;
 	switch (key)
 	{
-	case 1:Yuan(); break;//Ô²ÐÎ
-	case 2:Chang(); break;//³¤·½ÐÎ
-	case 3:Zheng(); break;//Õý·½ÐÎ
+	case 1:Yuan(); break;//åœ†å½¢
+	case 2:Chang(); break;//é•¿æ–¹å½¢
+	case 3:Zheng(); break;//æ­£æ–¹å½¢
 	default:return 0;
 	}
 

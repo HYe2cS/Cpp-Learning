@@ -1,4 +1,4 @@
-#include<stdio.h>
+ï»¿#include<stdio.h>
 
 void movedisc(unsigned n, char fromneedle, char toneedle, char usingneedle)
 ;
@@ -12,11 +12,11 @@ main()
 
 	printf("please enter the number of disc:");
 
-	scanf("%d", &n);               /*ÊäÈëNÖµ*/
+	scanf("%d", &n);               /*è¾“å…¥Nå€¼*/
 
 	printf("\tneedle:\ta\t b\t c\n");
 
-	movedisc(n, 'a', 'c', 'b');        /*´ÓAÉÏ½èÖúB½«N¸öÅÌ×ÓÒÆ¶¯µ½CÉÏ*/
+	movedisc(n, 'a', 'c', 'b');        /*ä»Aä¸Šå€ŸåŠ©Bå°†Nä¸ªç›˜å­ç§»åŠ¨åˆ°Cä¸Š*/
 
 	printf("\t Total: %d\n", i);
 }
@@ -29,12 +29,12 @@ void movedisc(unsigned n, char fromneedle, char toneedle, char usingneedle)
 	{
 		movedisc(n - 1, fromneedle, usingneedle, toneedle);
 
-		/*´ÓfromneedleÉÏ½èÖútoneedle½«N-1¸öÅÌ×ÓÒÆ¶¯µ½usingn
-eedleÉÏ*/
+		/*ä»fromneedleä¸Šå€ŸåŠ©toneedleå°†N-1ä¸ªç›˜å­ç§»åŠ¨åˆ°usingn
+eedleä¸Š*/
 
 		++i;
 
-		switch (fromneedle)     /*½«fromneedle ÉÏµÄÒ»¸öÅÌ×ÓÒÆµ½toneedleÉÏ*/
+		switch (fromneedle)     /*å°†fromneedle ä¸Šçš„ä¸€ä¸ªç›˜å­ç§»åˆ°toneedleä¸Š*/
 
 		{
 		case 'a': switch (toneedle)
@@ -86,7 +86,7 @@ n", i, n, n);
 
 		movedisc(n - 1, usingneedle, toneedle, fromneedle);
 
-		/*´ÓusingneedleÉÏ½èÖúfromneedle½«N-1¸öÅÌ×ÓÒÆ¶¯µ½toneedleÉÏ
+		/*ä»usingneedleä¸Šå€ŸåŠ©fromneedleå°†N-1ä¸ªç›˜å­ç§»åŠ¨åˆ°toneedleä¸Š
 */
 	}
 }

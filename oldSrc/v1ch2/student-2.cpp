@@ -1,10 +1,10 @@
-//studentÀàµÄ±àĞ´ÊäÈëÊä³ö
+ï»¿//studentç±»çš„ç¼–å†™è¾“å…¥è¾“å‡º
 #include<iostream>
 #include<string>
 using namespace std;
 class Student {
 public:
-	Student(string na = "ÕÅÈı", string sn = "20190000000", char s = 'm', int ag = 20);//¹¹Ôìº¯Êı
+	Student(string na = "å¼ ä¸‰", string sn = "20190000000", char s = 'm', int ag = 20);//æ„é€ å‡½æ•°
 	void set(string na, string sn, char s, int ag);
 	void show();
 private:
@@ -13,7 +13,7 @@ private:
 	char sex;
 	int age;
 };
-Student::Student(string na, string sn, char s, int ag)//¹¹Ôìº¯Êı
+Student::Student(string na, string sn, char s, int ag)//æ„é€ å‡½æ•°
 {
 	name = na; sno = sn; sex = s; age = ag;
 }
@@ -23,17 +23,17 @@ void Student::set(string na, string sn, char s, int ag)
 }
 void Student::show()
 {
-	cout << "ĞÕÃû£º" << name << "\tÑ§ºÅ£º" << sno << "\tĞÔ±ğ£º" << sex << "\tÄêÁä£º" << age << endl;
+	cout << "å§“åï¼š" << name << "\tå­¦å·ï¼š" << sno << "\tæ€§åˆ«ï¼š" << sex << "\tå¹´é¾„ï¼š" << age << endl;
 }
 int main()
 {
-	//¶ÔÏóÊı×é
-	Student stud1[4] = { Student("ÕÅÔª½Ú","20181251215",'m',19),Student("ÕÅÔª½Ú","20181251215",'m',19),Student("ÕÅÔª½Ú","20181251215",'m',19) };
+	//å¯¹è±¡æ•°ç»„
+	Student stud1[4] = { Student("å¼ å…ƒèŠ‚","20181251215",'m',19),Student("å¼ å…ƒèŠ‚","20181251215",'m',19),Student("å¼ å…ƒèŠ‚","20181251215",'m',19) };
 	for (int i = 0; i < 4; i++)
 	{
 		stud1[i].show();
 	}
-	//¶ÔÏóÖ¸Õë
+	//å¯¹è±¡æŒ‡é’ˆ
 	Student* p = stud1;
 	for (int i = 0; i < 4; i++)
 	{
@@ -42,15 +42,15 @@ int main()
 	}
 	/* 	Student stud1;
 		stud1.show();
-		Student stud2("ÕÅÔª½Ú","20181251215",'m',19);
+		Student stud2("å¼ å…ƒèŠ‚","20181251215",'m',19);
 		stud2.show();
 
-		stud1.set("ÕÅÔª½Ú","20181251215",'m',19);//ÆÕÍ¨·½Ê½
+		stud1.set("å¼ å…ƒèŠ‚","20181251215",'m',19);//æ™®é€šæ–¹å¼
 		stud1.show();
 		Student *p=&stud1;
-		(*p).set("ÕÅÔª½Ú","20181251215",'m',19);//(*p).·½Ê½
+		(*p).set("å¼ å…ƒèŠ‚","20181251215",'m',19);//(*p).æ–¹å¼
 		(*p).show();
-		p->set("ÕÅÔª½Ú","20181251215",'m',19);//p->·½Ê½
+		p->set("å¼ å…ƒèŠ‚","20181251215",'m',19);//p->æ–¹å¼
 		p->show();
 	*/
 	return 0;

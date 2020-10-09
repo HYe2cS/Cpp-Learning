@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 using namespace std;
 //base
 class Base {
@@ -46,7 +46,7 @@ public:
 protected:
 	int y;
 };
-//ÅÉÉúÀà
+//æ´¾ç”Ÿç±»
 class Derived :public Base, public Base1 {
 public:
 	Derived(int x1, int y1, float z1) :Base(x1), Base1(y1), b(x1), b1(y1)
@@ -54,7 +54,7 @@ public:
 		cout << "Constructing Derived." << endl;
 		z = z1;
 	}
-	void setxyz(int x1, int y1, float z1)//×¢Òâx=x1;y=y1;z=z1;b.setx(x1);Ğ´ÔÚº¯ÊıÌåÄÚ
+	void setxyz(int x1, int y1, float z1)//æ³¨æ„x=x1;y=y1;z=z1;b.setx(x1);å†™åœ¨å‡½æ•°ä½“å†…
 	{
 		x = x1;
 		y = y1;

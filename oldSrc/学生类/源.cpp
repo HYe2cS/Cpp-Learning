@@ -1,21 +1,21 @@
-// test1.cpp : ´ËÎÄ¼þ°üº¬ "main" º¯Êý¡£³ÌÐòÖ´ÐÐ½«ÔÚ´Ë´¦¿ªÊ¼²¢½áÊø¡£
+ï»¿// test1.cpp : æ­¤æ–‡ä»¶åŒ…å« "main" å‡½æ•°ã€‚ç¨‹åºæ‰§è¡Œå°†åœ¨æ­¤å¤„å¼€å§‹å¹¶ç»“æŸã€‚
 /*
-1¡¢(20·Ö)±àÐ´Ò»¸öC++³ÌÐò£¬½¨Á¢Ò»¸ösquare() µÄº¯Êý£¬·µ»ØÆä
-²ÎÊýµÄÆ½·½£¬ÖØÔØsquare() 3´Î£¬ÈÃËü·µ»ØÕûÊý¡¢³¤ÕûÊýÓëË«¾«¶È
-ÊýµÄÆ½·½¡£¡£
-2¡¢(30·Ö)·Ö±ð¶¨Òå¹«¹²»ùÀàperson(ÈËÔ±)Àà£¬ÓÉËüÅÉÉú³öTeacher(½Ì
-	Ê¦)ÀàºÍCadre(¸É ²¿)Àà£¬²ÉÓÃ¶à¼Ì³Ð·½Ê½ÔÙÓÉÕâÁ½¸öÀàÅÉÉú³ö
-	Teacher_Cadre.Àà£¬ ÒªÇó :
-	(1)ÔÚ¹«¹²»ùÀàÖÐ°üº¬ÐÕÃû¡¢ÄêÁä¡¢ÐÔ±ð¡¢µç»°µÈÊý¾Ý³ÉÔ±£¬ÒÔ
-	¼°ÓÃÓÚÐÅÏ¢Êä³öµÄ³ÉÔ±º¯Êýshow¡£
-	(2) Teacher ÀàµÄÊý¾Ý³ÉÔ±ÖÐ»¹ÓÐÖ°³Æ¡¢¹¤×Ê¡¢Cadre ÀàµÄÊý¾Ý³É
-	Ô±»¹ÓÐÖ°Îñ£¬ÇÒÕâÁ½¸öÀà¶¼ÓÐÊä³ö×Ô¼ºÐÅÏ¢µÄ³ÉÔ±º¯Êýshow¡£.
-	3)ÔÚÀàÖÐÉùÃ÷³ÉÔ±º¯Êý£¬ÀàÍâ¶¨Òå¡£
-	(4)ÎªÁË±ÜÃâ¶þÒåÐÔ£¬Ó¦°Ñ¹«¹²»ùÀàÉèÎªÐé»ùÀà¡£
-	3¡¢(25·Ö)ÉùÃ÷Ò»¸ö¸´ÊýÀàcomplex, Ê¹ÓÃ³ÉÔ±ÔËËã·ûÖØÔØº¯ÊýÖØÔØ
-	¡°_¡±ÊµÏÖÁ½¸ö¸´ÊýµÄ¼õ·¨¡£
-	4¡¢(25·Ö)¶¨ÒåÒ»Ò»¸öshape³éÏóÀà£¬ÓÉËüÅÉÉú³öRectangleÀàºÍCircleÀà£¬
-	ÓÃÐéº¯Êý·Ö±ð¼ÆËã¾ØÐÎºÍÔ²µÄÃæ»ýArea¡£
+1ã€(20åˆ†)ç¼–å†™ä¸€ä¸ªC++ç¨‹åºï¼Œå»ºç«‹ä¸€ä¸ªsquare() çš„å‡½æ•°ï¼Œè¿”å›žå…¶
+å‚æ•°çš„å¹³æ–¹ï¼Œé‡è½½square() 3æ¬¡ï¼Œè®©å®ƒè¿”å›žæ•´æ•°ã€é•¿æ•´æ•°ä¸ŽåŒç²¾åº¦
+æ•°çš„å¹³æ–¹ã€‚ã€‚
+2ã€(30åˆ†)åˆ†åˆ«å®šä¹‰å…¬å…±åŸºç±»person(äººå‘˜)ç±»ï¼Œç”±å®ƒæ´¾ç”Ÿå‡ºTeacher(æ•™
+	å¸ˆ)ç±»å’ŒCadre(å¹² éƒ¨)ç±»ï¼Œé‡‡ç”¨å¤šç»§æ‰¿æ–¹å¼å†ç”±è¿™ä¸¤ä¸ªç±»æ´¾ç”Ÿå‡º
+	Teacher_Cadre.ç±»ï¼Œ è¦æ±‚ :
+	(1)åœ¨å…¬å…±åŸºç±»ä¸­åŒ…å«å§“åã€å¹´é¾„ã€æ€§åˆ«ã€ç”µè¯ç­‰æ•°æ®æˆå‘˜ï¼Œä»¥
+	åŠç”¨äºŽä¿¡æ¯è¾“å‡ºçš„æˆå‘˜å‡½æ•°showã€‚
+	(2) Teacher ç±»çš„æ•°æ®æˆå‘˜ä¸­è¿˜æœ‰èŒç§°ã€å·¥èµ„ã€Cadre ç±»çš„æ•°æ®æˆ
+	å‘˜è¿˜æœ‰èŒåŠ¡ï¼Œä¸”è¿™ä¸¤ä¸ªç±»éƒ½æœ‰è¾“å‡ºè‡ªå·±ä¿¡æ¯çš„æˆå‘˜å‡½æ•°showã€‚.
+	3)åœ¨ç±»ä¸­å£°æ˜Žæˆå‘˜å‡½æ•°ï¼Œç±»å¤–å®šä¹‰ã€‚
+	(4)ä¸ºäº†é¿å…äºŒä¹‰æ€§ï¼Œåº”æŠŠå…¬å…±åŸºç±»è®¾ä¸ºè™šåŸºç±»ã€‚
+	3ã€(25åˆ†)å£°æ˜Žä¸€ä¸ªå¤æ•°ç±»complex, ä½¿ç”¨æˆå‘˜è¿ç®—ç¬¦é‡è½½å‡½æ•°é‡è½½
+	â€œ_â€å®žçŽ°ä¸¤ä¸ªå¤æ•°çš„å‡æ³•ã€‚
+	4ã€(25åˆ†)å®šä¹‰ä¸€ä¸€ä¸ªshapeæŠ½è±¡ç±»ï¼Œç”±å®ƒæ´¾ç”Ÿå‡ºRectangleç±»å’ŒCircleç±»ï¼Œ
+	ç”¨è™šå‡½æ•°åˆ†åˆ«è®¡ç®—çŸ©å½¢å’Œåœ†çš„é¢ç§¯Areaã€‚
 	*/
 
 #include <iostream>
@@ -38,15 +38,15 @@ person::person(string na, int ag, string se, int num) {
 	number = num;
 }
 void person::show() {
-	cout << "ÐÕÃû£º" << name << endl;
-	cout << "ÄêÁä£º" << age << endl;
-	cout << "ÐÔ±ð£º" << sex << endl;
-	cout << "µç»°£º" << number << endl;
+	cout << "å§“åï¼š" << name << endl;
+	cout << "å¹´é¾„ï¼š" << age << endl;
+	cout << "æ€§åˆ«ï¼š" << sex << endl;
+	cout << "ç”µè¯ï¼š" << number << endl;
 }
 class Teacher :virtual public person {
 private:
-	string title;//Ö°³Æ
-	float money;//¹¤×Ê
+	string title;//èŒç§°
+	float money;//å·¥èµ„
 public:
 	Teacher(string na, int ag, string se, int num, string tit, float mon);
 	void show();
@@ -56,13 +56,13 @@ Teacher::Teacher(string na, int ag, string se, int num, string tit, float mon) :
 	money = mon;
 }
 void Teacher::show() {
-	cout << "Ö°³Æ£º" << title << endl;
-	cout << "¹¤×Ê£º" << money << endl;
+	cout << "èŒç§°ï¼š" << title << endl;
+	cout << "å·¥èµ„ï¼š" << money << endl;
 };
 
 class Cadre :virtual public person {
 private:
-	string position;//Ö°Îñ
+	string position;//èŒåŠ¡
 public:
 	Cadre(string na, int ag, string se, int num, string pos);
 	void show();
@@ -71,7 +71,7 @@ Cadre::Cadre(string na, int ag, string se, int num, string pos) :person(na, ag, 
 	position = pos;
 }
 void Cadre::show() {
-	cout << "Ö°Îñ£º" << position << endl;
+	cout << "èŒåŠ¡ï¼š" << position << endl;
 }
 class Teacher_Cadre :public Teacher, public Cadre {
 public:
@@ -89,7 +89,7 @@ void Teacher_Cadre::show() {
 }
 int main()
 {
-	Teacher_Cadre t1("ÕÅÔª½Ú", 20, "ÄÐ", 13155299590, "ÌØ¼¶½ÌÊ¦", 3000, "ÊýÑ§ÀÏÊ¦");
+	Teacher_Cadre t1("å¼ å…ƒèŠ‚", 20, "ç”·", 13155299590, "ç‰¹çº§æ•™å¸ˆ", 3000, "æ•°å­¦è€å¸ˆ");
 	t1.show();
 	return 0;
 }

@@ -1,5 +1,5 @@
-/*2. ´Ó¼üÅÌÊäÈëÈýÌõ±ßa¡¢bºÍc£¬ÈôÄÜ¹¹³ÉÈý½ÇÐÎÔòÊä³öÆäÃæ»ý£¬
-·ñÔòÊä³ö²»ÄÜ¹¹³ÉÈý½ÇÐÎµÄÌáÊ¾ÐÅÏ¢"No triangle"¡£ Èý½ÇÐÎÃæ»ý¼ÆËã¹«Ê½    ÆäÖÐ£ºs=(a+b+c)£¯2¡££¨10·Ö£©
+ï»¿/*2. ä»Žé”®ç›˜è¾“å…¥ä¸‰æ¡è¾¹aã€bå’Œcï¼Œè‹¥èƒ½æž„æˆä¸‰è§’å½¢åˆ™è¾“å‡ºå…¶é¢ç§¯ï¼Œ
+å¦åˆ™è¾“å‡ºä¸èƒ½æž„æˆä¸‰è§’å½¢çš„æç¤ºä¿¡æ¯"No triangle"ã€‚ ä¸‰è§’å½¢é¢ç§¯è®¡ç®—å…¬å¼    å…¶ä¸­ï¼šs=(a+b+c)ï¼2ã€‚ï¼ˆ10åˆ†ï¼‰
 */
 #include<stdio.h>
 #include<math.h>

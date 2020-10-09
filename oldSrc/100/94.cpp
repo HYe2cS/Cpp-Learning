@@ -1,4 +1,4 @@
-#include<stdio.h>
+ï»¿#include<stdio.h>
 
 main()
 
@@ -12,7 +12,7 @@ main()
 
 		scanf("%d", &n);
 
-		if (n < 3) printf("\n Enter error!\n");     /*¿ØÖÆÊäÈëÕýÈ·µÄNÖµ*/
+		if (n < 3) printf("\n Enter error!\n");     /*æŽ§åˆ¶è¾“å…¥æ­£ç¡®çš„Nå€¼*/
 	}
 
 	un = un2 = 1;
@@ -28,7 +28,7 @@ main()
 
 		un2 = un;
 
-		un = un1 + un2;      /*ÀûÓÃÍ¨Ïî¹«Ê½Çó½âNÏîµÄÖµ*/
+		un = un1 + un2;      /*åˆ©ç”¨é€šé¡¹å…¬å¼æ±‚è§£Né¡¹çš„å€¼*/
 
 		printf(i % 10 ? "%d\t" : "%d\n", un);
 	}

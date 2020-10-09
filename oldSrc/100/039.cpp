@@ -1,4 +1,4 @@
-#include<stdio.h>
+ï»¿#include<stdio.h>
 
 main()
 
@@ -7,13 +7,13 @@ main()
 
 	printf("The series with equal difference are:\n");
 
-	for (n = 1; n <= 6; n++)                 /*¹«²înÈ¡ÖµÎª1~6*/
+	for (n = 1; n <= 6; n++)                 /*å…¬å·®nå–å€¼ä¸º1~6*/
 
-		for (a = 1; a <= 4; a++)             /*Ê×ÏîaÈ¡ÖµÎª1~4*/
+		for (a = 1; a <= 4; a++)             /*é¦–é¡¹aå–å€¼ä¸º1~4*/
 
-			if (4 * n + 6 * a == 26 && n * (n + a) * (n + a + a) * (n + a + a + a) == 880)  /*ÅÐ¶Ï½á¹û*/
+			if (4 * n + 6 * a == 26 && n * (n + a) * (n + a + a) * (n + a + a + a) == 880)  /*åˆ¤æ–­ç»“æžœ*/
 
 				for (i = 0; i < 20; i++)
 
-					printf("%d  ", n + i * a);            /*Êä³öÇ°20Ïî*/
+					printf("%d  ", n + i * a);            /*è¾“å‡ºå‰20é¡¹*/
 }

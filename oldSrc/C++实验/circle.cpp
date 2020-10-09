@@ -1,6 +1,6 @@
-#include"circle.h"
+ï»¿#include"circle.h"
 #include"iostream.h"
-//ÀàµÄÊµÏÖ
+//ç±»çš„å®ç°
 
 circle::circle(double r)
 {

@@ -1,8 +1,8 @@
-#include<stdio.h>
+ï»¿#include<stdio.h>
 #include<math.h>
 int main()
 {
-	int x = 25, y = 25, z = 30; /*³õÊ¼»¯ĞèÒª±È½ÏµÄÊı*/
+	int x = 25, y = 25, z = 30; /*åˆå§‹åŒ–éœ€è¦æ¯”è¾ƒçš„æ•°*/
 	float f = 25.095, h = 25.095;
 	printf("****************************************\n");
 	printf("**This is a logical calculator: **\n");

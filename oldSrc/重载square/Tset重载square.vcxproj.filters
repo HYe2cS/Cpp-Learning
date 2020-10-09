@@ -15,10 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="测试对成员初始化.cpp">
+    <ClCompile Include="重载square.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="重载square.cpp">
+    <ClCompile Include="privateMemberTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

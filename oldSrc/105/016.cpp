@@ -1,4 +1,4 @@
-#include<stdio.h>
+ï»¿#include<stdio.h>
 int main()
 {
 	int i, j, count;
@@ -10,8 +10,8 @@ int main()
 	puts("The the result is:\n");
 	printf(" RED BALL WHITE BALL BLACK BALL\n");
 	count = 1;
-	for (i = 0; i <= 3; i++)       /*iÊÇºìÇò¸öÊý£¬×÷ÎªÍâ²ãÑ­»·±äÁ¿*/
-		for (j = 0; j <= 3; j++)   /*jÊÇ°×Çò¸öÊý£¬×÷ÎªÄÚ²ãÑ­»·±äÁ¿*/
+	for (i = 0; i <= 3; i++)       /*iæ˜¯çº¢çƒä¸ªæ•°ï¼Œä½œä¸ºå¤–å±‚å¾ªçŽ¯å˜é‡*/
+		for (j = 0; j <= 3; j++)   /*jæ˜¯ç™½çƒä¸ªæ•°ï¼Œä½œä¸ºå†…å±‚å¾ªçŽ¯å˜é‡*/
 			if ((8 - i - j) <= 6)
 				printf("    %d         %d         %d\n", count++, i, j, 8 - i - j);
 	getchar(); \

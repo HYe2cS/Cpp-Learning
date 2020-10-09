@@ -1,23 +1,23 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<string>
 using namespace std;
 class CPublication {
 protected:
-	string title;//±êÌâ
-	float coat;//¼Û¸ñ
+	string title;//æ ‡é¢˜
+	float coat;//ä»·æ ¼
 public:
 	CPublication(string ti, float co) {
 		title = ti;
 		coat = co;
 	}
 	GetData() {
-		cout << "±êÌâ:";
+		cout << "æ ‡é¢˜:";
 		cin >> title;
-		cout << "¼Û¸ñ:";
+		cout << "ä»·æ ¼:";
 		cin >> coat;
 	}
 	PutData() {
-		cout << "±êÌâ:" << title << endl << "¼Û¸ñ:" << coat << endl;
+		cout << "æ ‡é¢˜:" << title << endl << "ä»·æ ¼:" << coat << endl;
 	}
 };
 class CBook :public CPublication {
@@ -27,15 +27,15 @@ public:
 	}
 	GetData() {
 		CPublication::GetData();
-		cout << "Ò³Êý:";
+		cout << "é¡µæ•°:";
 		cin >> type;
 	}
 	PutData() {
 		CPublication::PutData();
-		cout << "Ò³Êý" << type << endl;
+		cout << "é¡µæ•°" << type << endl;
 	}
 private:
-	int type; //Ò³Êý
+	int type; //é¡µæ•°
 };
 class CTape :public CPublication {
 public:
@@ -44,22 +44,22 @@ public:
 	}
 	GetData() {
 		CPublication::GetData();
-		cout << "²¥·ÅÊ±¼ä:";
+		cout << "æ’­æ”¾æ—¶é—´:";
 		cin >> minutes;
 	}
 	PutData() {
 		CPublication::PutData();
-		cout << "²¥·ÅÊ±¼ä:" << minutes << endl;
+		cout << "æ’­æ”¾æ—¶é—´:" << minutes << endl;
 	}
 private:
 	float minutes;
 };
 int main() {
-	CBook cb("ÉÙÄêpi", 33.42, 236);
+	CBook cb("å°‘å¹´pi", 33.42, 236);
 	cb.GetData();
 	cb.PutData();
 	cout << "===================================" << endl;
-	CTape ct("ÉÙÄêpi", 33.42, 2362);
+	CTape ct("å°‘å¹´pi", 33.42, 2362);
 	ct.GetData();
 	ct.PutData();
 	return 0;

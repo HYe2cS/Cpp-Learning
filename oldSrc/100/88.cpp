@@ -1,4 +1,4 @@
-#include<stdio.h>
+ï»¿#include<stdio.h>
 
 main()
 
@@ -14,7 +14,7 @@ main()
 			printf("How many stick do you wish to take(1~%d)?", a > 4 ? 4 : a);
 
 			scanf("%d", &i);
-		} while (i > 4 || i<1 || i>a);      /*½ÓÊÕÕıÔÚÈ·µÄÊäÈë*/
+		} while (i > 4 || i<1 || i>a);      /*æ¥æ”¶æ­£åœ¨ç¡®çš„è¾“å…¥*/
 
 		if (a - i > 0) printf(" %d stick left in the pile.\n", a - i);
 
@@ -23,14 +23,14 @@ main()
 		{
 			printf(" You have taken the last stick.\n");
 
-			printf(" * * * You lose! \nGame Over.\n");     /*Êä³öÈ¡Ê¤±ê¼Ç*/
+			printf(" * * * You lose! \nGame Over.\n");     /*è¾“å‡ºå–èƒœæ ‡è®°*/
 
 			break;
 		}
 
 		else
 
-			printf(" Compute take %d stick.\n", 5 - i);    /*Êä³ö¼ÆËã»úÈ¡µÄ×ÓÊı
+			printf(" Compute take %d stick.\n", 5 - i);    /*è¾“å‡ºè®¡ç®—æœºå–çš„å­æ•°
    */
 
 		a -= 5;

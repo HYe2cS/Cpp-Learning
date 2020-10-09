@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<string>
 using namespace std;
 class person {
@@ -22,14 +22,14 @@ person::person(string na, int ag, char se, string add, int ph) {
 }
 void person::show()
 {
-	cout << "ÐÕÃû:" << name << endl << "ÄêÁä:" << age << endl << "ÐÔ±ð:" << sex << endl
-		<< "µØÖ·:" << address << endl << "µç»°ºÅÂë:" << phone << endl;
+	cout << "å§“å:" << name << endl << "å¹´é¾„:" << age << endl << "æ€§åˆ«:" << sex << endl
+		<< "åœ°å€:" << address << endl << "ç”µè¯å·ç :" << phone << endl;
 }
 
 class Teacher :virtual public person {
 protected:
-	string position;//Ö°³Æ
-	float salary;//¹¤×Ê
+	string position;//èŒç§°
+	float salary;//å·¥èµ„
 public:
 	Teacher(string na, int ag, char se, string add, int ph, string po, float sa);
 	void show();
@@ -40,12 +40,12 @@ Teacher::Teacher(string na, int ag, char se, string add, int ph, string po, floa
 }
 void Teacher::show() {
 	person::show();
-	cout << "Ö°³Æ:" << position << endl << "¹¤×Ê:" << salary << endl;
+	cout << "èŒç§°:" << position << endl << "å·¥èµ„:" << salary << endl;
 }
 
 class Cadre :virtual public person {
 protected:
-	string job;//Ö°Îñ
+	string job;//èŒåŠ¡
 public:
 	Cadre(string na, int ag, char se, string add, int ph, string jo);
 	void show();
@@ -55,7 +55,7 @@ Cadre::Cadre(string na, int ag, char se, string add, int ph, string jo) :person(
 }
 void Cadre::show() {
 	person::show();
-	cout << "Ö°Îñ:" << job << endl;
+	cout << "èŒåŠ¡:" << job << endl;
 }
 
 class Teacher_Cadre :public Teacher, public Cadre {
@@ -69,13 +69,13 @@ public:
 
 void Teacher_Cadre::show() {
 	person::show();
-	cout << "Ö°Îñ:" << job << endl;
-	cout << "Ö°³Æ:" << position << endl << "¹¤×Ê:" << salary << endl;
+	cout << "èŒåŠ¡:" << job << endl;
+	cout << "èŒç§°:" << position << endl << "å·¥èµ„:" << salary << endl;
 }
 
 int main()
 {
-	Teacher_Cadre tc("ÕÅÔª½Ú", 19, 'm', "°²»ÕÊ¡", 13155299590, "Ñ§Éú", "¸ß¼¶", 1);
+	Teacher_Cadre tc("å¼ å…ƒèŠ‚", 19, 'm', "å®‰å¾½çœ", 13155299590, "å­¦ç”Ÿ", "é«˜çº§", 1);
 	tc.show();
 	return 0;
 }

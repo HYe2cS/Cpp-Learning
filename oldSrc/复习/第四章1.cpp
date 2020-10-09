@@ -1,10 +1,10 @@
-#include<iostream>
+ï»¿#include<iostream>
 using namespace std;
 class base {
 public:
-	base(int x) { a = x; cout << "»ùÀàbaseµÄ¹¹Ôìº¯Êý" << endl; }
+	base(int x) { a = x; cout << "åŸºç±»baseçš„æž„é€ å‡½æ•°" << endl; }
 	~base() {
-		cout << "µ÷ÓÃbaseÎö¹¹º¯shu" << endl;
+		cout << "è°ƒç”¨baseæžæž„å‡½shu" << endl;
 	}
 	void show() { cout << "a=" << a << endl; }
 private:
@@ -13,13 +13,13 @@ private:
 
 class base1 {
 public:
-	base1(int xx) { aa = xx; cout << "»ùÀàbase1µÄ¹¹Ôìº¯Êý" << endl; }
+	base1(int xx) { aa = xx; cout << "åŸºç±»base1çš„æž„é€ å‡½æ•°" << endl; }
 	void show()
 	{
 		cout << "aa=" << aa << endl;
 	}
 	~base1() {
-		cout << "µ÷ÓÃbase1Îö¹¹º¯shu" << endl;
+		cout << "è°ƒç”¨base1æžæž„å‡½shu" << endl;
 	}
 protected:
 	int aa;
@@ -30,7 +30,7 @@ public:
 	derived(int x, int x1, int xx1, int xx2, int y) :base(x), base1(xx1), s1(x1), s2(xx2)
 	{
 		b = y;
-		cout << "ÅÉÉúÀàderivedµÄ¹¹Ôìº¯Êý" << endl;
+		cout << "æ´¾ç”Ÿç±»derivedçš„æž„é€ å‡½æ•°" << endl;
 	}
 	void show()
 	{
@@ -41,7 +41,7 @@ public:
 		cout << "b=" << b << endl;
 	}
 	~derived() {
-		cout << "µ÷ÓÃderivedÎö¹¹º¯shu" << endl;
+		cout << "è°ƒç”¨derivedæžæž„å‡½shu" << endl;
 	}
 	base1::show;
 

@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 using namespace std;
 class CBuilding {
 public:
@@ -10,12 +10,12 @@ public:
 	}
 	show()
 	{
-		cout << "Â¥·¿²ãÊýÎª" << Build << ",·¿¼äÊýÎª" << Room << ",×ÜÃæ»ýÎª" << Area << endl;
+		cout << "æ¥¼æˆ¿å±‚æ•°ä¸º" << Build << ",æˆ¿é—´æ•°ä¸º" << Room << ",æ€»é¢ç§¯ä¸º" << Area << endl;
 	}
 protected:
-	int Build;//Â¥·¿²ãÊý
-	int Room;//·¿¼äÊý
-	float Area;//×ÜÃæ»ý
+	int Build;//æ¥¼æˆ¿å±‚æ•°
+	int Room;//æˆ¿é—´æ•°
+	float Area;//æ€»é¢ç§¯
 };
 class CHousing :public CBuilding {
 public:
@@ -27,11 +27,11 @@ public:
 	show()
 	{
 		CBuilding::show();
-		cout << "ÎÔÊÒÊýÁ¿Îª" << BedRoom << ",Ô¡ÊÒÊýÁ¿Îª" << BathRoom << endl;
+		cout << "å§å®¤æ•°é‡ä¸º" << BedRoom << ",æµ´å®¤æ•°é‡ä¸º" << BathRoom << endl;
 	}
 private:
-	int BedRoom;//ÎÔÊÒÊýÁ¿
-	int BathRoom;//Ô¡ÊÒÊýÁ¿
+	int BedRoom;//å§å®¤æ•°é‡
+	int BathRoom;//æµ´å®¤æ•°é‡
 };
 class COfficBuilding :public CBuilding {
 public:
@@ -43,11 +43,11 @@ public:
 	show()
 	{
 		CBuilding::show();
-		cout << "Ãð»ðÆ÷ÊýÁ¿Îª" << InFire << ",µç»°ÊýÁ¿Îª" << Phone << endl;
+		cout << "ç­ç«å™¨æ•°é‡ä¸º" << InFire << ",ç”µè¯æ•°é‡ä¸º" << Phone << endl;
 	}
 private:
-	int InFire;//Ãð»ðÆ÷ÊýÁ¿
-	int Phone;//µç»°ÊýÁ¿
+	int InFire;//ç­ç«å™¨æ•°é‡
+	int Phone;//ç”µè¯æ•°é‡
 };
 int main()
 {

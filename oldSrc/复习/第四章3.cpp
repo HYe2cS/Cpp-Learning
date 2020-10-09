@@ -1,9 +1,9 @@
-#include<iostream>
+ï»¿#include<iostream>
 using namespace std;
 
 class base {
 public:
-	base() { a = 5; cout << "µ÷ÓÃbaseµÄ¹¹Ôìº¯Êý" << a << endl; }
+	base() { a = 5; cout << "è°ƒç”¨baseçš„æž„é€ å‡½æ•°" << a << endl; }
 	void show() { cout << "a=" << a << endl; }
 protected:
 	int a;
@@ -11,7 +11,7 @@ protected:
 
 class base1 :virtual protected base {
 public:
-	base1() { a = a + 10;; cout << "µ÷ÓÃbase1µÄ¹¹Ôìº¯Êý" << a << endl; }
+	base1() { a = a + 10;; cout << "è°ƒç”¨base1çš„æž„é€ å‡½æ•°" << a << endl; }
 
 protected:
 	int aa;
@@ -19,7 +19,7 @@ protected:
 
 class base2 :virtual protected base {
 public:
-	base2() { a = a + 20; cout << "µ÷ÓÃbase2µÄ¹¹Ôìº¯Êý" << a << endl; }
+	base2() { a = a + 20; cout << "è°ƒç”¨base2çš„æž„é€ å‡½æ•°" << a << endl; }
 
 protected:
 	int bb;
@@ -29,7 +29,7 @@ class derived :private base1, public base2 {
 public:
 	derived()
 	{
-		cout << "ÅÉÉúÀàderivedµÄ¹¹Ôìº¯Êý" << endl;
+		cout << "æ´¾ç”Ÿç±»derivedçš„æž„é€ å‡½æ•°" << endl;
 		cout << base1::a << endl;
 		cout << base2::a << endl;
 		//		cout<<derived::a<<endl;

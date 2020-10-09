@@ -1,20 +1,20 @@
-#include<stdio.h>
+ï»¿#include<stdio.h>
 int main()
 {
 	int integer, i, max, min, sum;
-	max = -32768;                  /*ÏÈ¼ÙÉèµ±Ç°µÄ×î´óÖµmaxÎªCÓïÑÔÕûĞÍÊıµÄ×îĞ¡Öµ
+	max = -32768;                  /*å…ˆå‡è®¾å½“å‰çš„æœ€å¤§å€¼maxä¸ºCè¯­è¨€æ•´å‹æ•°çš„æœ€å°å€¼
 */
-	min = 32767;                   /*ÏÈ¼ÙÉèµ±Ç°µÄ×îĞ¡ÖµminÎªCÓïÑÔÕûĞÍÊıµÄ×î´óÖµ
+	min = 32767;                   /*å…ˆå‡è®¾å½“å‰çš„æœ€å°å€¼minä¸ºCè¯­è¨€æ•´å‹æ•°çš„æœ€å¤§å€¼
 */
-	sum = 0;                       /*½«ÇóÀÛ¼ÓºÍ±äÁ¿µÄ³õÖµÖÃÎª0*/
+	sum = 0;                       /*å°†æ±‚ç´¯åŠ å’Œå˜é‡çš„åˆå€¼ç½®ä¸º0*/
 	for (i = 1; i <= 10; i++)
 	{
 		printf("Input number %d=", i);
-		scanf("%d", &integer);          /*ÊäÈëÆÀÎ¯µÄÆÀ·Ö*/
-		sum += integer;                  /*¼ÆËã×Ü·Ö*/
-		if (integer > max)max = integer;    /*Í¨¹ı±È½ÏÉ¸Ñ¡³öÆäÖĞµÄ×î¸ß·Ö*/
-		if (integer < min)min = integer;    /*Í¨¹ı±È½ÏÉ¸Ñ¡³öÆäÖĞµÄ×îµÍ·Ö*/
+		scanf("%d", &integer);          /*è¾“å…¥è¯„å§”çš„è¯„åˆ†*/
+		sum += integer;                  /*è®¡ç®—æ€»åˆ†*/
+		if (integer > max)max = integer;    /*é€šè¿‡æ¯”è¾ƒç­›é€‰å‡ºå…¶ä¸­çš„æœ€é«˜åˆ†*/
+		if (integer < min)min = integer;    /*é€šè¿‡æ¯”è¾ƒç­›é€‰å‡ºå…¶ä¸­çš„æœ€ä½åˆ†*/
 	}
 	printf("Canceled max score:%d\nCanceled min score:%d\n", max, min);
-	printf("Average score:%d\n", (sum - max - min) / 8);     /*Êä³ö½á¹û*/
+	printf("Average score:%d\n", (sum - max - min) / 8);     /*è¾“å‡ºç»“æœ*/
 }

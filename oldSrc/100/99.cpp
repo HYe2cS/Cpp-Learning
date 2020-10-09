@@ -1,7 +1,7 @@
-#include<stdio.h>
+ï»¿#include<stdio.h>
 #include<string.h>
 #include<math.h>
-#define MAX 4000/*ÊıÎ»ÉÏÏŞ*/
+#define MAX 4000/*æ•°ä½ä¸Šé™*/
 dd(char* a)
 {
 	char t[MAX];
@@ -128,7 +128,7 @@ ck(char* a)
 main()
 {
 	char a[MAX] = { NULL }, b[MAX] = { NULL }, c[MAX] = { NULL };
-	printf("ÊäÈëÁ½¸öÊı£º\n");
+	printf("è¾“å…¥ä¸¤ä¸ªæ•°ï¼š\n");
 	scanf("%s", a);
 	getchar(); ck(a);
 	scanf("%s", b);

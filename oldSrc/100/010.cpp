@@ -1,4 +1,4 @@
-#include<stdio.h>
+ï»¿#include<stdio.h>
 void printb(int, int);
 main()
 {
@@ -6,8 +6,8 @@ main()
 	scanf("%d", &x);
 	printf("number of decimal form:%d\n", x);
 	printf("      it's binary form:");
-	printb(x, sizeof(int) * 8);  /*x:ÕûÊı  sizeof(int):intĞÍÔÚÄÚ´æÖĞËùÕ¼µÄ×Ö½ÚÊı
-								 sizeof(int)*8:intĞÍ¶ÔÓ¦µÄÎ»Êı*/
+	printb(x, sizeof(int) * 8);  /*x:æ•´æ•°  sizeof(int):intå‹åœ¨å†…å­˜ä¸­æ‰€å çš„å­—èŠ‚æ•°
+								 sizeof(int)*8:intå‹å¯¹åº”çš„ä½æ•°*/
 	putchar('\n');
 }
 
@@ -15,7 +15,7 @@ void printb(int x, int n)
 {
 	if (n > 0)
 	{
-		putchar('0' + ((unsigned)(x & (1 << (n - 1))) >> (n - 1)));  /*Êä³öµÚnÎ»*/
-		printb(x, n - 1);      /*¹éµ÷ÓÃ£¬Êä³öxµÄºón-1Î»*/
+		putchar('0' + ((unsigned)(x & (1 << (n - 1))) >> (n - 1)));  /*è¾“å‡ºç¬¬nä½*/
+		printb(x, n - 1);      /*å½’è°ƒç”¨ï¼Œè¾“å‡ºxçš„ån-1ä½*/
 	}
 }

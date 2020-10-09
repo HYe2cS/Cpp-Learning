@@ -1,10 +1,10 @@
-#include<stdio.h>
+ï»¿#include<stdio.h>
 
 #include<math.h>
 
 #define NUM 320
 
-int number[NUM];      /*´æ·Å²»³¬¹ı1993µÄÈ«²¿ÆæÊı*/
+int number[NUM];      /*å­˜æ”¾ä¸è¶…è¿‡1993çš„å…¨éƒ¨å¥‡æ•°*/
 
 int fflag(int i);
 
@@ -15,18 +15,18 @@ main()
 
 	printf("there are follwing primes sequences in first row:\n");
 
-	for (j = 0, i = 3; i <= 1993; i += 2)       /*Çó³ö²»³¬¹ı1993µÄÈ«²¿ÆæÊı*/
+	for (j = 0, i = 3; i <= 1993; i += 2)       /*æ±‚å‡ºä¸è¶…è¿‡1993çš„å…¨éƒ¨å¥‡æ•°*/
 
 		if (fflag(i)) number[j++] = i;
 
-	for (j--; number[j] > 1898; j--)     /*´Ó×î´óµÄËØÊı¿ªÊ¼Ïò1898ËÑË÷*/
+	for (j--; number[j] > 1898; j--)     /*ä»æœ€å¤§çš„ç´ æ•°å¼€å§‹å‘1898æœç´¢*/
 
 	{
-		for (i = 0; number[j] - number[i] > 1898; i++);  /*Ñ­»·²éÕÒÂú×ãÌõ¼şµÄËØÊı
+		for (i = 0; number[j] - number[i] > 1898; i++);  /*å¾ªç¯æŸ¥æ‰¾æ»¡è¶³æ¡ä»¶çš„ç´ æ•°
 */
 
-		if (number[j] - number[i] == 1898)          /*ÈôÁ½¸öËØÊıµÄ²îÎª1898£¬Ôò
-Êä³ö*/
+		if (number[j] - number[i] == 1898)          /*è‹¥ä¸¤ä¸ªç´ æ•°çš„å·®ä¸º1898ï¼Œåˆ™
+è¾“å‡º*/
 
 printf("(%d).%3d,.....,%d\n", ++count, number[i], number[j]);
 	}
@@ -37,7 +37,7 @@ int fflag(int i)
 {
 	int j;
 
-	if (i <= 1) return 0;                /*ÅĞ¶ÏÊÇ·ñÎªËØÊı*/
+	if (i <= 1) return 0;                /*åˆ¤æ–­æ˜¯å¦ä¸ºç´ æ•°*/
 
 	if (i == 2) return 1;
 

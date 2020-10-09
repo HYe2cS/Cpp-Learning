@@ -1,4 +1,4 @@
-#include<stdio.h>
+ï»¿#include<stdio.h>
 #include<stdlib.h>
 #define BUFFERSIZE 1024
 int main()
@@ -20,7 +20,7 @@ int main()
 			continue;
 		}
 		sum = a + b;
-		printf("The sum of%d and %d is %d\N", a, b, sum);/*Êä³ö¼ÆËã½á¹û*/
+		printf("The sum of%d and %d is %d\N", a, b, sum);/*è¾“å‡ºè®¡ç®—ç»“æžœ*/
 	}
 	return 0;
 }

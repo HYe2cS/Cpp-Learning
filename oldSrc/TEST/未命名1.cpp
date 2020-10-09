@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<string>
 using namespace std;
 class Student {
@@ -28,14 +28,14 @@ void Student::setstudent(string sn, string na, char s, int a)
 }
 void Student::show()
 {
-	cout << "Ñ§ºÅ:" << sno << endl;
-	cout << "ĞÕÃû:" << name << endl;
-	cout << "ĞÔ±ğ:" << sex << endl;
-	cout << "ÄêÁä:" << age << endl;
+	cout << "å­¦å·:" << sno << endl;
+	cout << "å§“å:" << name << endl;
+	cout << "æ€§åˆ«:" << sex << endl;
+	cout << "å¹´é¾„:" << age << endl;
 }
 int main()
 {
-	Student s[3] = { Student("2018342","¿ªĞÄ³¬ÈË",'f',7),Student("2013842","ÌğĞÄ³¬ÈË",'m',9),Student("2018342","¿ªĞÄ³¬ÈË",'f',7) };
+	Student s[3] = { Student("2018342","å¼€å¿ƒè¶…äºº",'f',7),Student("2013842","ç”œå¿ƒè¶…äºº",'m',9),Student("2018342","å¼€å¿ƒè¶…äºº",'f',7) };
 	for (int i = 0; i < 3; i++)
 	{
 		s[i].show();
@@ -46,11 +46,11 @@ int main()
 		p->show();
 		p--;
 	}
-	/*Student s1("2019321","Ğ¡ĞÄ³¬ÈË",'f',8);
+	/*Student s1("2019321","å°å¿ƒè¶…äºº",'f',8);
 	s1.show();
-	s1.setstudent("2019321","Ğ¡ĞÄ³¬ÈË",'f',8);
+	s1.setstudent("2019321","å°å¿ƒè¶…äºº",'f',8);
 	s1.show();
-	Student s2("2019321","Ğ¡ĞÄ³¬ÈË",'f',8);
+	Student s2("2019321","å°å¿ƒè¶…äºº",'f',8);
 	s2.show();*/
 	return 0;
 }

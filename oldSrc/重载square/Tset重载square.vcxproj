@@ -98,7 +98,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="测试对成员初始化.cpp" />
+    <ClCompile Include="privateMemberTest.cpp" />
     <ClCompile Include="重载square.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

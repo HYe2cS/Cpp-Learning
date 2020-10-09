@@ -1,11 +1,11 @@
-#include<stdio.h>
-#define MAX_STATION_NUM 32 /*¶¨Òå×î´óÔÊĞíµÄ´¢ÓÍµãÊıÄ¿*/
+ï»¿#include<stdio.h>
+#define MAX_STATION_NUM 32 /*å®šä¹‰æœ€å¤§å…è®¸çš„å‚¨æ²¹ç‚¹æ•°ç›®*/
 int main()
 {
 	int k, i;
-	float wDistance;       /*wDistanceÊÇÖÕµãÖÁµ±Ç°ÖüÓÍµãµÄ¾àÀë*/
-	float storedOil[MAX_STATION_NUM];/*storedOil[i]ÊÇµÚi¸ö´¢ÓÍµãµÄ´¢ÓÍÁ¿*/
-	float distance[MAX_STATION_NUM]; /*distance[i]ÊÇµÚi¸ö´¢ÓÍµãµ½ÖÕµãµÄ¾àÀë*/
+	float wDistance;       /*wDistanceæ˜¯ç»ˆç‚¹è‡³å½“å‰è´®æ²¹ç‚¹çš„è·ç¦»*/
+	float storedOil[MAX_STATION_NUM];/*storedOil[i]æ˜¯ç¬¬iä¸ªå‚¨æ²¹ç‚¹çš„å‚¨æ²¹é‡*/
+	float distance[MAX_STATION_NUM]; /*distance[i]æ˜¯ç¬¬iä¸ªå‚¨æ²¹ç‚¹åˆ°ç»ˆç‚¹çš„è·ç¦»*/
 
 	puts("***********************************************");
 	puts("*         this program will solve             *");
@@ -14,7 +14,7 @@ int main()
 	puts("The whole distance is 1000km,and the result is:\n");
 	puts("station     distance(km)    oil(l)");
 	k = 1;
-	wDistance = 500;        /*´Ói=1´¦¿ªÊ¼ÏòÊ¼µãµ¹ÍÆ*/
+	wDistance = 500;        /*ä»i=1å¤„å¼€å§‹å‘å§‹ç‚¹å€’æ¨*/
 	distance[1] = 500;
 	storedOil[1] = 500;
 	while (1)
@@ -26,9 +26,9 @@ int main()
 		if (wDistance >= 1000)
 			break;
 	}
-	distance[k] = 1000;        /*ÖÃÊ¼µãÖÁÖÕµãµÄ¾àÀëÖµ*/
-	storedOil[k] = (1000 - distance[k - 1]) * (2 * k + 1) + storedOil[k - 1];    /*ÇóÊ¼µã²ØÓÍÁ¿*/
-	for (i = 0; i < k; i++)       /*ÓÉÊ¼µã¿ªÊ¼ÖğÒ»´òÓ¡Ê¼µãÖÁµ±Ç°ÖüÓÍµãµÄ¾àÀëºÍ²ØÓÍÁ¿*/
+	distance[k] = 1000;        /*ç½®å§‹ç‚¹è‡³ç»ˆç‚¹çš„è·ç¦»å€¼*/
+	storedOil[k] = (1000 - distance[k - 1]) * (2 * k + 1) + storedOil[k - 1];    /*æ±‚å§‹ç‚¹è—æ²¹é‡*/
+	for (i = 0; i < k; i++)       /*ç”±å§‹ç‚¹å¼€å§‹é€ä¸€æ‰“å°å§‹ç‚¹è‡³å½“å‰è´®æ²¹ç‚¹çš„è·ç¦»å’Œè—æ²¹é‡*/
 		printf("%4d        %6.3f         %6.3f\n", i, 1000 - distance[k - i], storedOil[k - i]);
 	getchar();
 }

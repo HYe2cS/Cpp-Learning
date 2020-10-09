@@ -1,12 +1,12 @@
-#include<stdio.h>
-char* p[10] = { "Áã","Ò»","¶ş","Èı","ËÄ","Îå","Áù","Æß","°Ë","¾Å" };
-void PrintInterger(char a[], int len);/*Êä³öÕûÊı²¿·Ö */
-void PrintDecimal(char a[], int len);/*Êä³öĞ¡Êı²¿·Ö */
+ï»¿#include<stdio.h>
+char* p[10] = { "é›¶","ä¸€","äºŒ","ä¸‰","å››","äº”","å…­","ä¸ƒ","å…«","ä¹" };
+void PrintInterger(char a[], int len);/*è¾“å‡ºæ•´æ•°éƒ¨åˆ† */
+void PrintDecimal(char a[], int len);/*è¾“å‡ºå°æ•°éƒ¨åˆ† */
 int main(void)
 {
-	char Number[128];/* ÓÃÀ´´æ·ÅÓÃ»§ÊäÈëµÄÊı×Ö */
-	char Interger[64], Decimal[64];/* ·Ö±ğ´æ·ÅÊäÈëÊıµÄÕûÊıºÍĞ¡Êı²¿·Ö */
-	int lenI, lenD;/* ·Ö±ğ¼ÇÂ¼ÕûÊıºÍĞ¡Êı²¿·ÖµÄ³¤¶È */
+	char Number[128];/* ç”¨æ¥å­˜æ”¾ç”¨æˆ·è¾“å…¥çš„æ•°å­— */
+	char Interger[64], Decimal[64];/* åˆ†åˆ«å­˜æ”¾è¾“å…¥æ•°çš„æ•´æ•°å’Œå°æ•°éƒ¨åˆ† */
+	int lenI, lenD;/* åˆ†åˆ«è®°å½•æ•´æ•°å’Œå°æ•°éƒ¨åˆ†çš„é•¿åº¦ */
 	int i, j;
 	puts("*************************************");
 	puts("*      This is a print program      *");
@@ -15,7 +15,7 @@ int main(void)
 	puts("please input the money:");
 	gets(Number);
 	i = 0; j = 0;
-	/* ´¦ÀíÊäÈëµÄÊıµÄÕûÊı²¿·Ö */
+	/* å¤„ç†è¾“å…¥çš„æ•°çš„æ•´æ•°éƒ¨åˆ† */
 	while ((Number[i] != '/0') && (Number[i] != '.') && (Number[i] >= '0') && (Number[i] <= '9'))
 	{
 		Interger[i] = Number[i];
@@ -25,15 +25,15 @@ int main(void)
 	if (Number[i] == '.')
 	{
 		i++;
-		/*´¦ÀíÊäÈëµÄÊıµÄĞ¡Êı²¿·Ö*/
+		/*å¤„ç†è¾“å…¥çš„æ•°çš„å°æ•°éƒ¨åˆ†*/
 		while (Number[i] != '/0' && Number[i] >= '0' && Number[i] <= '9')
 		{
 			Decimal[j++] = Number[i++];
 		}
-		/* ¾«È·µ½Ğ¡Êıµãºó4Î»Êı */
+		/* ç²¾ç¡®åˆ°å°æ•°ç‚¹å4ä½æ•° */
 		if ((j >= 4) && (Decimal[4] > '5'))
 		{
-			Decimal[3] += 1;/* ½øĞĞ4ÉáÎåÈë²Ù×÷ */
+			Decimal[3] += 1;/* è¿›è¡Œ4èˆäº”å…¥æ“ä½œ */
 			Decimal[4] = '/0';
 		}
 	}
@@ -52,7 +52,7 @@ void PrintInterger(char a[], int len)
 	tag1 = (a[len - 6] == '0' && a[len - 7] == '0' && a[len - 8] == '0');
 	tag2 = (a[len - 14] == '0' && a[len - 15] == '0' && a[len - 16] == '0');
 	tag3 = (a[len - 22] == '0' && a[len - 23] == '0' && a[len - 24] == '0');
-	printf("ÄúµÄÇ®ÊıÊÇ£º\n");
+	printf("æ‚¨çš„é’±æ•°æ˜¯ï¼š\n");
 	for (i = 0, j = len; i < len && j>0; i++, j--)
 	{
 		if (a[i] == '0' && i != len - 1)
@@ -60,13 +60,13 @@ void PrintInterger(char a[], int len)
 			if ((j == 5 && tag1) || (j == 13 && tag2) || (j == 21 && tag3))
 				;
 			else if ((j == 21 && !tag3) || (j == 5 && !tag1) || (j == 13 && !tag2))
-				printf("Íò");
+				printf("ä¸‡");
 			else if (j == 9 || j == 17)
-				printf("ÒÚ");
+				printf("äº¿");
 			else if (a[i + 1] == '0' && i != len - 1)
 				;
 			else if (a[i + 1] != '0' && i != len - 1)
-				printf("Áã");
+				printf("é›¶");
 			else
 				;
 		}
@@ -74,7 +74,7 @@ void PrintInterger(char a[], int len)
 			;
 		else if (a[i] != '0')
 		{
-			/*°¢À­²®Êı×ÖÏòºº×ÖµÄ×ª»»*/
+			/*é˜¿æ‹‰ä¼¯æ•°å­—å‘æ±‰å­—çš„è½¬æ¢*/
 			switch (a[i])
 			{
 			case '1': printf("%s", p[1]); break;
@@ -88,7 +88,7 @@ void PrintInterger(char a[], int len)
 			case '9': printf("%s", p[9]); break;
 			default:  printf("error"); ; break;
 			}
-			/*Êä³öÏàÓ¦µÄµ¥Î»*/
+			/*è¾“å‡ºç›¸åº”çš„å•ä½*/
 			switch (j)
 			{
 			case 2:
@@ -96,29 +96,29 @@ void PrintInterger(char a[], int len)
 			case 10:
 			case 14:
 			case 18:
-			case 22: printf("%s", "Ê®");  break;
+			case 22: printf("%s", "å");  break;
 			case 3:
 			case 7:
 			case 11:
 			case 15:
 			case 19:
-			case 23: printf("%s", "°Ù"); break;
+			case 23: printf("%s", "ç™¾"); break;
 			case 4:
 			case 8:
 			case 12:
 			case 16:
 			case 20:
-			case 24: printf("%s", "Ç§"); break;
+			case 24: printf("%s", "åƒ"); break;
 			case 5:
 			case 13:
-			case 21: printf("%s", "Íò");  break;
+			case 21: printf("%s", "ä¸‡");  break;
 			case 9:
-			case 17: printf("%s", "ÒÚ"); break;
+			case 17: printf("%s", "äº¿"); break;
 			default:  printf("%s", "");  break;
 			}
 		}
 	}
-	printf("%s", "Ô²");
+	printf("%s", "åœ†");
 }
 
 void PrintDecimal(char a[], int len)
@@ -126,7 +126,7 @@ void PrintDecimal(char a[], int len)
 	int i;
 	for (i = 0; i < len; i++)
 	{
-		/*°¢À­²®Êı×ÖÏòºº×ÖµÄ×ª»»*/
+		/*é˜¿æ‹‰ä¼¯æ•°å­—å‘æ±‰å­—çš„è½¬æ¢*/
 		switch (a[i])
 		{
 		case '0': printf("%s", p[0]); break;
@@ -141,13 +141,13 @@ void PrintDecimal(char a[], int len)
 		case '9': printf("%s", p[9]); break;
 		default:  printf("%s", p[0]); ; break;
 		}
-		/*Êä³ö¶ÔÓ¦µÄµ¥Î»*/
+		/*è¾“å‡ºå¯¹åº”çš„å•ä½*/
 		switch (i)
 		{
-		case 0: printf("%s", "½Ç"); break;
-		case 1: printf("%s", "·Ö"); break;
-		case 2: printf("%s", "Àå"); break;
-		case 3: printf("%s", "ºÁ"); break;
+		case 0: printf("%s", "è§’"); break;
+		case 1: printf("%s", "åˆ†"); break;
+		case 2: printf("%s", "å˜"); break;
+		case 3: printf("%s", "æ¯«"); break;
 		default:; break;
 		}
 	}

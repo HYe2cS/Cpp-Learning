@@ -1,10 +1,10 @@
-#include <stdio.h>
+ï»¿#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
 typedef struct {
 	char name[10];
-	long long num; //µç»°ºÅÂë
+	long long num; //ç”µè¯å·ç 
 	char email[20];
 	char addr[15];
 } STU;
@@ -18,13 +18,13 @@ int Read(STU stu[], int& N)
 	if ((fp1 = fopen(filename, "r+")) == NULL)
 		if ((fp1 = fopen(filename, "w+")) == NULL)
 		{
-			printf("ÎŞ·¨´ò¿ª´ËÎÄ¼ş!\n");
+			printf("æ— æ³•æ‰“å¼€æ­¤æ–‡ä»¶!\n");
 			exit(0);
 		}
 	if ((fp2 = fopen(numfile, "r+")) == NULL)
 		if ((fp1 = fopen(filename, "w+")) == NULL)
 		{
-			printf("ÎŞ·¨´ò¿ª´ËÎÄ¼ş!\n");
+			printf("æ— æ³•æ‰“å¼€æ­¤æ–‡ä»¶!\n");
 			exit(0);
 		}
 
@@ -41,16 +41,16 @@ void Save(STU stu[], int N)
 	FILE* fp1, * fp2;
 	int i;
 	char filename[20] = { "stu.txt" }, numfile[20] = { "num.txt" };;
-	printf("ÎÄ±¾ÎÄ¼şÃûÎª£º%s\n", filename);
+	printf("æ–‡æœ¬æ–‡ä»¶åä¸ºï¼š%s\n", filename);
 
 	if ((fp1 = fopen(filename, "w+")) == NULL)
 	{
-		printf("ÎŞ·¨´ò¿ª´ËÎÄ¼ş!\n");
+		printf("æ— æ³•æ‰“å¼€æ­¤æ–‡ä»¶!\n");
 		exit(0);
 	}
 	if ((fp2 = fopen(numfile, "w+")) == NULL)
 	{
-		printf("ÎŞ·¨´ò¿ª´ËÎÄ¼ş!\n");
+		printf("æ— æ³•æ‰“å¼€æ­¤æ–‡ä»¶!\n");
 		exit(0);
 	}
 	for (i = 0; i < N; i++)
@@ -61,33 +61,33 @@ void Save(STU stu[], int N)
 	fprintf(fp2, "%d", N);
 	fclose(fp1);
 	fclose(fp2);
-	printf("±£´æÍê±Ï£¡\n");
+	printf("ä¿å­˜å®Œæ¯•ï¼\n");
 	system("pause");
 }
 void Pre_top()
 {
-	printf("ĞÕÃû\t\tµç»°ºÅÂë\tµç×ÓÓÊÏä\t\tµØÖ·\n");
+	printf("å§“å\t\tç”µè¯å·ç \tç”µå­é‚®ç®±\t\tåœ°å€\n");
 }
-void Pre_title()          //´òÓ¡±êÌâ
+void Pre_title()          //æ‰“å°æ ‡é¢˜
 {
 	printf("-------------------------------------------------\n");
-	printf("|\t\t»¶Ó­Ê¹ÓÃÑ§ÉúĞÅÏ¢¹ÜÀíÏµÍ³\t|\n");
-	printf("|\t1£ºÊä³öËùÓĞÊı¾İ\t\t2.Ôö¼ÓÑ§ÉúÊı¾İ\t|\n");
-	printf("|\t3£ºÉ¾³ıÑ§ÉúÊı¾İ\t\t4.±à¼­Ñ§ÉúÊı¾İ\t|\n");
-	printf("|\t5£ºÅÅĞòËùÓĞÊı¾İ\t\t6.²éÑ¯Ñ§ÉúÊı¾İ\t|\n");
-	printf("|\t7.ÍË³ö                           \t|\n");
+	printf("|\t\tæ¬¢è¿ä½¿ç”¨å­¦ç”Ÿä¿¡æ¯ç®¡ç†ç³»ç»Ÿ\t|\n");
+	printf("|\t1ï¼šè¾“å‡ºæ‰€æœ‰æ•°æ®\t\t2.å¢åŠ å­¦ç”Ÿæ•°æ®\t|\n");
+	printf("|\t3ï¼šåˆ é™¤å­¦ç”Ÿæ•°æ®\t\t4.ç¼–è¾‘å­¦ç”Ÿæ•°æ®\t|\n");
+	printf("|\t5ï¼šæ’åºæ‰€æœ‰æ•°æ®\t\t6.æŸ¥è¯¢å­¦ç”Ÿæ•°æ®\t|\n");
+	printf("|\t7.é€€å‡º                           \t|\n");
 	printf("-------------------------------------------------\n");
-	printf("ÇëÊäÈë²Ù×÷ĞòºÅ:");
+	printf("è¯·è¾“å…¥æ“ä½œåºå·:");
 }
 
-int Print(STU stu[], int N)     //Êä³öÈ«²¿¼ÇÂ¼Êı¾İ
+int Print(STU stu[], int N)     //è¾“å‡ºå…¨éƒ¨è®°å½•æ•°æ®
 {
 	int i;
 	if (N)Pre_top();
 	for (i = 0; i < N; i++)
 		printf("%-10s\t%-12lld\t%-20s\t%-15s\n", stu[i].name, stu[i].num, stu[i].email, stu[i].addr);
 	//Prt(stu[i]);
-	printf("È«²¿Êä³öÍê³É!\n");
+	printf("å…¨éƒ¨è¾“å‡ºå®Œæˆ!\n");
 	system("pause");
 	return 1;
 }
@@ -108,7 +108,7 @@ int Sort(STU stu[], int N)
 			temp = stu[i]; stu[i] = stu[maxt]; stu[maxt] = temp;
 		}
 	}
-	printf("ÅÅĞòºó½á¹û£º\n");
+	printf("æ’åºåç»“æœï¼š\n");
 	Print(stu, N);
 	Save(stu, N);
 	return 1;
@@ -119,7 +119,7 @@ int Search(STU stu[], int N)
 	char name[10];
 	int result;
 	int i;
-	while (getchar() != '\n');                     //Çå¿Õ¼üÅÌ»º³åÇø
+	while (getchar() != '\n');                     //æ¸…ç©ºé”®ç›˜ç¼“å†²åŒº
 	scanf("%s", &name);
 	result = -1;
 	for (i = 0; i < N; i++)
@@ -131,8 +131,8 @@ int Search(STU stu[], int N)
 		}
 	}
 	if (result == -1)
-	{//Ã»ÕÒµ½Ñ§ÉúĞÅÏ¢
-		printf("Ã»ÓĞÕÒµ½¸ÃÑ§ÉúĞÅÏ¢£¡\n");
+	{//æ²¡æ‰¾åˆ°å­¦ç”Ÿä¿¡æ¯
+		printf("æ²¡æœ‰æ‰¾åˆ°è¯¥å­¦ç”Ÿä¿¡æ¯ï¼\n");
 		system("pause");
 		return -1;
 	}
@@ -145,7 +145,7 @@ int Search(STU stu[], int N)
 		return result;
 	}
 }
-int Del(STU stu[], int N)//°´ÕÕĞÕÃûÉ¾³ı
+int Del(STU stu[], int N)//æŒ‰ç…§å§“ååˆ é™¤
 {
 	int result;
 	char key;
@@ -154,15 +154,15 @@ int Del(STU stu[], int N)//°´ÕÕĞÕÃûÉ¾³ı
 	if (result >= 0)
 	{
 		system("cls");
-		printf("ÄúÈ·ÈÏÒªÉ¾³ıÂğ?y-yes,n-no\n");
-		while (getchar() != '\n');                     //Çå¿Õ¼üÅÌ»º³åÇø
+		printf("æ‚¨ç¡®è®¤è¦åˆ é™¤å—?y-yes,n-no\n");
+		while (getchar() != '\n');                     //æ¸…ç©ºé”®ç›˜ç¼“å†²åŒº
 		scanf("%c", &key);
 		if (key == 'y')
 		{
 			for (i = result; i < N - 1; i++)
 				stu[i] = stu[i + 1];
 			N--;
-			printf("É¾³ıÍê³É£¡\n");
+			printf("åˆ é™¤å®Œæˆï¼\n");
 			Save(stu, N);
 		}
 	}
@@ -177,22 +177,22 @@ int Edit(STU stu[], int N)
 	if (result >= 0)
 	{
 		system("cls");
-		printf("ÄúÈ·ÈÏÒªĞŞ¸ÄÂğ?y-yes,n-no\n");
-		while (getchar() != '\n');                     //Çå¿Õ¼üÅÌ»º³åÇø
+		printf("æ‚¨ç¡®è®¤è¦ä¿®æ”¹å—?y-yes,n-no\n");
+		while (getchar() != '\n');                     //æ¸…ç©ºé”®ç›˜ç¼“å†²åŒº
 		scanf("%c", &key);
 		if (key == 'y')
 		{
-			printf("ÇëÖØĞÂÊäÈë¸ÃÑ§ÉúĞÅÏ¢£º\nÇëÊäÈëĞÕÃû£º");
-			while (getchar() != '\n');                     //Çå¿Õ¼üÅÌ»º³åÇø
+			printf("è¯·é‡æ–°è¾“å…¥è¯¥å­¦ç”Ÿä¿¡æ¯ï¼š\nè¯·è¾“å…¥å§“åï¼š");
+			while (getchar() != '\n');                     //æ¸…ç©ºé”®ç›˜ç¼“å†²åŒº
 			scanf("%s", &stu[result].name);
-			printf("ÇëÊäÈëµç»°ºÅÂë£º");
-			while (getchar() != '\n');                     //Çå¿Õ¼üÅÌ»º³åÇø
+			printf("è¯·è¾“å…¥ç”µè¯å·ç ï¼š");
+			while (getchar() != '\n');                     //æ¸…ç©ºé”®ç›˜ç¼“å†²åŒº
 			scanf("%lld", &stu[result].num);
-			printf("ÇëÊäÈëEmail£º");
-			while (getchar() != '\n');                     //Çå¿Õ¼üÅÌ»º³åÇø
+			printf("è¯·è¾“å…¥Emailï¼š");
+			while (getchar() != '\n');                     //æ¸…ç©ºé”®ç›˜ç¼“å†²åŒº
 			scanf("%s", &stu[result].email);
-			printf("ÇëÊäÈë¼ÒÍ¥×¡Ö·£º");
-			while (getchar() != '\n');                     //Çå¿Õ¼üÅÌ»º³åÇø
+			printf("è¯·è¾“å…¥å®¶åº­ä½å€ï¼š");
+			while (getchar() != '\n');                     //æ¸…ç©ºé”®ç›˜ç¼“å†²åŒº
 			scanf("%s", &stu[result].addr);
 			Save(stu, N);
 			return 1;
@@ -204,24 +204,24 @@ void Add(STU stu[], int N)
 {
 	int i, k;
 	int j = 1;
-	printf("ÒªÌí¼ÓµÄÈËÊı(ÕûÊı)£º");
-	while (getchar() != '\n');                     //Çå¿Õ¼üÅÌ»º³åÇø
-	scanf("%d", &k);//ÊäÈëÊı¾İ
+	printf("è¦æ·»åŠ çš„äººæ•°(æ•´æ•°)ï¼š");
+	while (getchar() != '\n');                     //æ¸…ç©ºé”®ç›˜ç¼“å†²åŒº
+	scanf("%d", &k);//è¾“å…¥æ•°æ®
 	for (i = N; i < N + k; i++)
 	{
-		printf("ÇëÊäÈëµÚ%dÎ»Ñ§ÉúĞÅÏ¢\n", j);
+		printf("è¯·è¾“å…¥ç¬¬%dä½å­¦ç”Ÿä¿¡æ¯\n", j);
 		j++;
-		printf("ÇëÊäÈëĞÕÃû£º");
-		while (getchar() != '\n');                     //Çå¿Õ¼üÅÌ»º³åÇø
+		printf("è¯·è¾“å…¥å§“åï¼š");
+		while (getchar() != '\n');                     //æ¸…ç©ºé”®ç›˜ç¼“å†²åŒº
 		scanf("%s", &stu[i].name);
-		printf("ÇëÊäÈëµç»°ºÅÂë£º");
-		while (getchar() != '\n');                     //Çå¿Õ¼üÅÌ»º³åÇø
+		printf("è¯·è¾“å…¥ç”µè¯å·ç ï¼š");
+		while (getchar() != '\n');                     //æ¸…ç©ºé”®ç›˜ç¼“å†²åŒº
 		scanf("%lld", &stu[i].num);
-		printf("ÇëÊäÈëEmail£º");
-		while (getchar() != '\n');                     //Çå¿Õ¼üÅÌ»º³åÇø
+		printf("è¯·è¾“å…¥Emailï¼š");
+		while (getchar() != '\n');                     //æ¸…ç©ºé”®ç›˜ç¼“å†²åŒº
 		scanf("%s", &stu[i].email);
-		printf("ÇëÊäÈë¼ÒÍ¥×¡Ö·£º");
-		while (getchar() != '\n');                     //Çå¿Õ¼üÅÌ»º³åÇø
+		printf("è¯·è¾“å…¥å®¶åº­ä½å€ï¼š");
+		while (getchar() != '\n');                     //æ¸…ç©ºé”®ç›˜ç¼“å†²åŒº
 		scanf("%s", &stu[i].addr);
 	}
 	N = N + k;
@@ -243,10 +243,10 @@ int main()
 		{
 		case 1:Print(stu, N); break;
 		case 2:	Add(stu, N); break;
-		case 3:	printf("ÇëÊäÈëÓûÉ¾³ıµÄĞÕÃû£º"); Del(stu, N); break;
-		case 4:	printf("ÇëÊäÈëÓû±à¼­µÄĞÕÃû£º"); Edit(stu, N); break;
+		case 3:	printf("è¯·è¾“å…¥æ¬²åˆ é™¤çš„å§“åï¼š"); Del(stu, N); break;
+		case 4:	printf("è¯·è¾“å…¥æ¬²ç¼–è¾‘çš„å§“åï¼š"); Edit(stu, N); break;
 		case 5:Sort(stu, N); break;
-		case 6:	printf("ÇëÊäÈëÓû²éÕÒÈËµÄĞÕÃû£º"); Search(stu, N); break;
+		case 6:	printf("è¯·è¾“å…¥æ¬²æŸ¥æ‰¾äººçš„å§“åï¼š"); Search(stu, N); break;
 		case 7:system("pause"); return 0;
 		default:break;
 		}

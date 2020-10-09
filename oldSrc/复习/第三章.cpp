@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 using namespace std;
 
 class date {
@@ -12,7 +12,7 @@ private:
 	int year, month, day;
 };
 
-date::date() { cout << "²»´ø²ÎÊýµÄ¹¹Ôìº¯Êý" << endl; }
+date::date() { cout << "ä¸å¸¦å‚æ•°çš„æž„é€ å‡½æ•°" << endl; }
 
 date::date(int y, int m, int d) :day(d)
 {
@@ -22,7 +22,7 @@ date::date(int y, int m, int d) :day(d)
 
 void date::show()
 {
-	cout << "³öÉúÈÕÆÚ" << year << "-" << month << "-" << day << endl;
+	cout << "å‡ºç”Ÿæ—¥æœŸ" << year << "-" << month << "-" << day << endl;
 }
 
 date::~date()

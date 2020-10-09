@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<string>
 using namespace std;
 class time;
@@ -11,7 +11,7 @@ private:
 	int year, month, day;
 };
 
-date::date() { cout << "²»´ø²ÎÊýµÄ¹¹Ôìº¯Êý" << endl; }
+date::date() { cout << "ä¸å¸¦å‚æ•°çš„æž„é€ å‡½æ•°" << endl; }
 
 date::date(int y, int m, int d) :day(d)
 {

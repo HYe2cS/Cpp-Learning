@@ -1,4 +1,4 @@
-//Á½¸öÕûÊı°´ÕÕ´ÓĞ¡µ½´óµÄË³Ğò
+ï»¿//ä¸¤ä¸ªæ•´æ•°æŒ‰ç…§ä»å°åˆ°å¤§çš„é¡ºåº
 #include<iostream>
 using namespace std;
 void F(int& a, int& b)
@@ -16,10 +16,10 @@ class AB {
 int main()
 {
 	//	int m,n;
-	//	cout<<"ÇëÊäÈëÁ½¸öÕûÊıa b:";
+	//	cout<<"è¯·è¾“å…¥ä¸¤ä¸ªæ•´æ•°a b:";
 	//	cin>>m>>n;
 	//	F(m,n);
-	//	cout<<"°´ÕÕ´ÓĞ¡µ½´óµÄË³ĞòÊÇ:"<<m<<" "<<n<<endl;
+	//	cout<<"æŒ‰ç…§ä»å°åˆ°å¤§çš„é¡ºåºæ˜¯:"<<m<<" "<<n<<endl;
 
 	//	int *p = new int[10];
 	//	delete[] p;

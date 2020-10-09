@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<string>
 using namespace std;
 class CPU {
@@ -14,17 +14,17 @@ public:
 	void Run();
 	void Stop();
 private:
-	string rank;//µÈ¼¶
-	int frequency;//ÆµÂÊ
-	float voltage;//µçÑ¹
+	string rank;//ç­‰çº§
+	int frequency;//é¢‘çŽ‡
+	float voltage;//ç”µåŽ‹
 };
 CPU::CPU()
 {
-	cout << "¹¹ÔìÒ»¸öCPU" << endl;
+	cout << "æž„é€ ä¸€ä¸ªCPU" << endl;
 }
 CPU::~CPU()
 {
-	cout << "Îö¹¹Ò»¸öCPU" << endl;
+	cout << "æžæž„ä¸€ä¸ªCPU" << endl;
 }
 string CPU::GetRank()
 {
@@ -52,11 +52,11 @@ void CPU::SetVoltage(float v)
 }
 void CPU::Run()
 {
-	cout << "CPU¿ªÊ¼ÔËÐÐ£¡" << endl;
+	cout << "CPUå¼€å§‹è¿è¡Œï¼" << endl;
 }
 void CPU::Stop()
 {
-	cout << "CPUÍ£Ö¹ÔËÐÐ£¡" << endl;
+	cout << "CPUåœæ­¢è¿è¡Œï¼" << endl;
 }
 
 class Student {
@@ -96,14 +96,14 @@ private:
 };
 void Car::Input()
 {
-	cout << "ÇëÊäÈë³µµÄÑÕÉ«:";
+	cout << "è¯·è¾“å…¥è½¦çš„é¢œè‰²:";
 	cin >> color;
-	cout << "ÇëÊäÈë³µµÄËÙ¶È:";
+	cout << "è¯·è¾“å…¥è½¦çš„é€Ÿåº¦:";
 	cin >> speed;
 }
 void  Output(Car& x)
 {
-	cout << "³µµÄÑÕÉ«ÊÇ" << x.color << ",³µµÄËÙ¶ÈÊÇ" << x.speed << endl;
+	cout << "è½¦çš„é¢œè‰²æ˜¯" << x.color << ",è½¦çš„é€Ÿåº¦æ˜¯" << x.speed << endl;
 }
 
 class Date {
@@ -126,11 +126,11 @@ void Date::set(int y, int m, int d)
 }
 void Date::show()
 {
-	cout << "ÉúÈÕ£º" << year << "Äê" << month << "ÔÂ" << day << "ÈÕ" << endl;
+	cout << "ç”Ÿæ—¥ï¼š" << year << "å¹´" << month << "æœˆ" << day << "æ—¥" << endl;
 }
 class Person {
 public:
-	Person(int y = 2000, int m = 00, int d = 00, string i = "20000000000", string na = "ÕÅÈý", char se = 'm');
+	Person(int y = 2000, int m = 00, int d = 00, string i = "20000000000", string na = "å¼ ä¸‰", char se = 'm');
 	void set(int y, int m, int d, string i, string na, char se);
 	void show();
 private:
@@ -154,7 +154,7 @@ void Person::set(int y, int m, int d, string i, string na, char se)
 }
 void Person::show()
 {
-	cout << "±àºÅ£º" << id << endl << "ÐÕÃû£º" << name << endl << "ÐÔ±ð£º" << sex << endl;
+	cout << "ç¼–å·ï¼š" << id << endl << "å§“åï¼š" << name << endl << "æ€§åˆ«ï¼š" << sex << endl;
 	birthday.show();
 }
 int main()
@@ -165,25 +165,25 @@ int main()
 	cpu1.SetFrequency(3000);
 	cpu1.SetVoltage(220);
 	cpu1.Run();
-	cout<<"cpu1µÄµÈ¼¶ÊÇ£º"<<cpu1.GetRank()<<endl;
-	cout<<"cpu1µÄÆµÂÊÊÇ£º"<<cpu1.GetFrequency()<<endl;
-	cout<<"cpu1µÄµçÑ¹ÊÇ£º"<<cpu1.GetVoltage()<<endl;
+	cout<<"cpu1çš„ç­‰çº§æ˜¯ï¼š"<<cpu1.GetRank()<<endl;
+	cout<<"cpu1çš„é¢‘çŽ‡æ˜¯ï¼š"<<cpu1.GetFrequency()<<endl;
+	cout<<"cpu1çš„ç”µåŽ‹æ˜¯ï¼š"<<cpu1.GetVoltage()<<endl;
 	cpu1.Stop();
 	*/
 	/*
 	Student s[100];
-	cout<<"ÇëÊäÈë±¾°àÑ§ÉúÈËÊý:";
+	cout<<"è¯·è¾“å…¥æœ¬ç­å­¦ç”Ÿäººæ•°:";
 	int n;
 	cin>>n;
 	float sc;
 	for(int i=0;i<n;i++)
 	{
-		cout<<"ÇëÊäÈëµÚ"<<i+1<<"¸öÑ§ÉúµÄ·ÖÊý:";
+		cout<<"è¯·è¾“å…¥ç¬¬"<<i+1<<"ä¸ªå­¦ç”Ÿçš„åˆ†æ•°:";
 		cin>>sc;
 		s[i].account(sc);
 	}
-	cout<<"È«°àµÄ×Ü³É¼¨ÊÇ:"<<Student::sum()<<endl;
-	cout<<"È«°àµÄÆ½¾ù³É¼¨ÊÇ:"<<Student::average()<<endl;
+	cout<<"å…¨ç­çš„æ€»æˆç»©æ˜¯:"<<Student::sum()<<endl;
+	cout<<"å…¨ç­çš„å¹³å‡æˆç»©æ˜¯:"<<Student::average()<<endl;
 	*/
 	/*
 	Car c1;
@@ -191,17 +191,17 @@ int main()
 	Output(c1);
 	*/
 	Person p[100];
-	cout << "ÇëÊäÈëÈËÔ±¸öÊý:";
+	cout << "è¯·è¾“å…¥äººå‘˜ä¸ªæ•°:";
 	int n;
 	cin >> n;
 	for (int i = 0; i < n; i++)
 	{
-		cout << "ÇëÊäÈëµÚ" << i + 1 << "¸öÈËÔ±ÐÅÏ¢:" << endl;
+		cout << "è¯·è¾“å…¥ç¬¬" << i + 1 << "ä¸ªäººå‘˜ä¿¡æ¯:" << endl;
 		int y; int m; int d; string id; string na; char se;
-		cout << "±àºÅ£º"; cin >> id;
-		cout << "ÐÕÃû£º"; cin >> na;
-		cout << "ÐÔ±ð£º"; cin >> se;
-		cout << "ÉúÈÕ£º"; cin >> y >> m >> d;
+		cout << "ç¼–å·ï¼š"; cin >> id;
+		cout << "å§“åï¼š"; cin >> na;
+		cout << "æ€§åˆ«ï¼š"; cin >> se;
+		cout << "ç”Ÿæ—¥ï¼š"; cin >> y >> m >> d;
 		p[i].set(y, m, d, id, na, se);
 	}
 	for (int i = 0; i < n; i++)

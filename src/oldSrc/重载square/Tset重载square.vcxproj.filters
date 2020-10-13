@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="重载square.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="privateMemberTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

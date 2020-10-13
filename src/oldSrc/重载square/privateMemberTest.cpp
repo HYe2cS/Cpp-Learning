@@ -11,6 +11,7 @@ int main() {
     test t1;
     t1.b1 = 2;
     t1.b2 = 2;
+    cout << "hel啊啊啊lo" << endl;
     cout << t1.b1 << endl;
     cout << t1.b2 << endl;
 }

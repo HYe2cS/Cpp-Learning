@@ -341,3 +341,7 @@ healthchecksdb
 
 # mkdocs site
 /site
+
+/test
+/out
+/main

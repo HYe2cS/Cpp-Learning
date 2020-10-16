@@ -141,7 +141,6 @@ nav:
   - 介绍: index.md
   - 学习方法和书籍: pre/0_1_学习方法和书籍.md
   - 怎么学C++: pre/0_2.md
-
   - 文章集:
       - test: article/test.md
 

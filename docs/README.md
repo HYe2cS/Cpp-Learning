@@ -41,7 +41,7 @@
   - 第18章 : 用于大型程序的工具  [笔记](docs/notes/ch18.md)  [练习](docs/excersize/ch18.md)
   - 第19章 : 特殊工具与技术  [笔记](docs/notes/ch19.md)  [练习](docs/excersize/ch19.md)
 
-## 参考
+## 鸣谢
 
 - [C++ Primer 5 Answers(C++11/14)](https://github.com/Mooophy/Cpp-Primer)
 - [《C++ Primer》第五版中文版习题答案](https://github.com/huangmingchuan/Cpp_Primer_Answers)

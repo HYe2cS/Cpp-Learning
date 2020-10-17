@@ -344,6 +344,3 @@ healthchecksdb
 
 /test
 /out
-/.vscode/
-*.sin
-*.vcxproj.*

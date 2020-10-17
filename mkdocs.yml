@@ -141,9 +141,13 @@ nav:
   - 介绍: index.md
   - 学习方法和书籍: pre/0_1_学习方法和书籍.md
   - 怎么学C++: pre/0_2.md
+  - 笔记目录: pre/0_3.md
+  - 学习笔记:
+      - ch01: notes/ch01.md
+  - 课后练习:
+      - ch01: excersize/ch01.md
   - 文章集:
-      - test: article/test.md
-
+      - test: article/我的python学习经历及资源整理.md
   - Changelog:
       - 开发计划: changelog/TODO.md
       - testMarkdown: changelog/test.md

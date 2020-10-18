@@ -11,12 +11,12 @@
 ## 环境
 
 system: windows 10
-IDE: Clion
-compiler: CMake 3.17.3
+IDE: Clion VS2019
+compiler: CMake 3.17.3 MSBuild 16.0
 
 选择Clion只是为了不增加一门IDE的学习成本
 
-后期可能会上手VS，先这样。
+
 
 ## 目录
 目录|备注

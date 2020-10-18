@@ -138,17 +138,55 @@ markdown_extensions:
 
 # Page tree 页面树
 nav:
-  - 介绍: index.md
-  - 学习方法和书籍: pre/0_1_学习方法和书籍.md
-  - 怎么学C++: pre/0_2.md
-  - 笔记目录: pre/0_3.md
+  - 怎样学C++:
+      - 介绍: index.md
+      - 学习方法和书籍: pre/0_1_学习方法和书籍.md
+      - 怎么学C++: pre/0_2.md
+      - 笔记目录: pre/0_3.md
   - 学习笔记:
       - ch01: notes/ch01.md
+      - ch02: notes/ch02.md
+      - ch03: notes/ch03.md
+      - ch04: notes/ch04.md
+      - ch05: notes/ch05.md
+      - ch06: notes/ch06.md
+      - ch07: notes/ch07.md
+      - ch08: notes/ch08.md
+      - ch09: notes/ch09.md
+      - ch10: notes/ch10.md
+      - ch11: notes/ch11.md
+      - ch12: notes/ch12.md
+      - ch13: notes/ch13.md
+      - ch14: notes/ch14.md
+      - ch15: notes/ch15.md
+      - ch16: notes/ch16.md
+      - ch17: notes/ch17.md
+      - ch18: notes/ch18.md
+      - ch19: notes/ch19.md
   - 课后练习:
       - ch01: excersize/ch01.md
+      - ch02: excersize/ch02.md
+      - ch03: excersize/ch03.md
+      - ch04: excersize/ch04.md
+      - ch05: excersize/ch05.md
+      - ch06: excersize/ch06.md
+      - ch07: excersize/ch07.md
+      - ch08: excersize/ch08.md
+      - ch09: excersize/ch09.md
+      - ch10: excersize/ch10.md
+      - ch11: excersize/ch11.md
+      - ch12: excersize/ch12.md
+      - ch13: excersize/ch13.md
+      - ch14: excersize/ch14.md
+      - ch15: excersize/ch15.md
+      - ch16: excersize/ch16.md
+      - ch17: excersize/ch17.md
+      - ch18: excersize/ch18.md
+      - ch19: excersize/ch19.md
   - 文章集:
-      - test: article/我的python学习经历及资源整理.md
+      - test: article/C++中的64位整数.md
   - Changelog:
+      - 其他的一些链接: changelog/0_5_链接集.md
       - 开发计划: changelog/TODO.md
       - testMarkdown: changelog/test.md
 

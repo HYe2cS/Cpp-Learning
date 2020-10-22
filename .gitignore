@@ -344,3 +344,4 @@ healthchecksdb
 /test
 /out
 /.vscode
+/.idea

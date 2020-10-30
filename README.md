@@ -27,7 +27,7 @@ Python
 
 C++的体系庞大，各类学习视频、学习资料也鱼龙混杂，导致初学者迷茫在信息的海洋中，做了无用功，没能解决问题。
 
-*HYe2cS/LearningNotes* 提供了一个适宜而完备的C++学习框架，试图解决一些新手常见的问题，
+*YJ2CS/LearningNotes* 提供了一个适宜而完备的C++学习框架，试图解决一些新手常见的问题，
 即“如何学C++？”“重点学啥？”“学习过程中会遇到哪些坑？怎么解决？”
 
 *C++学习路线图* 是学习路线的总纲，会介绍"如何系统的自学C++语言?","初学者到底需要学习什么?"
@@ -38,15 +38,15 @@ C++的体系庞大，各类学习视频、学习资料也鱼龙混杂，导致�
 本pages附带的文章集，里面是我开发过程中的一些感悟,踩过的一些坑,以及转载的一些新人环境配置方面常见问题的解决方法,有兴趣可以阅读。
 
 ## 目录
-- [详细内容请见LearningNotes Github Pages](https://hye2cs.github.io/LearningNotes/)
+- [详细内容请见LearningNotes Github Pages](https://YJ2CS.github.io/LearningNotes/)
 
-- [源码请见LearningNotes GitHub repo](https://github.com/HYe2cS/LearningNotes)
+- [源码请见LearningNotes GitHub repo](https://github.com/YJ2CS/LearningNotes)
 
-- [Java 笔记与源码目录](https://hye2cs.github.io/LearningNotes/Java/pre/0_4/)
+- [Java 笔记与源码目录](https://YJ2CS.github.io/LearningNotes/Java/pre/0_4/)
 
-- [Python 笔记与源码阅读目录](https://hye2cs.github.io/LearningNotes/Python/pre/0_3/)
+- [Python 笔记与源码阅读目录](https://YJ2CS.github.io/LearningNotes/Python/pre/0_3/)
 
-- [C++ 笔记与源码阅读目录](https://hye2cs.github.io/LearningNotes/Cpp/pre/0_3/)
+- [C++ 笔记与源码阅读目录](https://YJ2CS.github.io/LearningNotes/Cpp/pre/0_3/)
 
 
 ## 学习书籍
@@ -214,7 +214,7 @@ C++的体系庞大，不是所有内容都能在日常工作中用到，具体�
 - [C++ 资源大全中文版](https://github.com/jobbole/awesome-cpp-cn)
 
 ## 我在干啥
-- [可以点击这查看我的repo进度，不一定更新](https://hye2cs.github.io/LearningNotes/Home/changelog/TODO/)
+- [可以点击这查看我的repo进度，不一定更新](https://YJ2CS.github.io/LearningNotes/Home/changelog/TODO/)
 
 ## 环境
 
